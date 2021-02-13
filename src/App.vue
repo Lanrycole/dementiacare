@@ -1,28 +1,72 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <div class="desktop_nav">
+        <desktopNav/>
+      </div>
+      <div class="mobile_nav">
+        <mobileNav/>
+      </div>
+
+    </div>
+    <router-view/>
+
+    <div class="footer">
+      <Footer/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import mobileNav from "@/components/layout/mobileNav"
+import desktopNav from "@/components/layout/desktopNav"
+import Footer from "@/components/Footer"
+
 
 export default {
-  name: 'App',
+
   components: {
-    HelloWorld
-  }
+    mobileNav,
+    desktopNav,
+    Footer,
+   }
+
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import "./src/assets/Colors/colors";
+@import "./src/assets/Fonts/fonts";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $textFont;
 }
+
+#app {
+
+  #nav{
+
+    .mobile_nav{
+      display:none;
+    }
+
+  }
+
+}
+
+@media (max-width: 599px) {
+  #app {
+    #nav{
+      .mobile_nav{
+        display:block;
+      }
+      .desktop_nav{
+        display:none;
+      }
+    }
+  }
+}
+
 </style>
