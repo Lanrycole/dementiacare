@@ -1,26 +1,72 @@
 <template>
   <div id="home">
     <div class="welcome">
-      <div class="landing_info">
-        <div class="landing_text" data-aos="fade-up"
-             data-aos-anchor-placement="top-bottom"
-             data-aos-duration="3000">
-          <p id="msg">
-            Super care for adults
-          </p>
-          <h1> Reliable Dementia Care</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
-          </p>
-          <div class="landing_text_button">
-            <Button type="button" class="btn1">Contact</Button>
-            <Button type="button" class="btn2">Book Now</Button>
-          </div>
-        </div>
+      <div class="landing">
+        <VueSlickCarousel :arrows="false" :dots="false" v-bind="settings">
+          <div class="landing_info">
+            <div class="landing_text">
+              <p class="msg">
+                Lorem Ipsum
+              </p>
+              <h1>Dementia Adult Care</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
+              </p>
+              <div class="landing_text_button">
+                <Button type="button"  class="btn1">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact  v-scroll-to="'#contact'">Contact </router-link>
+                </Button>
+                <Button type="button" class="btn2" >
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact  v-scroll-to="'#book'">Book Us </router-link>
 
-        <div class="landing_img">
-          <img src="../assets/Images/slide-19.png" alt="">
-        </div>
+                </Button>
+              </div>
+
+            </div>
+            <div class="landing_img">
+              <img src="../assets/Images/h.jpeg" alt="">
+            </div>
+          </div>
+          <div class="landing_info">
+            <div class="landing_text">
+              <p class="msg">
+                Lorem Ipsum
+              </p>
+              <h1>Home Service</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
+              </p>
+              <div class="landing_text_button">
+                <Button type="button" class="btn1">Contact</Button>
+                <Button type="button" class="btn2">Book Now</Button>
+              </div>
+
+            </div>
+            <div class="landing_img">
+              <img src="../assets/Images/homeservice.jpg" alt="">
+            </div>
+          </div>
+          <div class="landing_info">
+            <div class="landing_text">
+              <p class="msg">
+                Lorem Ipsum
+              </p>
+              <h1>Staffing</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
+              </p>
+              <div class="landing_text_button">
+                <Button type="button" class="btn1">Contact</Button>
+                <Button type="button" class="btn2">Book Now</Button>
+              </div>
+
+            </div>
+            <div class="landing_img">
+              <img src="../assets/Images/staffing2.jpg" alt="">
+            </div>
+          </div>
+        </VueSlickCarousel>
+
       </div>
     </div>
 
@@ -31,13 +77,47 @@
     <div class="welcome_card">
       <welcome-card/>
     </div>
-    <div class="packages">
-      <packages/>
-    </div>
     <div class="hiring">
       <hiring/>
     </div>
+    <div class="staffing">
+      <h2>Staffing Areas</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
+      </p>
+      <div class="staffing_info">
+        <div class="staffing_details">
+          <img src="../assets/Images/doctors.svg" alt="">
+          <p>Health Practitioner</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurses.svg" alt="">
+          <p>Registered Nurse</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurse_prac.svg" alt="">
+          <p>Nurse Practitioner</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/health_worker.svg" alt="">
+          <p>PSW</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/home_care.svg" alt="">
+          <p>Home Care </p>
+        </div>
 
+      </div>
+
+    </div>
+
+    <div class="review">
+      <review/>
+    </div>
+
+    <div class="health">
+      <HealthResources/>
+    </div>
 
   </div>
 </template>
@@ -45,10 +125,18 @@
 
 <script>
 
-import Services from '@/components/Services'
-import welcomeCard from '@/components/welcomeCard'
-import Hiring from '@/components/Hiring'
-import packages from '@/components/packages'
+import Services from '@/components/services_short_comp'
+import welcomeCard from '@/components/our_history_comp'
+import Hiring from '@/components/hiring_comp'
+
+import Review from '@/components/reviews_comp'
+import HealthResources from '@/components/healthresources_comp'
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 
 export default {
@@ -57,10 +145,26 @@ export default {
     Services,
     welcomeCard,
     Hiring,
-    packages
+
+    Review,
+    HealthResources,
+    VueSlickCarousel
   },
   data() {
-    return {}
+    return {
+      settings: {
+        "infinite": true,
+        "autoplay": true,
+        "autoplaySpeed": 2000,
+        "dots": true,
+        "dotsClass": "slick-dots custom-dot-class",
+        "edgeFriction": 0.35,
+        "speed": 500,
+        "slidesToShow": 1,
+        "slidesToScroll": 1
+
+      },
+    }
   },
 }
 </script>
@@ -78,79 +182,81 @@ export default {
 }
 
 #home {
-  margin-top: 12vh;
+  margin-top: 13vh;
 
   .welcome {
     position: relative;
 
-    .landing_info {
-      position: relative;
+    .landing {
+      background: black;
+      outline: none;
 
-      .landing_img {
-        margin: 0 auto;
-        grid-column-start: 2;
-        grid-column-end: 4;
+      .landing_info {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        background: black;
+        outline: none;
 
-        img {
-          width: 100%;
-          max-width: 100%;
-        }
-      }
+        .landing_text {
+          align-items: center;
+          margin: 10px;
+          outline: none;
 
-      .landing_text {
-        position: absolute;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        top: 160px;
-        left: 5%;
-        padding: 20px;
-        align-items: center;
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6);
+          h1 {
+            font-size: 60px;
+            font-weight: bolder;
+            color: $textColor;
 
-        h1 {
-          font-size: 60px;
-          font-weight: bolder;
-          color: $highlight;
-          margin-top: 20px;
-        }
-
-        #msg {
-          color: $secondaryColor;
-          font-weight: bolder;
-          font-size: 30px;
-          opacity: 1;
-
-        }
-
-        p {
-          margin-top: 20px;
-          opacity: 0.8;
-          color: $textColor;
-          font-size: 18px;
-        }
-
-        .landing_text_button {
-          margin: 6vh auto;
-          text-align: center;
-          display: flex;
-          justify-content: space-around;
-
-          .btn1 {
-            @include homeButton;
-            border: 1px solid $textColor;
           }
 
-          .btn2 {
-            @include homeButton;
-            background: $highlight;
+          .msg {
+            margin-top: 20vh;
+            color: $secondaryColor;
+            font-weight: bolder;
+            font-size: 30px;
+            opacity: 1;
+          }
 
-            &:hover {
-              color: $headerColor;
+          p {
+            opacity: 0.8;
+            color: $textColor;
+            font-size: 16px;
+          }
+
+          .landing_text_button {
+            margin: 2vh auto;
+            text-align: start;
+            justify-content: space-around;
+
+            .btn1 {
+              @include homeButton;
+              margin: 20px;
+              background: $highlight;
+              a{
+                color:$textColor;
+              }
+            }
+
+            .btn2 {
+              @include homeButton;
+              margin: 20px;
+              a{
+                color:$textColor;
+              }
+              &:hover {
+                color: $headerColor;
+              }
             }
           }
         }
+
+        .landing_img {
+          img {
+            width: 1200px;
+          }
+        }
       }
+
 
     }
 
@@ -174,28 +280,393 @@ export default {
       width: 50%;
     }
   }
+
+  .staffing {
+    padding: 40px;
+    text-align: center;
+
+    h2 {
+      text-align: center;
+      font-size: 50px;
+      padding: 40px;
+      opacity: 0.9;
+      color: $headerColor;
+    }
+
+    .staffing_info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      padding: 40px;
+    }
+
+    .staffing_details {
+      margin: 0 auto;
+
+      img {
+        width: 200px;
+
+        &:hover {
+
+          cursor: pointer;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
-    .landing_info {
+    margin-top: 0;
 
-      grid-template-columns: 1fr;
+    .welcome {
+      .landing {
+        margin-top: 4vh;
 
-      .landing_text {
+        .landing_info {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "a a a"
+          "a a a";
+
+          .landing_text {
+
+            h1 {
+              font-size: 25px;
+            }
+
+            .msg {
+              margin-top: 2vh;
+              font-size: 16px;
+            }
+
+
+            .landing_text_button {
+              margin: 2vh auto;
+              text-align: start;
+
+              justify-content: space-around;
+
+              .btn1 {
+                @include homeButton;
+                margin: 5px;
+                width: 100%;
+                background: $highlight;
+              }
+
+              .btn2 {
+                @include homeButton;
+                margin: 5px;
+                width: 100%;
+
+
+                &:hover {
+                  color: $headerColor;
+                }
+              }
+            }
+          }
+
+          .landing_img {
+            grid-area: a;
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .staffing {
+      padding: 10px;
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .staffing_info {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
 
       }
 
-      .landing_img {
+      .staffing_details {
+        margin: 0 auto;
+
         img {
-          width: 20px;
+          width: 60px;
         }
       }
     }
   }
 
-
 }
 
+@media (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #home {
+    margin-top: 0;
 
+    .welcome {
+      .landing {
+
+
+        .landing_text {
+          padding: 5px;
+          width: 90% !important;
+
+          h1 {
+            font-size: 50px;
+            font-weight: bolder;
+            margin-top: 10px;
+          }
+
+          .msg {
+            color: $secondaryColor;
+            font-weight: bolder;
+            font-size: 20px;
+            opacity: 1;
+            margin-top: 25vh;
+          }
+
+          .landing_text_button {
+            width: 100%;
+
+            .btn1, .btn2 {
+              width: 40%;
+              margin: 10px auto 0 20px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 411px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
+  #home {
+    margin-top: 0;
+
+    .welcome {
+      .landing {
+        margin-top: 2vh !important;
+
+        .landing_info {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "a a a"
+          "a a a";
+
+          .landing_text {
+
+            h1 {
+              font-size: 35px;
+            }
+
+            .msg {
+              margin-top: 2vh;
+              font-size: 16px;
+            }
+
+
+            .landing_text_button {
+              margin: 2vh auto;
+              text-align: start;
+
+              justify-content: space-around;
+
+              .btn1 {
+                @include homeButton;
+                margin: 5px;
+                width: 100%;
+                background: $highlight;
+              }
+
+              .btn2 {
+                @include homeButton;
+                margin: 5px;
+                width: 100%;
+
+
+                &:hover {
+                  color: $headerColor;
+                }
+              }
+            }
+          }
+
+          .landing_img {
+            grid-area: a;
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .staffing {
+      padding: 10px;
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .staffing_info {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+
+      }
+
+      .staffing_details {
+        margin: 0 auto;
+
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  #home {
+    margin-top: 0;
+
+    .welcome {
+      .landing {
+        margin-top: 10vh !important;
+
+        .landing_info {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "a a a"
+          "a a a";
+
+          .landing_text {
+            text-align: center;
+            h1 {
+              font-size: 45px;
+            }
+
+            .msg {
+              margin-top: 2vh;
+              font-size: 16px;
+            }
+
+
+            .landing_text_button {
+              margin: 2vh auto;
+              text-align: center;
+              width: 100% !important;
+              justify-content: space-around;
+
+              .btn1 {
+                @include homeButton;
+                margin: 5px auto;
+                width: 40%;
+                background: $highlight;
+              }
+
+              .btn2 {
+                @include homeButton;
+                margin: 5px auto;
+                width: 40%;
+
+                &:hover {
+                  color: $headerColor;
+                }
+              }
+            }
+          }
+
+          .landing_img {
+            grid-area: a;
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .staffing {
+      padding: 10px;
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .staffing_info {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+
+      }
+
+      .staffing_details {
+        margin: 0 auto;
+
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
 </style>
+
+
+//@media (min-width: 481px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
+//  #home {
+//    margin-top: 0;
+//
+//    .welcome {
+//      .landing {
+//        height: 85vh;
+//
+//        .landing_text {
+//          padding: 5px;
+//          width: 90% !important;
+//
+//          h1 {
+//            font-size: 50px;
+//            font-weight: bolder;
+//            margin-top: 10px;
+//          }
+//
+//          .msg {
+//            color: $secondaryColor;
+//            font-weight: bolder;
+//            font-size: 20px;
+//            opacity: 1;
+//            margin-top: 35vh;
+//          }
+//
+//          .landing_text_button {
+//            width: 100%;
+//
+//            .btn1, .btn2 {
+//              width: 40%;
+//              margin: 10px auto 0 20px;
+//
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+

@@ -4,7 +4,6 @@ import router from './router'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import VueScrollTo from 'vue-scrollto'
-
 import VueMeta from 'vue-meta';
 
 Vue.config.productionTip = false

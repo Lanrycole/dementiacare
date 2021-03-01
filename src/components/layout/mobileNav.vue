@@ -2,15 +2,14 @@
   <div id="mobile_container">
     <div id="mobile_nav">
       <div class="nav_logo">
-        <img src="https://img.icons8.com/fluent/24/000000/facebook-new.png"/>
+        <img src="https://img.icons8.com/fluent/24/000000/facebook-new.png" alt="open menu"/>
       </div>
 
       <div class="menu_icon">
-        <img :src="menu_icon" @click="toggleMenu"/>
+        <img :src="menu_icon" @click="toggleMenu" alt="close menu"/>
       </div>
     </div>
     <div class="nav_items" :class="{expandMenu : !showMenu}">
-
       <ul>
         <li @click="toggleMenu">
           <router-link :to="{name: 'Home'}" class="router-link" exact>Home</router-link>
@@ -18,20 +17,46 @@
         <li @click="toggleMenu">
           <router-link :to="{name: 'About'}" class="router-link" exact>About</router-link>
         </li>
-        <li @click="toggleMenu">
-          <router-link :to="{name: 'Services'}" class="router-link" exact>Services</router-link>
+        <li id="ser" @click="showDropDown">
+           <a id="service">Services <img src="https://img.icons8.com/pastel-glyph/24/0F0F34/expand-arrow.png"
+                                        alt="arrow down"/></a>
+          <div id="dropdown" v-if="dropdown">
+            <ul>
+              <li data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="100"
+                  data-aos-duration="100" @click="toggleMenu">
+                <router-link :to="{name: 'consultation'}" class="router-link dropdown" exact>
+                 Consultation
+                </router-link>
+              </li>
+              <li data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="200"
+                  data-aos-duration="200" @click="toggleMenu">
+                <router-link :to="{name: 'staffing'}" class="router-link dropdown" exact >Staffing
+                </router-link>
+              </li>
+              <li data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="300"
+                  data-aos-duration="300" @click="toggleMenu">
+                <router-link :to="{name: 'homeservice'}" class="router-link dropdown" exact >Home
+                  Services
+                </router-link>
 
+              </li>
+            </ul>
+          </div>
         </li>
-        <li @click="toggleMenu">
-          <router-link :to="{name: 'Clients'}" class="router-link" exact>Clients</router-link>
-
-        </li>
+        <!--        <li @click="toggleMenu">-->
+        <!--          <router-link :to="{name: 'Clients'}" class="router-link" exact>Clients</router-link>-->
+        <!--        </li>-->
         <li @click="toggleMenu">
           <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
-
         </li>
         <li @click="toggleMenu">
-          <router-link :to="{name: 'JoinUs'}" class="router-link" exact>Join Us</router-link>
+          <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>
         </li>
       </ul>
     </div>
@@ -45,6 +70,7 @@ export default {
   data() {
     return {
       showMenu: true,
+      dropdown: false,
       menu_icon: 'https://img.icons8.com/fluent-systems-regular/24/ffffff/menu--v3.png'
     }
   },
@@ -52,11 +78,14 @@ export default {
     toggleMenu() {
       this.showMenu = !this.showMenu;
       if (this.menu_icon === 'https://img.icons8.com/fluent-systems-regular/24/ffffff/menu--v3.png') {
-        this.menu_icon = 'https://img.icons8.com/windows/24/ffffff/macos-close.png'
+        this.menu_icon = 'https://img.icons8.com/windows/32/ffffff/macos-close.png'
       } else {
         this.menu_icon = 'https://img.icons8.com/fluent-systems-regular/24/ffffff/menu--v3.png'
       }
 
+    },
+    showDropDown() {
+      this.dropdown = !this.dropdown;
     }
   }
 }
@@ -78,17 +107,19 @@ export default {
 }
 
 
-@media (max-width: 599px) {
+@media (max-width: 960px) {
 
   #mobile_container {
     #mobile_nav {
       background: $headerColor;
       color: $textColor;
       width: 100%;
-      z-index: 1;
+      z-index: 3;
       padding: 10px 10px 10px;
       display: flex;
-      justify-content:space-between;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
 
       .menu_icon {
         cursor: pointer;
@@ -101,45 +132,107 @@ export default {
     }
 
     .nav_items {
-      background: $headerColor;
+      background: $textColor;
       height: 0;
       position: fixed;
       width: 100%;
       overflow-x: hidden;
-      transition: 0.9s;
+      top: 55px;
       z-index: 2;
 
-      ul {
-        margin-top: 40px;
+      p {
+        margin: 30px auto;
+        text-align: center;
+        position: relative;
+        width: 40%;
+        padding: 8px;
+        border-radius: 6rem;
+        background: #57606f;
+        color: $textColor;
+        transition: .5s ease-in-out;
 
-        li {
-          padding: 10px;
+        img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          display: none;
+        }
 
-          .router-link {
-            text-decoration: none;
-            font-family: $navFont;
-            text-align: start;
-            list-style: none;
-            letter-spacing: 2px;
-            font-size: 50px;
-            font-weight: bolder;
-            color: $textColor;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            width: 70%;
+        &:hover {
+          width: 45%;
+          text-align: start;
 
-            &:hover {
-              border-bottom: 2px solid $highlight;
-            }
+          img {
+            display: block;
           }
         }
+      }
+
+      ul {
+
+        margin-left: 20px;
+        margin-bottom: 30px;
+        list-style: none;
+        text-decoration: none;
+
+        li {
+          padding: 5px;
+          list-style: none;
+          text-decoration: none;
+
+          .router-link, a {
+            font-weight: bolder;
+            list-style: none;
+            text-decoration: none;
+
+            color: $headerColor;
+
+          }
+        }
+
+        #ser {
+          list-style: none;
+          text-decoration: none;
+
+          #dropdown {
+            margin-left: 20px;
+
+            ul {
+              li {
+                list-style: none;
+                text-decoration: none;
+              }
+
+
+            }
+          }
+
+          a {
+            position: relative;
+            list-style: none;
+            text-decoration: none;
+
+            img {
+              position: absolute;
+              top: 0;
+            }
+          }
+
+          &:hover {
+            //#dropdown {
+            //  display: block;
+            //}
+          }
+
+        }
+
       }
 
     }
 
     .expandMenu {
-      height: 100% !important;
+      height: auto;
+
     }
   }
 

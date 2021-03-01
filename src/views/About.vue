@@ -1,10 +1,7 @@
 <template>
 
-  <!--TODO: Break About Us landing section into components and add props-->
   <div id="container">
-    <div class="landing">
-      <landing-page :boardImage="landingImg" :title="tittle" :text="text"/>
-    </div>
+
     <div class="team_member ">
       <div class="team_member_info">
         <div class="team_member_img">
@@ -17,7 +14,11 @@
             dolores fuga in maiores nemo nesciunt nulla numquam officia possimus quaerat qui quibusdam quis quod
             repellat repudiandae saepe sapiente soluta tempora totam ut veniam voluptate!</p>
           <div class="team_member_desc_btn">
-            <Button type="button" class="btn1">Contact</Button>
+            <Button type="button" class="btn1">
+              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+              </router-link>
+
+            </Button>
 
           </div>
         </div>
@@ -49,10 +50,6 @@
       </div>
     </div>
 
-    <!--    <div class='forms-studio'>-->
-    <!--      <iframe src='https://script.google.com/macros/s/AKfycbxq6hODm_QQ3Q0ya6LLDWPYAyA1aM6jCyOnpvFKRbtu2F-yTKeIe6Ws/exec'>-->
-    <!--      </iframe>-->
-    <!--    </div>-->
     <div class="more_info">
       <div class="info" data-aos="fade-up"
            data-aos-anchor-placement="top-bottom">
@@ -108,39 +105,45 @@
         </div>
       </div>
     </div>
+    <div class="review">
+      <Review/>
+    </div>
   </div>
 </template>
 <script>
-import LandingPage from '@/components/LandingPage'
+
+import Review from '@/components/reviews_comp'
+
+
 export default {
   name: 'About',
   components: {
-    LandingPage,
+
+    Review,
   },
   data: function () {
     return {
-      landingImg: require('../assets/Images/slide5.png'),
-      tittle: "About",
-      text: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat." +
-          " In nihil pariatur plac",
+      landingImg: require('../assets/Images/staffing_header.png'),
+      tittle: "About Us",
+      // text: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat." +
+      //     " In nihil pariatur plac",
       text_align_team: 'end',
       text_align_history: 'end',
       text_align_vision: 'end',
       text_align_partners: 'end',
       text_align_license: 'end',
       text_align: 'center',
-      menu_content: '   <h1>Partners</h1> <br> <p style="line-height:32px">   Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.' +
-          '          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.</p> ',
-      partner_text: '   <h1>Partners</h1> <br> <p style="line-height:32px">    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.\n' +
-          '          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.</p>',
+      menu_content: '   <h1>Partners</h1> <br> <p style="line-height:32px">   Lorem ipsum dolor sit amet, consectetur adipisicing elitatur placeat voluptas. Corporis labore modi necessitatibus perferendis.' +
+          '          Lorem ipsum dolor m </p> ',
+      partner_text: '   <h1>Partners</h1> <br> <p style="line-height:32px">    sitatibus perferendis.\n' +
+          '          Lorem Corporis labore modi necessitatibus perferendis.</p>',
 
       location_text: '    <h1>Location</h1> <br> <p style="line-height:32px">  We are located in Address. We serve Ontario, Quebec and environs.</p>',
       contact_text: '    <h1>Contact</h1> <br> <p style="line-height:32px">     Our customer service is always available. You can <a href="#">Send us an email</a> or <a href="#">Call us</a>. You can also nook am appointment</p>',
-      licenses_text: '  <h1>License</h1> <br> <p style="line-height:32px">      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.\n' +
-          '          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat. In nihil pariatur placeat voluptas. Corporis labore modi necessitatibus perferendis.</p>'
+      licenses_text: '  <h1>License</h1> <br> <p style="line-height:32px">      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum orporis labore modi necessitatibus perferendis.</p>'
     }
   },
-  methods:  {
+  methods: {
     toggleMessage(props) {
       this.resetTextAlign();
       this.menu_content = props;
@@ -189,7 +192,7 @@ export default {
 
 #container {
   .team_member {
-    margin: 10vh auto 5vh;
+    margin: 20vh auto 5vh;
 
     .team_member_info {
       background: $textColor;
@@ -198,7 +201,7 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
-
+      //box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
       .team_member_img {
         padding: 0;
         margin: 0;
@@ -239,6 +242,11 @@ export default {
             color: $headerColor;
             border: 1px solid $headerColor;
             //border: 1px solid $textColor;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+
+            a {
+              color: $headerColor;
+            }
           }
         }
       }
@@ -253,7 +261,6 @@ export default {
 
   .about_us_menu {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 70%;
     margin: 8vh auto 0;
@@ -265,7 +272,7 @@ export default {
       align-items: center;
       justify-content: center;
       background: $headerColor;
-      border-right: 1.5rem solid $highlight;
+      border-right: 0.5rem solid $highlight;
 
       .left_menu {
         height: 100%;
@@ -323,6 +330,7 @@ export default {
       height: 100%;
       border: 0;
     }
+
     .forms-studio-form-content {
       display: none !important;
     }
@@ -332,7 +340,7 @@ export default {
     margin: 10vh auto 10vh;
 
     .partner_info {
-      border: 3px solid blue;
+
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -359,34 +367,312 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+
     .info {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
       background: white;
+
       img {
         max-width: 100%;
         height: 320px;
       }
+
       .info_text {
         line-height: 32px;
         padding: 20px;
+
         h2 {
           margin-top: 7vh;
           font-size: 30px;
+
           &::selection {
             background: $secondaryColor;
           }
         }
+
         p {
           margin-top: 2vh;
           opacity: 0.8;
           line-height: 32px;
+
           &::selection {
             background: $secondaryColor;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  #container {
+    .team_member {
+      margin: 5vh auto 5vh;
+
+      .team_member_info {
+        background: $textColor;
+        width: 90%;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about_us_menu {
+      padding: 0 !important;
+      margin: 10px auto !important;
+      width: 100% !important;
+
+      .left_section {
+        width: 40% !important;
+        border-right: 0.5rem solid $highlight !important;
+
+        .left_menu {
+          width: 100% !important;
+
+          ul {
+
+            li {
+
+              padding: 10px;
+              font-size: 14px !important;
+
+              &:hover {
+                background-position: 0 100%;
+
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .right_section {
+        width: 90% !important;
+        margin: 10px;
+      }
+    }
+
+    .more_info {
+      grid-template-columns: 1fr !important;
+      grid-gap: 10px;
+      padding: 10px !important;
+
+      .info {
+        grid-template-columns: 1fr !important;
+        grid-gap: 5px;
+
+        .info_text {
+          h2 {
+            margin-top: 1vh !important;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  #container {
+    .team_member {
+      margin: 15vh auto 5vh;
+
+      .team_member_info {
+        background: $textColor;
+        width: 100%;
+        grid-template-columns: 1fr;
+
+        .team_member_img {
+          padding: 20px;
+          margin: 0 auto;
+
+          img {
+            margin: 0 auto;
+            width: 700px;
+            height: 100%;
+          }
+        }
+
+        .team_member_desc {
+          .team_member_desc_btn {
+            text-align: center;
+          }
+
+        }
+
+      }
+    }
+
+    .about_us_menu {
+      padding: 0 !important;
+      margin: 10px auto !important;
+      width: 100% !important;
+
+      .left_section {
+        width: 30% !important;
+        border-right: 0.5rem solid $highlight !important;
+
+        .left_menu {
+          width: 100% !important;
+
+          ul {
+
+            li {
+
+              padding: 10px;
+              font-size: 20px !important;
+
+              &:hover {
+                background-position: 0 100%;
+
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .right_section {
+        width: 90% !important;
+        margin: 10px;
+      }
+    }
+
+    .more_info {
+      grid-template-columns: 1fr !important;
+      grid-gap: 10px;
+      padding: 10px !important;
+      margin: 0 auto;
+
+      .info {
+        grid-template-columns: 1fr !important;
+        grid-gap: 0px;
+        width: 100%;
+        margin: 5vh auto;
+
+        .info_img {
+          margin: 0 auto;
+
+          img {
+            width: 800px;
+            height: 600px;
+          }
+        }
+
+        .info_text {
+          h2 {
+            margin-top: 1vh !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (min-width: 411px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
+  #container {
+    .team_member {
+      margin: 10vh auto 5vh;
+
+      .team_member_info {
+        background: $textColor;
+        width: 100%;
+        grid-template-columns: 1fr;
+
+        .team_member_img {
+          padding: 20px;
+          margin: 0 auto;
+
+          img {
+            margin: 0 auto;
+            width: 700px;
+
+          }
+        }
+
+        .team_member_desc {
+          padding: 10px;
+
+          h2 {
+            margin: 0;
+            padding: 0;
+          }
+
+        }
+
+      }
+    }
+
+    .about_us_menu {
+      padding: 0 !important;
+      margin: 10px auto !important;
+      width: 100% !important;
+
+      .left_section {
+        width: 30% !important;
+        border-right: 0.5rem solid $highlight !important;
+
+        .left_menu {
+          width: 100% !important;
+
+          ul {
+
+            li {
+
+              padding: 10px;
+              font-size: 20px !important;
+
+              &:hover {
+                background-position: 0 100%;
+
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .right_section {
+        width: 90% !important;
+        margin: 10px;
+      }
+    }
+
+    .more_info {
+      grid-template-columns: 1fr !important;
+      grid-gap: 10px;
+      padding: 10px !important;
+      margin: 0 auto;
+
+      .info {
+        grid-template-columns: 1fr !important;
+        grid-gap: 0px;
+        width: 100%;
+        margin: 5vh auto;
+
+        .info_img {
+          margin: 0 auto;
+
+          img {
+            width: 800px;
+
+          }
+        }
+
+        .info_text {
+          h2 {
+            margin-top: 1vh !important;
+          }
+        }
+
       }
     }
   }

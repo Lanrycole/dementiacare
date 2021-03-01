@@ -11,6 +11,8 @@
     </div>
     <router-view/>
 
+
+
     <div class="footer">
       <Footer/>
     </div>
@@ -20,7 +22,7 @@
 <script>
 import mobileNav from "@/components/layout/mobileNav"
 import desktopNav from "@/components/layout/desktopNav"
-import Footer from "@/components/Footer"
+import Footer from "@/components/footer_comp"
 
 
 export default {
@@ -29,7 +31,8 @@ export default {
     mobileNav,
     desktopNav,
     Footer,
-   }
+
+  }
 
 }
 </script>
@@ -37,6 +40,7 @@ export default {
 <style lang="scss">
 @import "./src/assets/Colors/colors";
 @import "./src/assets/Fonts/fonts";
+
 * {
   padding: 0;
   margin: 0;
@@ -46,10 +50,10 @@ export default {
 
 #app {
 
-  #nav{
+  #nav {
 
-    .mobile_nav{
-      display:none;
+    .mobile_nav {
+      display: none;
     }
 
   }
@@ -58,12 +62,13 @@ export default {
 
 @media (max-width: 599px) {
   #app {
-    #nav{
-      .mobile_nav{
-        display:block;
+    #nav {
+      .mobile_nav {
+        display: block;
       }
-      .desktop_nav{
-        display:none;
+
+      .desktop_nav {
+        display: none;
       }
     }
   }
