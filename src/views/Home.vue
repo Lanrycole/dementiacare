@@ -13,18 +13,20 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
               <div class="landing_text_button">
-                <Button type="button"  class="btn1">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact  v-scroll-to="'#contact'">Contact </router-link>
+                <Button type="button" class="btn1">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  </router-link>
                 </Button>
-                <Button type="button" class="btn2" >
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact  v-scroll-to="'#book'">Book Us </router-link>
+                <Button type="button" class="btn2">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
+                  </router-link>
 
                 </Button>
               </div>
 
             </div>
             <div class="landing_img">
-              <img src="../assets/Images/h.jpeg" alt="">
+              <img src="../assets/Images/diversified.jpeg" alt="diversified_images">
             </div>
           </div>
           <div class="landing_info">
@@ -232,17 +234,20 @@ export default {
               @include homeButton;
               margin: 20px;
               background: $highlight;
-              a{
-                color:$textColor;
+
+              a {
+                color: $textColor;
               }
             }
 
             .btn2 {
               @include homeButton;
               margin: 20px;
-              a{
-                color:$textColor;
+
+              a {
+                color: $textColor;
               }
+
               &:hover {
                 color: $headerColor;
               }
@@ -352,16 +357,16 @@ export default {
 
               .btn1 {
                 @include homeButton;
-                margin: 5px;
+                margin: 5px auto;
                 width: 100%;
                 background: $highlight;
               }
 
               .btn2 {
                 @include homeButton;
-                margin: 5px;
-                width: 100%;
 
+                width: 100%;
+                margin: 5px auto;
 
                 &:hover {
                   color: $headerColor;
@@ -414,11 +419,10 @@ export default {
 
     .welcome {
       .landing {
-
-
         .landing_text {
           padding: 5px;
-          width: 90% !important;
+          margin: 0 auto;
+          text-align: center;
 
           h1 {
             font-size: 50px;
@@ -436,7 +440,6 @@ export default {
 
           .landing_text_button {
             width: 100%;
-
             .btn1, .btn2 {
               width: 40%;
               margin: 10px auto 0 20px;
@@ -464,7 +467,9 @@ export default {
           "a a a";
 
           .landing_text {
-
+            width: 90% !important;
+            margin: 0 auto;
+            text-align: center;
             h1 {
               font-size: 35px;
             }
@@ -476,23 +481,24 @@ export default {
 
 
             .landing_text_button {
-              margin: 2vh auto;
-              text-align: start;
 
+              margin: 2vh auto;
+              text-align: center !important;
+              width: 100% !important;
               justify-content: space-around;
 
               .btn1 {
                 @include homeButton;
-                margin: 5px;
+                margin: 5px auto;
                 width: 100%;
                 background: $highlight;
+
               }
 
               .btn2 {
                 @include homeButton;
-                margin: 5px;
                 width: 100%;
-
+                margin: 5px auto;
 
                 &:hover {
                   color: $headerColor;
@@ -554,6 +560,8 @@ export default {
 
           .landing_text {
             text-align: center;
+            margin: 0 auto;
+
             h1 {
               font-size: 45px;
             }
@@ -626,47 +634,3 @@ export default {
   }
 }
 </style>
-
-
-//@media (min-width: 481px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
-//  #home {
-//    margin-top: 0;
-//
-//    .welcome {
-//      .landing {
-//        height: 85vh;
-//
-//        .landing_text {
-//          padding: 5px;
-//          width: 90% !important;
-//
-//          h1 {
-//            font-size: 50px;
-//            font-weight: bolder;
-//            margin-top: 10px;
-//          }
-//
-//          .msg {
-//            color: $secondaryColor;
-//            font-weight: bolder;
-//            font-size: 20px;
-//            opacity: 1;
-//            margin-top: 35vh;
-//          }
-//
-//          .landing_text_button {
-//            width: 100%;
-//
-//            .btn1, .btn2 {
-//              width: 40%;
-//              margin: 10px auto 0 20px;
-//
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
-
-

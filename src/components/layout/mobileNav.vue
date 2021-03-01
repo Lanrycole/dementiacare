@@ -2,7 +2,7 @@
   <div id="mobile_container">
     <div id="mobile_nav">
       <div class="nav_logo">
-        <img src="https://img.icons8.com/fluent/24/000000/facebook-new.png" alt="open menu"/>
+        <img src="../../assets/Images/logos.svg" alt="logo" width="190px">
       </div>
 
       <div class="menu_icon">
@@ -137,7 +137,7 @@ export default {
       position: fixed;
       width: 100%;
       overflow-x: hidden;
-      top: 55px;
+      top: 72px;
       z-index: 2;
 
       p {

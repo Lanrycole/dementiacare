@@ -4,8 +4,7 @@
       <VueSlickCarousel :arrows="false" :dots="true" v-bind="settings">
         <div class="review_info">
           <div class="review_img">
-            <span>
-                           <img src="../assets/Images/male_avatar.svg" alt="male avatar">
+            <span><img src="../assets/Images/male_avatar.svg" alt="male avatar">
             </span>
 
           </div>
@@ -25,9 +24,7 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review
-                  <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
-                </Button>
+                <Button type="button" class="btn2">Write Review</Button>
               </div>
 
             </div>
@@ -53,9 +50,7 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review
-                  <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
-                </Button>
+                <Button type="button" class="btn2">Write Review</Button>
               </div>
             </div>
           </div>
@@ -80,9 +75,7 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review
-                  <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
-                </Button>
+                <Button type="button" class="btn2">Write Review</Button>
               </div>
             </div>
           </div>
@@ -107,8 +100,7 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review
-                  <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
+                <Button type="button" class="btn2">Write Review <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
                 </Button>
               </div>
             </div>

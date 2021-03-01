@@ -81,11 +81,13 @@
             <div class="socials">
               <ul>
                 <li>
-                  <a href="https://www.instagram.com/diversified.dementia/" target="_blank"><img src="https://img.icons8.com/fluent/28/ffffff/instagram-new.png" alt="instagram"/></a>
+                  <a href="https://www.instagram.com/diversified.dementia/" target="_blank"><img
+                      src="https://img.icons8.com/fluent/28/ffffff/instagram-new.png" alt="instagram"/></a>
 
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/"><img src="https://img.icons8.com/fluent/28/ffffff/facebook-new.png" alt="facebook"/>
+                  <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/"><img
+                      src="https://img.icons8.com/fluent/28/ffffff/facebook-new.png" alt="facebook"/>
                   </a>
                 </li>
 
@@ -95,23 +97,45 @@
         </div>
         <div class="form_section">
           <form>
-            <input type="text" id="fname" name="fname" value="" placeholder="First Name">
-            <input type="text" id="lname" name="lname" value="" placeholder="Last Name">
-            <input type="text" id="num" name="phone" value="" placeholder="Phone">
-            <input type="text" id="email" name="email" value="" placeholder="Email">
-            <input type="text" id="city" name="city" value="" placeholder="City">
-            <input type="text" id="add" name="add" value="" placeholder="Province">
+            <div class="input_fields">
+              <div class="firstname"><label for="fname">First Name</label><br><input type="text" id="fname"
+                                                                                     name="fname">
+              </div>
+              <div class="lastName"><label for="lname">Last Name</label><br><input type="text" id="lname" name="lname"
+                                                                                   value=""></div>
+              <div class="phone"><label for="num">Phone Number</label><br><input type="text" id="num" name="phone">
+              </div>
+              <div class="email"><label for="email">Email</label><br><input type="text" id="email" name="email"></div>
+              <div class="email"><label for="address">Address</label><br><input type="text" id="address" name="address">
+              </div>
+              <div class="city"><label for="city">City</label><br><input type="text" id="city" name="city"></div>
+              <div class="city"><label for="zip_code">Zip Code</label><br><input type="text" id="zip_code"
+                                                                                 name="zipcode"></div>
+
+              <div class="availability"><label for="province">Province</label><br><input type="text"
+                                                                                         id="Province"
+                                                                                         name="availability"></div>
+
+
+            </div>
             <br>
-            <textarea id="text" name="w3review" rows="7" cols="100" placeholder="Message"></textarea>
+
+            <div class="message">
+              <label for="message">Additional information </label><br><textarea name="text" id="message" cols="100"
+                                                                                rows="10"></textarea>
+            </div>
+
             <br>
             <br>
-            <Button type="button" class="btn1">Send Message</Button>
+            <Button type="button" class="btn1">Send Application</Button>
           </form>
         </div>
 
       </div>
       <div class="book_us" id="book">
-        <iframe src="https://oreyomi.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeoreyomi" style="width:100%;height:1000px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true"></iframe>
+        <iframe src="https://oreyomi.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeoreyomi"
+                style="width:100%;height:1000px;border:0px;background-color:transparent;" frameborder="0"
+                allowtransparency="true"></iframe>
 
       </div>
     </div>
@@ -119,7 +143,7 @@
     <div class="hiring">
       <p>
         <router-link :to="{name: 'Joinus'}" class="join_us" exact>We are hiring</router-link>
-        </p>
+      </p>
     </div>
   </div>
 
@@ -129,9 +153,7 @@
 
 export default {
   name: "Contact",
-  components: {
-
-  },
+  components: {},
   data() {
     return {
 
@@ -163,15 +185,15 @@ export default {
       border-radius: 6rem;
       background: #57606f;
 
-cursor: pointer;
-   a{
-     text-decoration: none;
-     color: $textColor;
-   }
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
 
 
-
-      &:hover{
+      &:hover {
         background: $headerColor;
         color: $textColor;
       }
@@ -181,7 +203,7 @@ cursor: pointer;
 
   .contact {
     margin: 0 auto !important;
-    padding: 100px;
+    padding: 10px;
     outline: none !important;
     background-image: url("../assets/Images/phone.jpg");
     background-attachment: fixed;
@@ -201,47 +223,91 @@ cursor: pointer;
 
       .form_section {
         margin: 0 auto;
-        text-align: center;
+        text-align: center !important;
         border-radius: 2rem;
         grid-column-start: 2;
         grid-column-end: 4;
 
         form {
-          margin: 10vh auto;
-          text-align: center;
+          margin: 5vh auto;
+
           padding: 2px;
 
-          input[type="text"], textarea {
-            transform: scale(0.8);
-            position: relative;
-            padding: 18px 20px 20px 18px;
-            width: 50%;
-            font-weight: 100;
-            letter-spacing: 2px;
-            transition: width 0.8s ease;
-            outline: none;
-            background: none;
-            border: 1px solid #586070;
-            font-size: 18px;
-            display: inline-block;
+          .input_fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto;
+            text-align: center !important;
 
-            &:hover {
-              box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-              border: none;
+            div {
+              text-align: start !important;
+
+              label {
+                text-align: start;
+                font-weight: bolder;
+                opacity: 0.6;
+              }
             }
-          }
 
-          textarea {
-            width: 100%;
-            resize: none;
+
+            input[type="text"] {
+              //transform: scale(0.8);
+              position: relative;
+              padding: 10px 10px 10px 10px;
+              width: 90%;
+              font-weight: 100;
+              letter-spacing: 2px;
+              transition: width 0.8s ease;
+              outline: none;
+              background: none;
+              //border: 1px solid #586070;
+              border: none;
+              font-size: 18px;
+              display: inline-block;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+              &:hover {
+                box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+                border: none;
+              }
+            }
+
           }
 
           .btn1 {
-
+            text-align: center;
             @include homeButton;
             border: 1px solid $textColor;
-            margin: 10px;
+            margin: 10px auto;
+            width: 200px;
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+          }
+
+          .message {
+            margin: 0 auto;
+            text-align: start;
+
+            label {
+              text-align: start;
+              font-weight: bolder;
+              opacity: 0.6;
+            }
+
+            textarea {
+              width: 95%;
+              resize: none;
+              border: none;
+              outline: none;
+              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+              &:hover {
+                box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+                border: none;
+              }
+
+            }
           }
         }
       }
@@ -314,29 +380,59 @@ cursor: pointer;
           padding: 0;
           margin: 0 auto;
 
+          //form {
+          //  background: white;
+          //  margin: 5vh auto;
+          //
+          //  input[type="text"], textarea {
+          //    transform: scale(0.8);
+          //    position: relative;
+          //    width: 100%;
+          //
+          //  }
+          //
+          //  textarea {
+          //    width: 100%;
+          //  }
+          //
+          //  .btn1 {
+          //    @include homeButton;
+          //    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+          //  }
+          //
+          //  .btn1 {
+          //    text-align: center;
+          //
+          //  }
+          //}
           form {
-            background: white;
-            margin: 5vh auto;
+            margin: 2vh auto;
+            text-align: center;
+            padding: 10px;
+            background: $textColor;
 
-            input[type="text"], textarea {
-              transform: scale(0.8);
-              position: relative;
-              width: 100%;
+            .input_fields {
+              display: grid;
+              grid-template-columns: 1fr;
 
+              input[type="text"] {
+                padding: 10px 10px 10px 10px;
+                width: 100%;
+              }
+
+              input[type="file"] {
+                padding: 10px 10px 10px 10px;
+                width: 100%;
+              }
+
+              input[type="date"] {
+                padding: 10px 10px 10px 10px;
+                width: 100%;
+              }
             }
 
             textarea {
-              width: 100%;
-            }
-
-            .btn1 {
-              @include homeButton;
-              box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-            }
-
-            .btn1 {
-              text-align: center;
-
+              width: 100% !important;
             }
           }
         }
@@ -344,9 +440,11 @@ cursor: pointer;
 
 
     }
+
     .hiring {
       p {
         width: 53%;
+
         &:hover {
           width: 54%;
           text-align: start;
@@ -380,28 +478,31 @@ cursor: pointer;
           border-radius: 0;
 
           form {
-            background: none;
-            margin: 5vh auto;
+            margin: 2vh auto;
+            text-align: center;
+            padding: 30px;
 
-            input[type="text"], textarea {
-              transform: scale(0.8);
-              position: relative;
-              width: 100%;
+            .input_fields {
+              display: grid;
 
+              input[type="text"] {
+                padding: 10px 10px 10px 10px;
+                width: 90%;
+              }
+
+              input[type="file"] {
+                padding: 10px 10px 10px 10px;
+                width: 100%;
+              }
+
+              input[type="date"] {
+                padding: 10px 10px 10px 10px;
+                width: 100%;
+              }
             }
 
             textarea {
               width: 100%;
-            }
-
-            .btn1 {
-              @include homeButton;
-              box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-            }
-
-            .btn1 {
-              text-align: center;
-
             }
           }
         }
@@ -413,6 +514,7 @@ cursor: pointer;
     .hiring {
       p {
         width: 20%;
+
         &:hover {
           width: 22%;
           text-align: start;

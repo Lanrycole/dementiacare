@@ -5,7 +5,7 @@
       <p><img src="https://img.icons8.com/ios-filled/22/ffffff/map-pin.png" alt="map-pin"/> London, ON </p>
       <p><img src="https://img.icons8.com/ios-filled/22/ffffff/apple-mail.png" alt="mail"/> info@dementiacare.com</p>
       <p id="hire_p">
-      We are Hiring
+        We are Hiring
       </p>
 
     </div>
@@ -13,8 +13,9 @@
     <div id="desktop_nav" :class="{db: scrollPosition>250}">
 
       <div class="nav_logo">
-        <img src="https://img.icons8.com/fluent/24/000000/facebook-new.png" alt="facebook"/>
+        <img src="../../assets/Images/logos.svg" alt="logo" width="190px">
       </div>
+
       <div class="nav_items">
         <ul>
           <li>
@@ -33,7 +34,7 @@
                     data-aos-offset="100"
                     data-aos-duration="100">
                   <router-link :to="{name: 'consultation'}" class="router-link dropdown">
-                  Dimentia Consultation
+                    Dimentia Consultation
                   </router-link>
                 </li>
                 <li data-aos="fade-left"
@@ -67,7 +68,7 @@
       </div>
 
     </div>
-    <!--    <div id="dropdown" v-if="showDropDown">-->
+
 
   </div>
 </template>
@@ -78,6 +79,7 @@ export default {
   data() {
     return {
       scrollPosition: 0,
+
 
     }
   },
@@ -105,7 +107,7 @@ export default {
 }
 
 .db {
-  background: $headerColor;
+  background: $headerColor !important;
   transition: .7s ease-out;
 }
 
@@ -123,7 +125,6 @@ export default {
     color: $textColor;
     display: flex;
     justify-content: space-around;
-
 
 
     p {
@@ -144,17 +145,19 @@ export default {
       }
 
     }
+
     #hire_p {
       text-align: start;
       position: relative;
       padding: 10px 20px 10px 20px;
-cursor: pointer;
+      cursor: pointer;
       border-radius: 6rem;
       background: #57606f;
       color: $textColor;
       transition: .5s ease-in-out;
-      a{
-        text-decoration:none;
+
+      a {
+        text-decoration: none;
         color: $textColor;
 
       }
@@ -177,7 +180,11 @@ cursor: pointer;
 
     .nav_logo {
       width: 30%;
+
       text-align: start;
+      img{
+        display: block;
+      }
     }
 
     .nav_items {
@@ -294,9 +301,15 @@ cursor: pointer;
 
       .nav_items {
         text-align: center;
-        width: 90%;
+        width: 80%;
         position: relative;
+ul{
+  li{
+    padding:2px;
 
+  }
+
+}
       }
     }
   }
