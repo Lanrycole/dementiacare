@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Clients from '../views/Clients.vue'
 import Contact from '../views/Contact.vue'
 import Join from '../views/JoinUs.vue'
 import consultation from '../views/consultation.vue'
@@ -19,38 +18,33 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
+    path: '/About',
     name: 'About',
     component: About
   },
   {
-    path: '/clients',
-    name: 'Clients',
-    component: Clients
-  },
-  {
-    path: '/contact',
+    path: '/Contact',
     name: 'Contact',
     component: Contact
   },
   {
-    path: '/join_us',
+    path: '/Joinus',
     name: 'Joinus',
     component: Join
   },
   {
-    path: '/consultation',
-    name: 'consultation',
+    path: '/Consultation',
+    name: 'Consultation',
     component: consultation,
   },
   {
-    path: '/staffing',
-    name: 'staffing',
+    path: '/Staffing',
+    name: 'Staffing',
     component: staffing,
   },
   {
-    path: '/home_service',
-    name: 'homeservice',
+    path: '/Homeservice',
+    name: 'Homeservice',
     component: homeservice,
   },
 ]

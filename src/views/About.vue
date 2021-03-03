@@ -105,6 +105,10 @@
         </div>
       </div>
     </div>
+    <div class="staffing">
+      <staffing_cat/>
+    </div>
+
     <div class="review">
       <Review/>
     </div>
@@ -113,12 +117,11 @@
 <script>
 
 import Review from '@/components/reviews_comp'
-
-
+import staffing_cat from '@/components/staffing_areas'
 export default {
   name: 'About',
   components: {
-
+    staffing_cat,
     Review,
   },
   data: function () {
@@ -361,7 +364,7 @@ export default {
   }
 
   .more_info {
-    margin: 10vh auto 10vh;
+    margin: 10vh auto 0;
     padding: 80px;
     background: $textColor;
     display: grid;

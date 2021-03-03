@@ -11,7 +11,9 @@
         expedita mollitia pariatur quaerat rem tempore veniam? Dignissimos et id labore maiores non odio odit sint unde?
       </p>
       <div class="hiring_btn">
-        <Button type="button" class="btn1">Call Now</Button>
+        <Button type="button" class="btn1">
+          <a href="tel:6479092011">Call Us</a>
+        </Button>
 
         <Button type="button" class="btn2">
           <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>

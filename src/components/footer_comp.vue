@@ -14,13 +14,13 @@
       <div class="book_us">
         <img src="../assets/Images/book.svg" alt="calendar">
         <p>
-          <router-link :to="{name: 'Contact'}" class="router-link" exact  v-scroll-to="'#book'">Book An Appointment</router-link>
+          <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book An Appointment</router-link>
         </p>
       </div>
       <div class="join_uS">
         <img src="../assets/Images/resume.svg" alt="">
         <p>
-          <router-link :to="{name: 'joinus'}" class="router-link" exact  v-scroll-to="'#book'">Join Us</router-link>
+          <router-link :to="{name: 'Joinus'}" class="router-link" exact  v-scroll-to="'#book'">Join Us</router-link>
 
         </p>
 
@@ -45,10 +45,6 @@
               </li>
               <li>
                 <router-link :to="{name: 'Services'}" class="router-link" exact>Services</router-link>
-
-              </li>
-              <li>
-                <router-link :to="{name: 'Clients'}" class="router-link" exact>Clients</router-link>
               </li>
               <li>
                 <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
@@ -71,7 +67,6 @@
               </li>
               <li>
                 <router-link :to="{name: 'Services'}" class="router-link" exact>Services</router-link>
-
               </li>
               <li>
                 <router-link :to="{name: 'Clients'}" class="router-link" exact>Clients</router-link>

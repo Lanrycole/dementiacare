@@ -1,11 +1,12 @@
 <template>
-  <div id="container">
+  <div id="container" >
     <div class="hiring" v-if="scrollPosition<300">
       <p><img src="https://img.icons8.com/ios-filled/22/ffffff/ringing-phone.png" alt="phone"/> 1234567890</p>
       <p><img src="https://img.icons8.com/ios-filled/22/ffffff/map-pin.png" alt="map-pin"/> London, ON </p>
       <p><img src="https://img.icons8.com/ios-filled/22/ffffff/apple-mail.png" alt="mail"/> info@dementiacare.com</p>
       <p id="hire_p">
-        We are Hiring
+        <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#book'"> We are Hiring</router-link>
+
       </p>
 
     </div>
@@ -13,7 +14,8 @@
     <div id="desktop_nav" :class="{db: scrollPosition>250}">
 
       <div class="nav_logo">
-        <img src="../../assets/Images/logos.svg" alt="logo" width="190px">
+        <router-link :to="{name: 'Home'}" class="router-link" exact v-scroll-to="'#container'">
+          <img src="../../assets/Images/logos.svg" alt="logo" width="190px"></router-link>
       </div>
 
       <div class="nav_items">
@@ -33,22 +35,22 @@
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="100"
                     data-aos-duration="100">
-                  <router-link :to="{name: 'consultation'}" class="router-link dropdown">
-                    Dimentia Consultation
+                  <router-link :to="{name: 'Consultation'}" class="router-link dropdown">
+                    Dementia Consultation
                   </router-link>
                 </li>
                 <li data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="200"
                     data-aos-duration="200">
-                  <router-link :to="{name: 'staffing'}" class="router-link dropdown" exact>Staffing
+                  <router-link :to="{name: 'Staffing'}" class="router-link dropdown" exact>Staffing
                   </router-link>
                 </li>
                 <li data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="300"
                     data-aos-duration="300">
-                  <router-link :to="{name: 'homeservice'}" class="router-link dropdown" exact>Home Care
+                  <router-link :to="{name: 'Homeservice'}" class="router-link dropdown" exact>Home Care
                     Services
                   </router-link>
 

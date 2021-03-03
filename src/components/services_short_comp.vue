@@ -14,7 +14,7 @@
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
             </Button>
           </div>
@@ -33,7 +33,7 @@
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'staffing'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'Staffing'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
 
             </Button>
@@ -54,7 +54,7 @@
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'homeservice'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'Homeservice'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
 
             </Button>
@@ -136,7 +136,7 @@ export default {
         }
 
         .services_btn {
-          text-align: end;
+          text-align: center;
 
           .btn1 {
             @include homeButton;
@@ -148,7 +148,7 @@ export default {
             transition: 0.5s;
             position: relative;
             text-align: center;
-            border-bottom-right-radius: 25px;
+
             text-decoration: none !important;
             a{
               color: $headerColor;
@@ -157,7 +157,7 @@ export default {
             &:hover {
               background: $secondaryColor;
               color: $headerColor;
-              border-bottom-right-radius: 25px;
+
 
               img {
                 display: block;
@@ -167,7 +167,7 @@ export default {
             }
 
             &:before {
-              border-bottom-right-radius: 25px;
+
             }
 
           }

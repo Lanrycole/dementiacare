@@ -2,7 +2,8 @@
   <div id="mobile_container">
     <div id="mobile_nav">
       <div class="nav_logo">
-        <img src="../../assets/Images/logos.svg" alt="logo" width="190px">
+        <router-link :to="{name: 'Home'}" class="router-link" exact>
+          <img src="../../assets/Images/logos.svg" alt="logo" width="190px"></router-link>
       </div>
 
       <div class="menu_icon">
@@ -26,7 +27,7 @@
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="100"
                   data-aos-duration="100" @click="toggleMenu">
-                <router-link :to="{name: 'consultation'}" class="router-link dropdown" exact>
+                <router-link :to="{name: 'Consultation'}" class="router-link dropdown" exact>
                  Consultation
                 </router-link>
               </li>
@@ -34,14 +35,14 @@
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="200"
                   data-aos-duration="200" @click="toggleMenu">
-                <router-link :to="{name: 'staffing'}" class="router-link dropdown" exact >Staffing
+                <router-link :to="{name: 'Staffing'}" class="router-link dropdown" exact >Staffing
                 </router-link>
               </li>
               <li data-aos="fade-left"
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="300"
                   data-aos-duration="300" @click="toggleMenu">
-                <router-link :to="{name: 'homeservice'}" class="router-link dropdown" exact >Home
+                <router-link :to="{name: 'Homeservice'}" class="router-link dropdown" exact >Home
                   Services
                 </router-link>
 
@@ -176,7 +177,7 @@ export default {
         text-decoration: none;
 
         li {
-          padding: 5px;
+          padding: 20px;
           list-style: none;
           text-decoration: none;
 

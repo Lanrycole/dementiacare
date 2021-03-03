@@ -32,7 +32,26 @@ export default {
     desktopNav,
     Footer,
 
-  }
+  },
+  metaInfo() {
+    return {
+      title: "Diversified Dementia Care",
+      titleTemplate: '%s | Health Staffing and Consultancy Agency in London, Ontario',
+      meta: [
+        {charset: 'utf-8'},
+        {name: 'description', content: 'gator'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+        {
+          vmid: "description",
+          name: "description",
+          content:
+              "Diversified Dementia Care is a Health Consultancy and staffing Agency in London Ontario. " +
+              "We recruit health and medical Professionals to provide health services to Adults with Dementia"
+        }
+      ]
+
+    };
+  },
 
 }
 </script>

@@ -127,15 +127,20 @@
 
             <br>
             <br>
-            <Button type="button" class="btn1">Send Application</Button>
+            <Button type="button" class="btn1">Send Message</Button>
           </form>
         </div>
 
       </div>
-      <div class="book_us" id="book">
-        <iframe src="https://oreyomi.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeoreyomi"
-                style="width:100%;height:1000px;border:0px;background-color:transparent;" frameborder="0"
-                allowtransparency="true"></iframe>
+      <div class="book_us" >
+        <!--        You Can book me
+             <iframe src="https://oreyomi.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeoreyomi"
+                   style="width:100%;height:1000px;border:0px;" title="calendar"></iframe>-->
+<!--        Sprintful-->
+        <div  id="book" class="sprintful-inline-widget" data-url="https://on.sprintful.com/diversified-dementia-care" style="min-width:320px;height:630px;background-color:#dfe4ea;"></div>
+
+        <!-- ScheduleOnce embed START
+         <div id="SOIDIV_SalesTeamPage-KZ03JSMHUP" data-so-page="SalesTeamPage-KZ03JSMHUP" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="00"></div>-->
 
       </div>
     </div>
@@ -160,7 +165,14 @@ export default {
       title: "Contact"
 
     }
-  }
+  },
+  mounted() {
+    const script = document.createElement('script');
+     script.src = 'https://sprintful.com/widget/v1.js' //sprintful
+    // script.src = 'https://cdn.oncehub.com/mergedjs/so.js' //schedule once
+    script.addEventListener('load', this.setLoaded);
+    document.body.appendChild(script);
+  },
 
 }
 
@@ -301,6 +313,8 @@ export default {
               border: none;
               outline: none;
               box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+              font-size: 18px;
+              padding: 10px 10px 10px 10px;
 
               &:hover {
                 box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
@@ -379,32 +393,6 @@ export default {
         .form_section {
           padding: 0;
           margin: 0 auto;
-
-          //form {
-          //  background: white;
-          //  margin: 5vh auto;
-          //
-          //  input[type="text"], textarea {
-          //    transform: scale(0.8);
-          //    position: relative;
-          //    width: 100%;
-          //
-          //  }
-          //
-          //  textarea {
-          //    width: 100%;
-          //  }
-          //
-          //  .btn1 {
-          //    @include homeButton;
-          //    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-          //  }
-          //
-          //  .btn1 {
-          //    text-align: center;
-          //
-          //  }
-          //}
           form {
             margin: 2vh auto;
             text-align: center;
@@ -444,12 +432,6 @@ export default {
     .hiring {
       p {
         width: 53%;
-
-        &:hover {
-          width: 54%;
-          text-align: start;
-
-        }
       }
     }
   }
@@ -513,13 +495,8 @@ export default {
 
     .hiring {
       p {
-        width: 20%;
+        //width: 20%;
 
-        &:hover {
-          width: 22%;
-          text-align: start;
-
-        }
       }
     }
   }

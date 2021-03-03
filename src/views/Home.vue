@@ -18,7 +18,8 @@
                   </router-link>
                 </Button>
                 <Button type="button" class="btn2">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+
                   </router-link>
 
                 </Button>
@@ -39,8 +40,16 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
               <div class="landing_text_button">
-                <Button type="button" class="btn1">Contact</Button>
-                <Button type="button" class="btn2">Book Now</Button>
+                <Button type="button" class="btn1">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  </router-link>
+                </Button>
+                <Button type="button" class="btn2">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+
+                  </router-link>
+
+                </Button>
               </div>
 
             </div>
@@ -58,8 +67,16 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
               <div class="landing_text_button">
-                <Button type="button" class="btn1">Contact</Button>
-                <Button type="button" class="btn2">Book Now</Button>
+                <Button type="button" class="btn1">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  </router-link>
+                </Button>
+                <Button type="button" class="btn2">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+
+                  </router-link>
+
+                </Button>
               </div>
 
             </div>
@@ -83,34 +100,7 @@
       <hiring/>
     </div>
     <div class="staffing">
-      <h2>Staffing Areas</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
-      </p>
-      <div class="staffing_info">
-        <div class="staffing_details">
-          <img src="../assets/Images/doctors.svg" alt="">
-          <p>Health Practitioner</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/nurses.svg" alt="">
-          <p>Registered Nurse</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/nurse_prac.svg" alt="">
-          <p>Nurse Practitioner</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/health_worker.svg" alt="">
-          <p>PSW</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/home_care.svg" alt="">
-          <p>Home Care </p>
-        </div>
-
-      </div>
-
+      <staffing_cat/>
     </div>
 
     <div class="review">
@@ -130,6 +120,7 @@
 import Services from '@/components/services_short_comp'
 import welcomeCard from '@/components/our_history_comp'
 import Hiring from '@/components/hiring_comp'
+import staffing_cat from '@/components/staffing_areas'
 
 import Review from '@/components/reviews_comp'
 import HealthResources from '@/components/healthresources_comp'
@@ -147,7 +138,7 @@ export default {
     Services,
     welcomeCard,
     Hiring,
-
+    staffing_cat,
     Review,
     HealthResources,
     VueSlickCarousel
@@ -286,41 +277,7 @@ export default {
     }
   }
 
-  .staffing {
-    padding: 40px;
-    text-align: center;
 
-    h2 {
-      text-align: center;
-      font-size: 50px;
-      padding: 40px;
-      opacity: 0.9;
-      color: $headerColor;
-    }
-
-    .staffing_info {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      padding: 40px;
-    }
-
-    .staffing_details {
-      margin: 0 auto;
-
-      img {
-        width: 200px;
-
-        &:hover {
-
-          cursor: pointer;
-        }
-      }
-
-      p {
-        text-align: center;
-      }
-    }
-  }
 }
 
 @media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -440,6 +397,7 @@ export default {
 
           .landing_text_button {
             width: 100%;
+
             .btn1, .btn2 {
               width: 40%;
               margin: 10px auto 0 20px;
@@ -470,6 +428,7 @@ export default {
             width: 90% !important;
             margin: 0 auto;
             text-align: center;
+
             h1 {
               font-size: 35px;
             }
@@ -518,29 +477,7 @@ export default {
       }
     }
 
-    .staffing {
-      padding: 10px;
 
-      h2 {
-        text-align: center;
-        font-size: 30px;
-        padding: 10px;
-      }
-
-      .staffing_info {
-        grid-template-columns: 1fr 1fr;
-        padding: 10px;
-
-      }
-
-      .staffing_details {
-        margin: 0 auto;
-
-        img {
-          width: 60px;
-        }
-      }
-    }
   }
 }
 
@@ -608,29 +545,7 @@ export default {
       }
     }
 
-    .staffing {
-      padding: 10px;
 
-      h2 {
-        text-align: center;
-        font-size: 30px;
-        padding: 10px;
-      }
-
-      .staffing_info {
-        grid-template-columns: 1fr 1fr;
-        padding: 10px;
-
-      }
-
-      .staffing_details {
-        margin: 0 auto;
-
-        img {
-          width: 60px;
-        }
-      }
-    }
   }
 }
 </style>
