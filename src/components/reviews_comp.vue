@@ -163,7 +163,7 @@ export default {
 
 
     /* Create the parallax scrolling effect */
-    background: url("../assets/Images/review_bg1.jpg") no-repeat fixed center;
+    background: url("../assets/Images/reviews.jpg") no-repeat fixed center;
     background-size: cover;
 
     .review_info {
@@ -189,7 +189,7 @@ export default {
         line-height: 30px;
         border-left: 4px solid $highlight;
         background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
         color: $textColor;
 
         .review_stars {
@@ -254,7 +254,7 @@ export default {
   }
 }
 
-@media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .reviews {
       padding: 10px;

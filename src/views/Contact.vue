@@ -83,11 +83,15 @@
                 <li>
                   <a href="https://www.instagram.com/diversified.dementia/" target="_blank"><img
                       src="https://img.icons8.com/fluent/28/ffffff/instagram-new.png" alt="instagram"/></a>
-
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/"><img
+                  <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/" target="_blank"> <img
                       src="https://img.icons8.com/fluent/28/ffffff/facebook-new.png" alt="facebook"/>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/diversified-dementia-care-service/" target="_blank"><img
+                      src="https://img.icons8.com/fluent/28/000000/linkedin.png" alt="linkedin"/>
                   </a>
                 </li>
 
@@ -96,51 +100,21 @@
           </div>
         </div>
         <div class="form_section">
-          <form>
-            <div class="input_fields">
-              <div class="firstname"><label for="fname">First Name</label><br><input type="text" id="fname"
-                                                                                     name="fname">
-              </div>
-              <div class="lastName"><label for="lname">Last Name</label><br><input type="text" id="lname" name="lname"
-                                                                                   value=""></div>
-              <div class="phone"><label for="num">Phone Number</label><br><input type="text" id="num" name="phone">
-              </div>
-              <div class="email"><label for="email">Email</label><br><input type="text" id="email" name="email"></div>
-              <div class="email"><label for="address">Address</label><br><input type="text" id="address" name="address">
-              </div>
-              <div class="city"><label for="city">City</label><br><input type="text" id="city" name="city"></div>
-              <div class="city"><label for="zip_code">Zip Code</label><br><input type="text" id="zip_code"
-                                                                                 name="zipcode"></div>
+          <iframe src="https://www.cognitoforms.com/f/XgneZ0-g00OXljwZXvzjrA?id=1"
+                  style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes"
+                  seamless="seamless" height="755" width="100%"></iframe>
 
-              <div class="availability"><label for="province">Province</label><br><input type="text"
-                                                                                         id="Province"
-                                                                                         name="availability"></div>
-
-
-            </div>
-            <br>
-
-            <div class="message">
-              <label for="message">Additional information </label><br><textarea name="text" id="message" cols="100"
-                                                                                rows="10"></textarea>
-            </div>
-
-            <br>
-            <br>
-            <Button type="button" class="btn1">Send Message</Button>
-          </form>
         </div>
 
-      </div>
-      <div class="book_us" >
-        <!--        You Can book me
-             <iframe src="https://oreyomi.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeoreyomi"
-                   style="width:100%;height:1000px;border:0px;" title="calendar"></iframe>-->
-<!--        Sprintful-->
-        <div  id="book" class="sprintful-inline-widget" data-url="https://on.sprintful.com/diversified-dementia-care" style="min-width:320px;height:630px;background-color:#dfe4ea;"></div>
 
-        <!-- ScheduleOnce embed START
-         <div id="SOIDIV_SalesTeamPage-KZ03JSMHUP" data-so-page="SalesTeamPage-KZ03JSMHUP" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="00"></div>-->
+      </div>
+      <div class="book_us">
+        <h2>Booking</h2>
+        <iframe src="https://dementiadementia-developer.youcanbook.me/?noframe=true&skipHeaderFooter=true"
+                id="ycbmiframedementiadementia-developer"
+                style="width:100%;height:1000px;border:0px;background-color:transparent;" frameborder="0"
+                allowtransparency="true"></iframe>
+
 
       </div>
     </div>
@@ -150,6 +124,8 @@
         <router-link :to="{name: 'Joinus'}" class="join_us" exact>We are hiring</router-link>
       </p>
     </div>
+
+
   </div>
 
 </template>
@@ -168,7 +144,7 @@ export default {
   },
   mounted() {
     const script = document.createElement('script');
-     script.src = 'https://sprintful.com/widget/v1.js' //sprintful
+    script.src = 'https://sprintful.com/widget/v1.js' //sprintful
     // script.src = 'https://cdn.oncehub.com/mergedjs/so.js' //schedule once
     script.addEventListener('load', this.setLoaded);
     document.body.appendChild(script);
@@ -217,7 +193,6 @@ export default {
     margin: 0 auto !important;
     padding: 10px;
     outline: none !important;
-    background-image: url("../assets/Images/phone.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -225,105 +200,19 @@ export default {
     position: relative;
 
     #sec {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      background: white;
-      width: 95%;
-      margin: 15vh auto;
+      width: 80%;
+      margin: 25vh auto;
       border-radius: 2rem;
       box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
 
       .form_section {
-        margin: 0 auto;
+        padding: 40px;
         text-align: center !important;
         border-radius: 2rem;
         grid-column-start: 2;
         grid-column-end: 4;
-
-        form {
-          margin: 5vh auto;
-
-          padding: 2px;
-
-          .input_fields {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin: 0 auto;
-            text-align: center !important;
-
-            div {
-              text-align: start !important;
-
-              label {
-                text-align: start;
-                font-weight: bolder;
-                opacity: 0.6;
-              }
-            }
-
-
-            input[type="text"] {
-              //transform: scale(0.8);
-              position: relative;
-              padding: 10px 10px 10px 10px;
-              width: 90%;
-              font-weight: 100;
-              letter-spacing: 2px;
-              transition: width 0.8s ease;
-              outline: none;
-              background: none;
-              //border: 1px solid #586070;
-              border: none;
-              font-size: 18px;
-              display: inline-block;
-              margin-top: 10px;
-              margin-bottom: 10px;
-              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-              &:hover {
-                box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-                border: none;
-              }
-            }
-
-          }
-
-          .btn1 {
-            text-align: center;
-            @include homeButton;
-            border: 1px solid $textColor;
-            margin: 10px auto;
-            width: 200px;
-            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-          }
-
-          .message {
-            margin: 0 auto;
-            text-align: start;
-
-            label {
-              text-align: start;
-              font-weight: bolder;
-              opacity: 0.6;
-            }
-
-            textarea {
-              width: 95%;
-              resize: none;
-              border: none;
-              outline: none;
-              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-              font-size: 18px;
-              padding: 10px 10px 10px 10px;
-
-              &:hover {
-                box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-                border: none;
-              }
-
-            }
-          }
-        }
       }
 
       .contact_details {
@@ -364,6 +253,13 @@ export default {
         }
       }
     }
+    .book_us{
+      h2{
+        text-align: center;
+        margin: 30px;
+        font-size:40px;
+      }
+    }
   }
 }
 
@@ -382,7 +278,7 @@ export default {
         display: unset;
         width: 100%;
         background: white;
-
+        margin: 8vh auto 5vh;
         .contact_details {
           border-radius: 0px;
           margin: 0 auto;
@@ -392,37 +288,7 @@ export default {
 
         .form_section {
           padding: 0;
-          margin: 0 auto;
-          form {
-            margin: 2vh auto;
-            text-align: center;
-            padding: 10px;
-            background: $textColor;
 
-            .input_fields {
-              display: grid;
-              grid-template-columns: 1fr;
-
-              input[type="text"] {
-                padding: 10px 10px 10px 10px;
-                width: 100%;
-              }
-
-              input[type="file"] {
-                padding: 10px 10px 10px 10px;
-                width: 100%;
-              }
-
-              input[type="date"] {
-                padding: 10px 10px 10px 10px;
-                width: 100%;
-              }
-            }
-
-            textarea {
-              width: 100% !important;
-            }
-          }
         }
       }
 
@@ -439,54 +305,31 @@ export default {
 
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
+
+    .landing {
+      display: none;
+    }
+
     .contact {
       padding: 0;
-      background: none;
 
       #sec {
-        border-radius: 0;
+        display: unset;
         width: 100%;
+        background: white;
 
         .contact_details {
           border-radius: 0px;
-          margin: 0 auto;
-          width: 100%;
+          margin: 5vh auto;
+          width: 98%;
           padding: 12px;
+
         }
 
         .form_section {
-          padding: 0;
-          margin: 0 auto;
-          border-radius: 0;
+          width: 90%;
+          padding: 20px;
 
-          form {
-            margin: 2vh auto;
-            text-align: center;
-            padding: 30px;
-
-            .input_fields {
-              display: grid;
-
-              input[type="text"] {
-                padding: 10px 10px 10px 10px;
-                width: 90%;
-              }
-
-              input[type="file"] {
-                padding: 10px 10px 10px 10px;
-                width: 100%;
-              }
-
-              input[type="date"] {
-                padding: 10px 10px 10px 10px;
-                width: 100%;
-              }
-            }
-
-            textarea {
-              width: 100%;
-            }
-          }
         }
       }
 
@@ -495,8 +338,7 @@ export default {
 
     .hiring {
       p {
-        //width: 20%;
-
+        width: 53%;
       }
     }
   }

@@ -5,10 +5,13 @@
     </div>
     <div class="hiring_text">
 
-      <h2>We are hiring</h2>
+      <h2>Join Us</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem consequatur distinctio doloremque
-        expedita mollitia pariatur quaerat rem tempore veniam? Dignissimos et id labore maiores non odio odit sint unde?
+        Are you a Registered Nurse, Personal Support Worker, Registered Practical Nurse or a Nursing aide in Canada?
+        Are you interested in getting health related job offers that are suitable for you?
+        We are constantly recruiting to fill various patient-care assignments all over Canada.
+        Get in touch with us at
+
       </p>
       <div class="hiring_btn">
         <Button type="button" class="btn1">
@@ -16,8 +19,7 @@
         </Button>
 
         <Button type="button" class="btn2">
-          <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>
-
+          <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#joinus'">Join Us</router-link>
         </Button>
       </div>
     </div>
@@ -75,6 +77,7 @@ export default {
 
     .hiring_btn {
       margin: 50px auto;
+
       .btn1 {
         @include homeButton;
         background: none;
@@ -90,22 +93,10 @@ export default {
           color: $headerColor;
         }
 
-        img {
-          top: 10px;
-          right: 10px;
-          position: absolute;
-          display: none;
-        }
-
         &:hover {
 
           background: $secondaryColor;
           color: $headerColor;
-
-          img {
-            display: block;
-
-          }
 
         }
 
@@ -114,6 +105,7 @@ export default {
         }
 
       }
+
       .btn2 {
         @include homeButton;
         background: none;
@@ -121,38 +113,38 @@ export default {
         box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
         border: 2px solid $secondaryColor;
         margin: 20px;
+
         a {
           color: $headerColor;
         }
 
-        img {
-          top: 10px;
-          right: 10px;
-          position: absolute;
-          display: none;
-        }
-
-        &:hover {
-          img {
-            display: block;
-          }
-        }
       }
     }
   }
 
   .hiring_img {
     img {
-      max-width: 100%;
+      width: 850px;
+      height: 100%;
+
     }
   }
 }
 
-@media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
 
   .hiring {
     padding: 10px;
     grid-template-columns: 1fr;
+
+    .hiring_img {
+
+      img {
+     max-width: 100%;
+
+      }
+    }
 
     .hiring_text {
       margin-top: 1vh;
@@ -185,6 +177,14 @@ export default {
   .hiring {
     padding: 10px;
     grid-template-columns: 1fr;
+
+    .hiring_img {
+
+      img {
+        max-width: 100%;
+
+      }
+    }
 
     .hiring_text {
       margin-top: 1vh;

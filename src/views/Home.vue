@@ -8,7 +8,7 @@
               <p class="msg">
                 Lorem Ipsum
               </p>
-              <h1>Dementia Adult Care</h1>
+              <h1>Diversified Dementia Care</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
@@ -35,7 +35,7 @@
               <p class="msg">
                 Lorem Ipsum
               </p>
-              <h1>Home Service</h1>
+              <h1>Home Care Services</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
@@ -62,7 +62,7 @@
               <p class="msg">
                 Lorem Ipsum
               </p>
-              <h1>Staffing</h1>
+              <h1>Staffing & Recruitment</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
               </p>
@@ -85,14 +85,13 @@
             </div>
           </div>
         </VueSlickCarousel>
-
       </div>
     </div>
 
     <div class="our_services">
       <Services/>
     </div>
-
+    <dropdown :dropdown_header="dropdown_title" :dropdown_text="dropdown_text" :icon="icon"/>
     <div class="welcome_card">
       <welcome-card/>
     </div>
@@ -106,24 +105,24 @@
     <div class="review">
       <review/>
     </div>
+    <div class="partners">
+      <img src="../assets/Images/insignaLogo.jpg" alt="">
 
+    </div>
     <div class="health">
       <HealthResources/>
     </div>
-
   </div>
 </template>
-
-
 <script>
 
 import Services from '@/components/services_short_comp'
 import welcomeCard from '@/components/our_history_comp'
 import Hiring from '@/components/hiring_comp'
 import staffing_cat from '@/components/staffing_areas'
-
 import Review from '@/components/reviews_comp'
 import HealthResources from '@/components/healthresources_comp'
+import dropdown from '@/components/dropdown'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
@@ -141,7 +140,8 @@ export default {
     staffing_cat,
     Review,
     HealthResources,
-    VueSlickCarousel
+    VueSlickCarousel,
+    dropdown
   },
   data() {
     return {
@@ -157,8 +157,19 @@ export default {
         "slidesToScroll": 1
 
       },
+      dropdown_title: 'Read Our COVID Statement. ',
+      dropdown_text: '<strong>DDC is taking a proactive and cautious approach to COVID-19 (coronavirus) as some of our clients and careers may be in the high-risk category for the virus. Our priority is to protect our community including staff, clients and their families, advocates, students, partners and our visitors.</strong>' +
+          '<br> <br>' +
+          'We are monitoring the situation daily and adhering to the guidelines and precautions set by the Ministry of health, local and public health units. We are ensuring our protocols are best practice and offering alternatives services to our clients, carers, students and partners.' +
+          '<br><br>' +
+          'This has an impact on the availability of some services and change of delivery of Our home care services. We are looking at additional ways we can continue to support our clients and adapt to the changing environment that coronavirus has created.\n' +
+          'During this time of uncertainty, our goal is to continue to support our community. Our services continue to ensure careers have a break and our clients have the opportunity to receive therapy, clinical support and socialization.\n' +
+          '<br><br>' +
+          'We are here to support you and help you in any way we can. Please contact us on 1(833) 564-6332 if you need any assistance and we will do our best to help you and/or provide you with the right resources.',
+        icon: 'https://img.icons8.com/fluent-systems-regular/30/000000/high-importance.png'
     }
   },
+
 }
 </script>
 
@@ -256,6 +267,15 @@ export default {
 
     }
 
+  }
+
+  .partners {
+    text-align: center;
+    padding: 40px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .our_services {
@@ -480,7 +500,77 @@ export default {
 
   }
 }
+@media  (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  #home {
 
+    margin-top: 0;
+
+    .welcome {
+      .landing {
+        margin-top: 10vh !important;
+
+        .landing_info {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "a a a"
+          "a a a";
+
+          .landing_text {
+            width: 90% !important;
+            margin: 0 auto;
+            text-align: center;
+
+            h1 {
+              font-size: 35px;
+            }
+
+            .msg {
+              margin-top: 2vh;
+              font-size: 16px;
+            }
+
+
+            .landing_text_button {
+
+              margin: 2vh auto;
+              text-align: center !important;
+              width: 100% !important;
+              justify-content: space-around;
+
+              .btn1 {
+                @include homeButton;
+                margin: 5px auto;
+                width: 100%;
+                background: $highlight;
+
+              }
+
+              .btn2 {
+                @include homeButton;
+                width: 100%;
+                margin: 5px auto;
+
+                &:hover {
+                  color: $headerColor;
+                }
+              }
+            }
+          }
+
+          .landing_img {
+            grid-area: a;
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
     margin-top: 0;

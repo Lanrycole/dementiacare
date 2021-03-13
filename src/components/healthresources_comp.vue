@@ -7,8 +7,9 @@
         <img src="../assets/Images/slide-1.jpg" alt="">
       </div>
       <div class="health_text">
-        <h2>Dimensia in Adult</h2>
-        <p>Health advice for Adult goes here. It will be an external link to other medical resources.</p>
+        <a href="https://www.caregiver.org/resource/caregivers-guide-understanding-dementia-behaviors"
+           target="_blank"><h2>Understanding Dementia</h2></a>
+        <p>Read More about Dementia</p>
       </div>
     </div>
     <div class="health_info" data-aos="fade-right"
@@ -18,8 +19,10 @@
         <img src="../assets/Images/slide-3.jpg" alt="">
       </div>
       <div class="health_text">
-        <h2>Dimensia Treatment</h2>
-        <p>Health advice for Adult goes here. It will be an external link to other medical resources.</p>
+        <a href="https://www.webmd.com/palliative-care/caring-for-a-person-with-dementia"
+           target="_blank"><h2>Caring for Dementia</h2></a>
+        <p>Caring for people with Dementia.</p>
+
       </div>
     </div>
     <div class="health_info" data-aos="fade-right"
@@ -29,8 +32,9 @@
         <img src="../assets/Images/slide-4.jpg" alt="">
       </div>
       <div class="health_text">
-        <h2>Getting help with Demensia .</h2>
-        <p>Health advice for Adult goes here. It will be an external link to other medical resources.</p>
+        <a href="https://www.canada.ca/en/public-health/services/diseases/dementia.html"
+           target="_blank"><h2>Dementia in Canada</h2></a>
+        <p>Read More about Dementia in Canada for Help and Support</p>
       </div>
     </div>
 
@@ -58,12 +62,14 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   padding: 80px 80px;
+
   .health_info {
     width: 90%;
     margin: 0 auto;
-    background:white ;
+    background: white;
     border-radius: 2rem;
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+
     .health_img {
       img {
         max-width: 100%;
@@ -83,7 +89,8 @@ export default {
         font-weight: normal;
         font-size: 16px;
         line-height: 32px;
-        margin-top:20px;
+        margin-top: 20px;
+
         &::selection {
           background: $secondaryColor;
         }
@@ -92,42 +99,47 @@ export default {
     }
 
     &:hover {
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-       cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      cursor: pointer;
     }
   }
 
 }
 
 @media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
-  .health_resources{
+  .health_resources {
     grid-template-columns: 1fr;
     grid-gap: 5px;
     padding: 10px;
+
     .health_info {
       width: 90%;
-      margin-top:2vh;
+      margin-top: 2vh;
     }
   }
 }
-@media (max-width: 731px) and (-webkit-min-device-pixel-ratio: 2) {
-  .health_resources{
-    margin-top:8vh;
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  .health_resources {
+    margin-top: 8vh;
     grid-template-columns: 1fr;
     grid-gap: 5px;
+padding:20px;
     .health_info {
-      width: 90%;
+      width: 100%;
 
     }
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .health_resources{
-    margin-top:8vh;
-    padding:10px;
-    grid-template-columns: 1fr ;
+  .health_resources {
+    margin-top: 8vh;
+    padding: 10px;
+    grid-template-columns: 1fr;
     grid-gap: 5px;
+
     .health_info {
       width: 100%;
 

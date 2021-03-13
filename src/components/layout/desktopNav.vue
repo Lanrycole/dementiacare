@@ -1,9 +1,10 @@
 <template>
-  <div id="container" >
+  <div id="container">
     <div class="hiring" v-if="scrollPosition<300">
-      <p><img src="https://img.icons8.com/ios-filled/22/ffffff/ringing-phone.png" alt="phone"/> 1234567890</p>
-      <p><img src="https://img.icons8.com/ios-filled/22/ffffff/map-pin.png" alt="map-pin"/> London, ON </p>
-      <p><img src="https://img.icons8.com/ios-filled/22/ffffff/apple-mail.png" alt="mail"/> info@dementiacare.com</p>
+      <p><img src="https://img.icons8.com/ios/22/ffffff/apple-phone.png" alt="phone"/>1234567890</p>
+      <p><img src="https://img.icons8.com/windows/22/ffffff/place-marker.png" alt="location"/> London, ON </p>
+      <p><img src="https://img.icons8.com/material-sharp/22/ffffff/filled-sent.png" alt="email"/>info@dementiacare.com
+      </p>
       <p id="hire_p">
         <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#book'"> We are Hiring</router-link>
 
@@ -184,7 +185,8 @@ export default {
       width: 30%;
 
       text-align: start;
-      img{
+
+      img {
         display: block;
       }
     }
@@ -261,11 +263,15 @@ export default {
             text-align: center;
             background-color: rgb(0, 0, 0); /* Fallback color */
             background-color: rgba(0, 0, 0, 0.9);
-            width: 30%;
+            width: 40%;
             display: none !important;
 
             ul {
               text-align: start;
+
+              li {
+                display: block;
+              }
 
               .router-link {
                 text-align: start;
@@ -293,9 +299,11 @@ export default {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media (max-width: 1117px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     #desktop_nav {
+
       .nav_logo {
         width: 10%;
         text-align: start;
@@ -305,13 +313,22 @@ export default {
         text-align: center;
         width: 80%;
         position: relative;
-ul{
-  li{
-    padding:2px;
 
-  }
+        ul {
+          li {
+            padding: 2px;
 
-}
+          }
+
+          #ser {
+            #dropdown {
+
+              width: 50%;
+
+            }
+
+          }
+        }
       }
     }
   }

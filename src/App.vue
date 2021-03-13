@@ -10,7 +10,7 @@
 
     </div>
     <router-view/>
-
+<!--Todo: Add SEO-->
 
 
     <div class="footer">
@@ -36,7 +36,7 @@ export default {
   metaInfo() {
     return {
       title: "Diversified Dementia Care",
-      titleTemplate: '%s | Health Staffing and Consultancy Agency in London, Ontario',
+      titleTemplate: '%s | Nursing Staffing, Home Care Services, Dementia Consultation, Staffing Agency in Ontario',
       meta: [
         {charset: 'utf-8'},
         {name: 'description', content: 'gator'},
@@ -45,8 +45,9 @@ export default {
           vmid: "description",
           name: "description",
           content:
-              "Diversified Dementia Care is a Health Consultancy and staffing Agency in London Ontario. " +
-              "We recruit health and medical Professionals to provide health services to Adults with Dementia"
+              "Diversified Dementia Care is a Health and staffing Agency in Ontario. " +
+              "We recruit health and medical Professionals to provide health services to long-term care homes, " +
+              "hospitals, organization and individuals"
         }
       ]
 
@@ -79,7 +80,7 @@ export default {
 
 }
 
-@media (max-width: 599px) {
+@media (max-width: 742px) {
   #app {
     #nav {
       .mobile_nav {

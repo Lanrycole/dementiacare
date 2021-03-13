@@ -1,23 +1,56 @@
 <template>
 
   <div id="container">
+    <div class="about">
+      <div class="about_text">
+        <h1>Dementia consultation</h1>
+        <p>
+          DDC provides a consultation service that includes dementia information, advice and support services to
+          individuals and families of people living with dementia and younger onset dementia to improve their quality of
+          life. DDC also provides consultation and advisory services to service providers and actively contributes to
+          developing a service sector that is responsive to and can meet the needs of people living with dementia and
+          younger onset dementia. <br>
+          We provide proactive follow-up after diagnosis with information and support by carrying out needs assessment,
+          goal setting and developing a person-centered care plan that focuses on supporting individuals living with
+          dementia.
+        </p>
 
-    <div class="team_member ">
+        <p>
+          Dementia care training, education, and programming should not be one-size-fits-all. We work with individuals
+          and companies to assess their individual needs and provide truly person-centered and company-centered
+          services. We are a growing company that aims to provide exceptional, evidence-based dementia care to
+          individuals with dementia. <br> We are always looking for new ways to collaborate with
+          a variety of professionals across Canada.
+          <br>
+          Currently, we are welcoming community partnership opportunities from assisted living and dementia communities
+          who provide exceptional care to residents with dementia.
+        </p>
+
+      </div>
+    </div>
+    <div class="team_member " data-aos="zoom-in">
       <div class="team_member_info">
         <div class="team_member_img">
-          <img src="../assets/Images/ceo.jpg" alt="">
+          <img src="../assets/Images/team.jpeg" alt="">
         </div>
         <div class="team_member_desc">
-          <h2>Lorem Ipsum</h2>
-          <h4>Director</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut commodi culpa, cum delectus doloremque,
-            dolores fuga in maiores nemo nesciunt nulla numquam officia possimus quaerat qui quibusdam quis quod
-            repellat repudiandae saepe sapiente soluta tempora totam ut veniam voluptate!</p>
+          <h2>Meet the Team</h2>
+          <p>
+            We are a team of dedicated company. We take pride in providing exceptional care.
+            Our organization team of staff include:
+          </p>
+
+          <p><strong>Demetia Care specialist</strong></p>
+
+          <p><strong>Care Managers</strong></p>
+
+          <p> <strong>HR</strong></p>
+
+          <p> <strong>Employee Management</strong></p>
           <div class="team_member_desc_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
               </router-link>
-
             </Button>
 
           </div>
@@ -25,7 +58,14 @@
       </div>
 
     </div>
-    <hr>
+
+    <div class="dropdown">
+      <dropdown :dropdown_header="support_org" :dropdown_text="support_org_text"/>
+      <dropdown :dropdown_header="philosophy_header" :dropdown_text="philosophy_text"/>
+      <dropdown :dropdown_header="consultants_header" :dropdown_text="consultants_text"/>
+      <dropdown :dropdown_header="staffing_header" :dropdown_text="staffing_text"/>
+
+    </div>
     <div class="about_us_menu ">
       <div class="left_section">
         <div class="left_menu">
@@ -33,9 +73,7 @@
             <li @click="toggleMessage(partner_text); align_partners()" :style="{'text-align': text_align_partners}">
               Partners
             </li>
-            <li @click="toggleMessage(licenses_text); align_license()" :style="{'text-align':text_align_license }">
-              License
-            </li>
+
             <li @click="toggleMessage(location_text); align_location()" :style="{'text-align': text_align_vision}">
               Location
             </li>
@@ -51,59 +89,64 @@
     </div>
 
     <div class="more_info">
-      <div class="info" data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom">
-        <div class="info_img">
-          <img src="../assets/Images/nurse1.jpg" alt="">
+      <h2>Why choose us ?</h2>
+      <div class="infos">
+        <div class="info" data-aos="fade-up"
+             data-aos-anchor-placement="top-bottom">
+          <div class="info_img">
+            <img src="../assets/Images/nurse1.jpg" alt="">
+          </div>
+          <div class="info_text">
+            <h2>Professionals</h2>
+            <p>
+              We have a large database of highly trained and experienced PSW, RPN, RN and nursing aides’
+              staff that are available all times (24/7) and ready to provide adequate compassionate care when needed
+            </p>
+          </div>
         </div>
-        <div class="info_text">
-          <h2>Highlight 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse et officiis provident sit tempore.
-            Adipisci amet explicabo possimus vero!.
-          </p>
-        </div>
-      </div>
-      <div class="info" data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom">
-        <div class="info_img">
-          <img src="../assets/Images/nurse2.jpg" alt="">
-        </div>
-        <div class="info_text">
-          <h2>Highlight 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse et officiis provident sit tempore.
-            Adipisci amet explicabo possimus vero!.
-          </p>
-        </div>
+        <div class="info" data-aos="fade-up"
+             data-aos-anchor-placement="top-bottom">
+          <div class="info_img">
+            <img src="../assets/Images/reliable.jpeg" alt="">
+          </div>
+          <div class="info_text">
+            <h2>We are Reliable</h2>
+            <p>
+              We continue to strive at providing our clients the best candidates for their homes
+            </p>
+          </div>
 
+        </div>
+        <div class="info" data-aos="fade-up"
+             data-aos-anchor-placement="top-bottom">
+          <div class="info_img">
+            <img src="../assets/Images/nurse3.jpg" alt="">
+          </div>
+          <div class="info_text">
+            <h2>We continue to Improve </h2>
+            <p>
+              Our confidence in providing excellent care and health professionals relies on our continuous education.
+
+            </p>
+          </div>
+        </div>
+        <div class="info" data-aos="fade-up"
+             data-aos-anchor-placement="top-bottom">
+          <div class="info_img">
+            <img src="../assets/Images/training.jpeg" alt="">
+          </div>
+          <div class="info_text">
+            <h2>Training System</h2>
+            <p>
+              We provide our staff with a large variety of mandatory training and continuous professional developments
+              that set them up for success in their roles. Our training system provides our staff evidence-based
+              practices
+              and guidelines that they can always access any time anywhere.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="info" data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom">
-        <div class="info_img">
-          <img src="../assets/Images/nurse3.jpg" alt="">
-        </div>
-        <div class="info_text">
-          <h2>Highlight 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse et officiis provident sit tempore.
-            Adipisci amet explicabo possimus vero!.
-          </p>
-        </div>
-      </div>
-      <div class="info" data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom">
-        <div class="info_img">
-          <img src="../assets/Images/nurse4.jpg" alt="">
-        </div>
-        <div class="info_text">
-          <h2>Highlight 4</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse et officiis provident sit tempore.
-            Adipisci amet explicabo possimus vero!
-          </p>
-        </div>
-      </div>
+
     </div>
     <div class="staffing">
       <staffing_cat/>
@@ -118,14 +161,66 @@
 
 import Review from '@/components/reviews_comp'
 import staffing_cat from '@/components/staffing_areas'
+import dropdown from '@/components/dropdown'
+
+
 export default {
   name: 'About',
   components: {
     staffing_cat,
     Review,
+    dropdown,
   },
   data: function () {
     return {
+      support_org: 'How do we support organizations?',
+      support_org_text: 'The partnership team will work alongside community care partners to assist in the identification of areas to further develop and improve support to individuals  living with dementia.\n' +
+          'Emphasis will be on key areas of client support such as assessment, person-centered approaches, enablement, wellness, dementia enabling environments and career support.' +
+          '<br>' +
+          ' <strong>Activities:</strong> ' +
+          '<br>• Coaching and Mentoring' +
+          '<br>• Consultancy Services' +
+          '<br>• Education and Training' +
+          '<br>• Community Dementia Champions' +
+          '<br>• Community support organizations can nominate staff to become Community Dementia Champions <br>' +
+          '<strong>Benefit of our training:</strong>' +
+          '<br>• Improved staff retention and staff satisfaction\n' +
+          '<br>• Improved resident satisfaction' +
+          '<br>• Decreased use of medication and other psychotropic interventions\n' +
+          '<br>• Improved wellbeing for all' +
+          '<br>• Increased involvement with wider community and relatives groups\n' +
+          '<br>• Improved reputation within the community\n' +
+          '<br>• Overall improvement in an organization’s financial position.\n',
+
+      philosophy_header: "Our philosophy",
+      philosophy_text: "Our philosophy of care embraces a person-centered approach that respects the individuality and the experience of those living with dementia." +
+          "We aim to help you to remain living at home for as long as possible. <br>" +
+          "Our dementia specialist and care managers work with you to understand your needs and help you navigate through the home care package process." +
+          "Should you choose DDC as your home care provider, your care manager will help you through the process of signing your <strong>home care agreement.</strong>" +
+          "Together with DDC, we will help you design a personalized plan that will meet your daily needs and also ensures your " +
+          "utmost wellbeing which includes a start date that is convenient. ",
+
+      enabling_header: "Enabling household",
+      enabling_text: "Based around our Enabling home environments, our dementia specialist team will" +
+          " provide an evidence-based environment that seeks to maximize well being in the persons living with dementia. <br>" +
+          " Providing a wide range of meaningful activities based on the person’s strengths, identity and interests, the " +
+          "teams will provide meaningful engagement, stimulation and friendship in a " +
+          "group setting that is specially designed for dementia enabling environments.",
+      consultants_header: " Our Consultants",
+      consultants_text: "Our consultants apply evidence-based knowledge, objective assessment techniques, " +
+          "a collaborative approach and a passion to improve the quality of life of older people and people with dementia. We use proven-in-practice knowledge," +
+          " professional expertise and experience for challenging situations, leading clients to new insights and innovative solutions. <br>" +
+          "We operate in a diverse range of care contexts including and not limited to:" +
+          " <br>• Homes of older people and people living with dementia\n" +
+          " <br>• Community and social clubs\n" +
+          " <br>• Respite care programs\n" +
+          " <br>• Residential aged care\n" +
+          " <br>• Hospitals" +
+          "<br>Contact us if you are open to decreasing resident discharge and use of psychotropic medications, while improving staff retention and satisfaction.",
+      staffing_header: "Staffing and Recruitments ",
+      staffing_text: "DDC specialize in providing temporary employments or continuous nursing staffing to long term care homes, Home care, Hospitals, Retirements homes and Community and Residential care homes  ",
+
+      icon: 'https://img.icons8.com/fluent-systems-regular/30/000000/low-importance.png',
       landingImg: require('../assets/Images/staffing_header.png'),
       tittle: "About Us",
       // text: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum ex illum ipsa ipsam natus optio placeat." +
@@ -134,16 +229,15 @@ export default {
       text_align_history: 'end',
       text_align_vision: 'end',
       text_align_partners: 'end',
-      text_align_license: 'end',
-      text_align: 'center',
-      menu_content: '   <h1>Partners</h1> <br> <p style="line-height:32px">   Lorem ipsum dolor sit amet, consectetur adipisicing elitatur placeat voluptas. Corporis labore modi necessitatibus perferendis.' +
-          '          Lorem ipsum dolor m </p> ',
-      partner_text: '   <h1>Partners</h1> <br> <p style="line-height:32px">    sitatibus perferendis.\n' +
-          '          Lorem Corporis labore modi necessitatibus perferendis.</p>',
 
-      location_text: '    <h1>Location</h1> <br> <p style="line-height:32px">  We are located in Address. We serve Ontario, Quebec and environs.</p>',
-      contact_text: '    <h1>Contact</h1> <br> <p style="line-height:32px">     Our customer service is always available. You can <a href="#">Send us an email</a> or <a href="#">Call us</a>. You can also nook am appointment</p>',
-      licenses_text: '  <h1>License</h1> <br> <p style="line-height:32px">      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium culpa cupiditate earum orporis labore modi necessitatibus perferendis.</p>'
+      text_align: 'center',
+      menu_content: '   <h1>Partners</h1> <br> <p style="line-height:32px"> The Dementia Partnership Project aims to enhance the experience of all involved and to also improve the quality of life of people living with dementia in their community when accessing support services.\n' +
+          'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n </p> ',
+      partner_text: '   <h1>Partners</h1> <br> <p style="line-height:32px"> The Dementia Partnership Project aims to enhance the experience of all involved and to also improve the quality of life of people living with dementia in their community when accessing support services.\n' +
+          'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n',
+
+      location_text: '    <h1>Location</h1> <br> <p style="line-height:32px">  2230 Blackwater Road London, ON N5X0L1.</p>',
+      contact_text: "   <h1>Contact</h1> <br> <p style='line-height:32px'> You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:webmaster@example.com'>send an email. </a>. We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span></p>",
     }
   },
   methods: {
@@ -169,9 +263,7 @@ export default {
     align_partners() {
       this.text_align_partners = 'end';
     },
-    align_license() {
-      this.text_align_license = 'end';
-    }
+
   },
   mounted() {
     this.resetTextAlign()
@@ -194,34 +286,66 @@ export default {
 }
 
 #container {
+  .about {
+    margin: 10vh auto 5vh;
+    background: url("../assets/Images/theteam.jpeg") no-repeat fixed center;
+    background-size: cover;
+    padding: 120px;
+
+    .about_text {
+      margin: 20vh auto;
+      background: $textColor;
+      padding: 40px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+
+      p {
+        line-height: 40px;
+        margin: 20px;
+      }
+
+      h1 {
+        border-bottom: 2px solid $secondaryColor;
+        width: 50%;
+        margin: 20px;
+      }
+    }
+  }
+
   .team_member {
-    margin: 20vh auto 5vh;
+
+    margin: 15vh auto 5vh;
+    //background: url("../assets/Images/compLogo.svg") no-repeat fixed center;
+    //background-size: cover;
 
     .team_member_info {
       background: $textColor;
-      width: 50%;
+      width: 70%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
+
       //box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
       .team_member_img {
         padding: 0;
         margin: 0;
 
         img {
-          max-width: 100%;
-          width: 440px;
+          width: 600px;
           height: 100%;
+
         }
       }
 
       .team_member_desc {
-        padding: 20px;
+        padding: 10px;
+        margin-top: 2vh;
 
         h2 {
           font-size: 35px;
-          margin-top: 2vh;
+          color: $headerColor;
+          border-bottom: 2px solid $secondaryColor;
+          width: 60%;
         }
 
         h4 {
@@ -231,13 +355,18 @@ export default {
         }
 
         p {
-          margin-top: 1vh;
           line-height: 30px;
+          padding: 10px;
+        }
+
+        hr {
+          text-align: start;
+          width: 40%;
         }
 
         .team_member_desc_btn {
           text-align: end;
-          margin-top: 2vh;
+
 
           .btn1 {
             @include homeButton;
@@ -257,16 +386,12 @@ export default {
 
   }
 
-  hr {
-    width: 50%;
-    margin: 0 auto;
-  }
 
   .about_us_menu {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    margin: 8vh auto 0;
+    margin: 12vh auto 0;
 
     .left_section {
       width: 30%;
@@ -318,114 +443,126 @@ export default {
     }
   }
 
-  .forms-studio {
-    position: relative;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    width: 100%;
-    height: 600px;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .forms-studio-form-content {
-      display: none !important;
-    }
-  }
-
-  .partner {
-    margin: 10vh auto 10vh;
-
-    .partner_info {
-
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-
-      .partner_img {
-        img {
-          max-width: 100%;
-        }
-      }
-
-      .partner_text {
-        margin-top: 5vh;
-        text-align: start;
-
-      }
-    }
-  }
-
   .more_info {
     margin: 10vh auto 0;
-    padding: 80px;
+    padding: 40px;
     background: $textColor;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
 
-    .info {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    h2 {
+      text-align: center;
+      font-size: 40px;
+    }
+
+
+    .infos {
+      margin-top: 5vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
-      background: white;
 
-      img {
-        max-width: 100%;
-        height: 320px;
-      }
+      .info {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        background: white;
 
-      .info_text {
-        line-height: 32px;
-        padding: 20px;
+        img {
+          width: 410px;
+          height: 100%;
 
-        h2 {
-          margin-top: 7vh;
-          font-size: 30px;
-
-          &::selection {
-            background: $secondaryColor;
-          }
         }
 
-        p {
-          margin-top: 2vh;
-          opacity: 0.8;
+        .info_text {
           line-height: 32px;
+          padding: 20px;
 
-          &::selection {
-            background: $secondaryColor;
+          h2 {
+            margin-top: 2vh;
+            font-size: 30px;
+            opacity: 0.8;
+            text-align: start;
+
+            &::selection {
+              background: $secondaryColor;
+            }
+          }
+
+          p {
+            margin-top: 2vh;
+            opacity: 0.8;
+            line-height: 34px;
+
+            &::selection {
+              background: $secondaryColor;
+            }
           }
         }
       }
     }
+
   }
 }
 
 @media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
   #container {
+    .about {
+      margin: 2vh auto;
+
+      padding: 10px;
+
+      .about_text {
+        margin: 50vh auto;
+        background: $textColor;
+        padding: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          line-height: 35px;
+          margin: 10px;
+        }
+
+        h1 {
+          border-bottom: 2px solid $secondaryColor;
+          width: 100%;
+          margin: 20px auto;
+          font-size: 30px;
+        }
+      }
+    }
+
     .team_member {
-      margin: 5vh auto 5vh;
+      margin: 1vh auto 5vh;
 
       .team_member_info {
         background: $textColor;
         width: 90%;
         grid-template-columns: 1fr;
+
+        .team_member_img {
+          padding: 0;
+          margin: 0;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .team_member_desc {
+          h2 {
+            width: 60%;
+            font-size: 30px;
+          }
+        }
       }
+
     }
 
     .about_us_menu {
       padding: 0 !important;
-      margin: 10px auto !important;
+      margin: 10vh auto !important;
       width: 100% !important;
 
       .left_section {
@@ -460,31 +597,196 @@ export default {
     }
 
     .more_info {
-      grid-template-columns: 1fr !important;
-      grid-gap: 10px;
-      padding: 10px !important;
+      padding: 5px;
 
-      .info {
-        grid-template-columns: 1fr !important;
-        grid-gap: 5px;
-
-        .info_text {
-          h2 {
-            margin-top: 1vh !important;
-          }
-        }
-
+      h2 {
+        font-size: 30px;
       }
+
+      .infos {
+        margin-top: 0.5vh;
+        grid-template-columns: 1fr !important;
+        grid-gap: 10px;
+        padding: 10px !important;
+
+        .info {
+          grid-template-columns: 1fr !important;
+          grid-gap: 5px;
+
+
+          img {
+            width: 100%;
+
+          }
+
+          .info_text {
+            h2 {
+              margin-top: 1vh !important;
+            }
+          }
+
+        }
+      }
+
     }
   }
 
 }
+@media (min-width: 411px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
+  #container {
+    .about {
+      margin: 2vh auto;
 
+      padding: 10px;
+
+      .about_text {
+        margin: 50vh auto;
+        background: $textColor;
+        padding: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          line-height: 35px;
+          margin: 10px;
+        }
+
+        h1 {
+          border-bottom: 2px solid $secondaryColor;
+          width: 100%;
+          margin: 20px auto;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .team_member {
+      margin: 1vh auto 5vh;
+
+      .team_member_info {
+        background: $textColor;
+        width: 90%;
+        grid-template-columns: 1fr;
+
+        .team_member_img {
+          padding: 0;
+          margin: 0;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .team_member_desc {
+          h2 {
+            width: 60%;
+            font-size: 30px;
+          }
+        }
+      }
+
+    }
+
+    .about_us_menu {
+      padding: 0 !important;
+      margin: 10vh auto !important;
+      width: 100% !important;
+
+      .left_section {
+        width: 40% !important;
+        border-right: 0.5rem solid $highlight !important;
+
+        .left_menu {
+          width: 100% !important;
+
+          ul {
+
+            li {
+
+              padding: 10px;
+              font-size: 14px !important;
+
+              &:hover {
+                background-position: 0 100%;
+
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .right_section {
+        width: 90% !important;
+        margin: 10px;
+      }
+    }
+
+    .more_info {
+      padding: 5px;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .infos {
+        margin-top: 0.5vh;
+        grid-template-columns: 1fr !important;
+        grid-gap: 10px;
+        padding: 10px !important;
+
+        .info {
+          grid-template-columns: 1fr !important;
+          grid-gap: 5px;
+
+
+          img {
+            width: 100%;
+
+          }
+
+          .info_text {
+            h2 {
+              margin-top: 1vh !important;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
+    .about {
+      margin: 10vh auto 5vh;
+      background: url("../assets/Images/theteam.jpeg") no-repeat fixed center;
+      background-size: cover;
+      padding: 20px;
+
+      .about_text {
+        margin: 20vh auto;
+        background: $textColor;
+        padding: 20px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          line-height: 40px;
+          margin: 20px;
+        }
+
+        h1 {
+          border-bottom: 2px solid $secondaryColor;
+          width: 60%;
+          margin: 20px;
+        }
+      }
+    }
     .team_member {
       margin: 15vh auto 5vh;
-
       .team_member_info {
         background: $textColor;
         width: 100%;
@@ -513,7 +815,7 @@ export default {
 
     .about_us_menu {
       padding: 0 !important;
-      margin: 10px auto !important;
+      margin: 10vh auto !important;
       width: 100% !important;
 
       .left_section {
@@ -548,42 +850,92 @@ export default {
     }
 
     .more_info {
-      grid-template-columns: 1fr !important;
-      grid-gap: 10px;
-      padding: 10px !important;
-      margin: 0 auto;
+      margin: 10vh auto 5vh;
+      padding: 10px;
+      background: $textColor;
 
-      .info {
-        grid-template-columns: 1fr !important;
-        grid-gap: 0px;
-        width: 100%;
-        margin: 5vh auto;
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
 
-        .info_img {
-          margin: 0 auto;
+
+      .infos {
+        margin-top: 5vh;
+
+
+        .info {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          display: grid;
+          grid-template-columns: 1fr ;
+          grid-gap: 5px;
+          background: white;
 
           img {
-            width: 800px;
-            height: 600px;
+           width: 100%;
+
+          }
+
+          .info_text {
+            line-height: 32px;
+            padding: 20px;
+
+            h2 {
+              margin-top: 2vh;
+              font-size: 30px;
+              opacity: 0.8;
+              text-align: start;
+
+              &::selection {
+                background: $secondaryColor;
+              }
+            }
+
+            p {
+              margin-top: 2vh;
+              opacity: 0.8;
+              line-height: 34px;
+
+              &::selection {
+                background: $secondaryColor;
+              }
+            }
           }
         }
-
-        .info_text {
-          h2 {
-            margin-top: 1vh !important;
-          }
-        }
-
       }
+
     }
   }
 }
-
-@media (min-width: 411px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
-    .team_member {
+    .about {
       margin: 10vh auto 5vh;
+      background: url("../assets/Images/theteam.jpeg") no-repeat fixed center;
+      background-size: cover;
+      padding: 20px;
 
+      .about_text {
+        margin: 20vh auto;
+        background: $textColor;
+        padding: 20px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          line-height: 40px;
+          margin: 20px;
+        }
+
+        h1 {
+          border-bottom: 2px solid $secondaryColor;
+          width: 60%;
+          margin: 20px;
+        }
+      }
+    }
+    .team_member {
+      margin: 15vh auto 5vh;
       .team_member_info {
         background: $textColor;
         width: 100%;
@@ -596,16 +948,13 @@ export default {
           img {
             margin: 0 auto;
             width: 700px;
-
+            height: 100%;
           }
         }
 
         .team_member_desc {
-          padding: 10px;
-
-          h2 {
-            margin: 0;
-            padding: 0;
+          .team_member_desc_btn {
+            text-align: center;
           }
 
         }
@@ -615,7 +964,7 @@ export default {
 
     .about_us_menu {
       padding: 0 !important;
-      margin: 10px auto !important;
+      margin: 10vh auto !important;
       width: 100% !important;
 
       .left_section {
@@ -650,35 +999,64 @@ export default {
     }
 
     .more_info {
-      grid-template-columns: 1fr !important;
-      grid-gap: 10px;
-      padding: 10px !important;
-      margin: 0 auto;
+      margin: 10vh auto 5vh;
+      padding: 10px;
+      background: $textColor;
 
-      .info {
-        grid-template-columns: 1fr !important;
-        grid-gap: 0px;
-        width: 100%;
-        margin: 5vh auto;
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
 
-        .info_img {
-          margin: 0 auto;
+
+      .infos {
+        margin-top: 5vh;
+
+
+        .info {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          display: grid;
+          grid-template-columns: 1fr ;
+          grid-gap: 5px;
+          background: white;
 
           img {
-            width: 800px;
+           width: 100%;
 
           }
-        }
 
-        .info_text {
-          h2 {
-            margin-top: 1vh !important;
+          .info_text {
+            line-height: 32px;
+            padding: 20px;
+
+            h2 {
+              margin-top: 2vh;
+              font-size: 30px;
+              opacity: 0.8;
+              text-align: start;
+
+              &::selection {
+                background: $secondaryColor;
+              }
+            }
+
+            p {
+              margin-top: 2vh;
+              opacity: 0.8;
+              line-height: 34px;
+
+              &::selection {
+                background: $secondaryColor;
+              }
+            }
           }
         }
-
       }
+
     }
   }
 }
+
+
 </style>
 

@@ -1,87 +1,30 @@
 <template>
   <div id="container">
-
-    <landing :text="text" :title="title" :board-image="boardImg"/>
-
-    <div class="resume_section">
-      <h2>Fill the form below and upload resume</h2>
-
-      <form>
-        <div class="input_fields">
-          <div class="firstname"><label for="fname">First Name</label><br><input type="text" id="fname" name="fname">
-          </div>
-          <div class="lastName"><label for="lname">Last Name</label><br><input type="text" id="lname" name="lname"
-                                                                               value=""></div>
-          <div class="phone"><label for="num">Phone Number</label><br><input type="text" id="num" name="phone"></div>
-          <div class="email"><label for="email">Email</label><br><input type="text" id="email" name="email"></div>
-          <div class="city"><label for="city">City</label><br><input type="text" id="city" name="city"></div>
-          <div class="availability"><label for="availability">Availability</label><br><input type="text"
-                                                                                             id="availability"
-                                                                                             name="availability"></div>
-          <div class="startDate"><label for="startDate">Start Date</label><br><input type="date" id="startDate"
-                                                                                     name="startDate"></div>
-          <div class="resume">
-            <label for="resume">Upload Resume</label><br><br>
-            <input type="file" id="resume" name="filename">
-          </div>
-
-        </div>
-        <br>
-
-        <div class="message">
-          <label for="message">Additional information </label><br><textarea name="text" id="message" cols="100"
-                                                                            rows="10"></textarea>
-        </div>
-
-        <br>
-        <br>
-        <Button type="button" class="btn1">Send Application</Button>
-      </form>
-      <p>You can also forward your resume to admin@demential.com</p>
+    <div class="hiring">
+      <hiring/>
     </div>
-    <div class="staffing">
-      <h2>Staffing Areas</h2>
-      <p class="staffing_p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ut?
-      </p>
-      <div class="staffing_info">
-        <div class="staffing_details">
-          <img src="../assets/Images/doctors.svg" alt="">
-          <p>Health Practitioner</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/nurses.svg" alt="">
-          <p>Registered Nurse</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/nurse_prac.svg" alt="">
-          <p>Nurse Practitioner</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/health_worker.svg" alt="">
-          <p>PSW</p>
-        </div>
-        <div class="staffing_details">
-          <img src="../assets/Images/home_care.svg" alt="">
-          <p>Home Care </p>
-        </div>
-
-      </div>
-
+<div class="staffing">
+  <staffing/>
+</div>
+    <div class="resume_section" id="joinus">
+      <iframe src="https://www.cognitoforms.com/f/XgneZ0-g00OXljwZXvzjrA?id=2" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="817" width="100%"></iframe>
     </div>
+
   </div>
 
 </template>
 
 <script>
-import landing from '@/components/landing_section'
+import hiring from '@/components/hiring_comp'
+import staffing from '@/components/staffing_areas'
 
 
 export default {
   name: "JoinUs",
 
   components: {
-    landing,
+    hiring,
+    staffing
   },
 
   data() {
@@ -101,6 +44,9 @@ export default {
 @import "./src/assets/Buttons/buttons";
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 
+.hiring{
+  margin-top: 13vh;
+}
 
 .resume_section {
   margin: 10vh auto;
@@ -242,42 +188,7 @@ export default {
   }
 }
 
-.staffing {
-  padding: 40px;
-  text-align: center;
-  background: $textColor;
 
-  h2 {
-    text-align: center;
-    font-size: 50px;
-    padding: 40px;
-    opacity: 0.9;
-    color: $headerColor;
-  }
-
-  .staffing_info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 40px;
-  }
-
-  .staffing_details {
-    margin: 0 auto;
-
-    img {
-      width: 200px;
-
-      &:hover {
-
-        cursor: pointer;
-      }
-    }
-
-    p {
-      text-align: center;
-    }
-  }
-}
 
 @media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
@@ -330,29 +241,7 @@ export default {
       }
     }
   }
-  .staffing {
-    padding: 10px;
 
-    h2 {
-      text-align: center;
-      font-size: 30px;
-      padding: 10px;
-    }
-
-    .staffing_info {
-      grid-template-columns: 1fr 1fr;
-      padding: 10px;
-
-    }
-
-    .staffing_details {
-      margin: 0 auto;
-
-      img {
-        width: 60px;
-      }
-    }
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -402,34 +291,6 @@ export default {
       }
     }
   }
-  .staffing {
-    padding: 10px;
 
-    h2 {
-      text-align: center;
-      font-size: 30px;
-      padding: 10px;
-    }
-
-    .staffing_p {
-      width: 60%;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .staffing_info {
-      grid-template-columns: 1fr 1fr;
-      padding: 10px;
-
-    }
-
-    .staffing_details {
-      margin: 0 auto;
-
-      img {
-        width: 60px;
-      }
-    }
-  }
 }
 </style>

@@ -9,9 +9,7 @@
           <h2>Dementia Consultation</h2>
           <hr>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cumque eum id, labore quasi
-            voluptatum? Accusantium dolor natus non?
-          </p>
+            Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one       </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
@@ -28,8 +26,7 @@
           <h2> Staffing and Recruitment</h2>
           <hr>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cumque eum id, labore quasi
-            voluptatum? Accusantium dolor natus non?
+            Are you an organization looking for quality care for your facilities? Or an individual looking for quality care at home?
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
@@ -49,8 +46,7 @@
           <h2>Home Care Services</h2>
           <hr>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cumque eum id, labore quasi
-            voluptatum? Accusantium dolor natus non?
+            Getting help at home does not take away your independence, it promotes your independence and ensures your safety all allows you to continue
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
@@ -177,7 +173,7 @@ export default {
   }
 }
 
-@media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     margin-top: 0;
 
@@ -198,13 +194,47 @@ export default {
 
 }
 
-@media (max-width: 731px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+@media(min-width: 411px) and(max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
-
-  }
-  @media(min-width: 731px) and(max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
     #container {
+      margin-top: 0;
 
+      .services {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        width: 100%;
+
+        .services_info {
+          margin: 20px auto;
+
+          .services_text {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  #container {
+    margin-top: 0;
+
+    .services {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      width: 100%;
+
+      .services_info {
+        margin: 20px auto;
+
+        .services_text {
+
+        }
+      }
     }
   }
 }

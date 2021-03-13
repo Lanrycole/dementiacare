@@ -28,16 +28,16 @@ export default {
   data() {
     return {
       service_Img: require('../assets/Images/consultation2-mini.png'),
-      text_header: "Long-Term care",
-      text: "          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut laboriosam laborum molestias ratione totam\n" +
-          "          ullam ut. Alias aliquid aperiam architecto consequuntur culpa cumque deserunt dolores dolorum eos esse, est\n" +
-          "          expedita fuga ipsam itaque laudantium magni maiores minima, minus molestiae necessitatibus placeat quia\n" +
-          "          reiciendis sapiente sit tempore? Culpa fugiat nobis ratione?\n" +
-          "          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut laboriosam laborum molestias ratione totam\n" +
-          "          ullam ut. Alias aliquid aperiam architecto consequuntur culpa cumque deserunt dolores dolorum eos esse, est\n" +
-          "          expedita fuga ipsam itaque laudantium magni maiores minima, minus molestiae necessitatibus placeat quia\n" +
-          "          reiciendis sapiente sit tempore? Culpa fugiat nobis ratione?\n" +
-          "          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut laboriosam laborum molestias ratione totam\n"
+      text_header: "Staffing and Recruitment",
+      text: " Are you an organization looking for quality care for your facilities? Or an individual looking for quality care at home? We can provide you with compassionate nursing candidates across Canada, we have a large database of experienced health care professionals and freshers." +
+          " <br><br>We will support your long-term care homes, hospital and residential homes with reliable, punctual, and professional staff that will promote the quality of life of your residents. \n" +
+          "All our staff undergo a thorough screening process that includes vulnerable sector checks, and we provide adequate education to our staff to ensure our clients safety as well as protecting the public.\n" +
+          "<br><br><span style='border-bottom: 1px solid red;'><strong>If you are an organization answer these questions:</strong></span><br>" +
+          "» Are you having challenges with staffing your facility? <br>" +
+          "» Are your staff getting their vacations? <br> " +
+          "» Do you want to decrease the burden on your staff and improve the quality of care delivered?<br>" +
+          "Call us today at <strong><em>  <a href='tel:6479092011'> 1(833) 564- 6332 EXT 0</a>  </em></strong> and we can provide your facility with competent staff <br>" +
+          "We have Nursing aides, Personal Support Worker, Registered Practical Nurse and Registered Nurse that can provide support to your team. \n"
     }
   }
 }

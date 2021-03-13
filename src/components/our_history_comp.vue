@@ -11,22 +11,19 @@
             Our History
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+            We are growing company dedicated to providing professional health care services through recruitment, consultation and home care services.
           </p>
           <h2>
             Philosophy
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+            Our philosophy of care embraces a person-centered approach that respects the individuality and the experience of those living with dementia.
           </p>
           <h2>
             Mission
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+            We aim to provide excellent care that will improve the quality of life of people in the community, through our specialized health services and professionals.
           </p>
 
           <div class="card_btn">
@@ -38,7 +35,7 @@
 
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
-        </router-link>
+              </router-link>
 
             </Button>
           </div>
@@ -52,30 +49,30 @@
         <div class="card_text" data-aos="zoom-in">
           <h2>Address</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+
+           <span style="border-bottom: 2px solid #F39E1C">2230 Blackwater Road London, ON N5X0L1.</span>
           </p>
           <h2>Contact</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+            You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:webmaster@example.com'>send an email. </a>.
+            <br> We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span>
           </p>
           <h2>Where we serve</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis cupiditate eaque eum explicabo in
-            ipsam quod repudiandae tempora voluptate?
+            We provide services and recruits health care professionals all over the country.
+
           </p>
 
           <div class="card_btn">
             <Button type="button" class="btn2">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Contact
-             </router-link>
+              </router-link>
 
             </Button>
 
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
-  </router-link>
+              </router-link>
 
             </Button>
           </div>
@@ -175,8 +172,6 @@ export default {
         .card_btn {
           margin: 20px;
           text-align: end;
-          display: flex;
-          justify-content: space-around;
 
           .btn2 {
             @include homeButton;
@@ -187,7 +182,7 @@ export default {
             transition: 0.5s;
             position: relative;
             text-align: center;
-
+            margin: 20px;
             a {
               color: $headerColor;
             }
@@ -221,7 +216,7 @@ export default {
             transition: 0.5s;
             position: relative;
             text-align: center;
-
+            margin: 20px;
             a {
               color: $headerColor;
             }
@@ -258,7 +253,7 @@ export default {
   }
 }
 
-@media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 767px)  {
   #container {
     margin: 0;
 
@@ -307,7 +302,7 @@ export default {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) and (max-width: 1024px)  {
   #container {
     margin: 0;
 
