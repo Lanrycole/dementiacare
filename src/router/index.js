@@ -7,6 +7,9 @@ import Join from '../views/JoinUs.vue'
 import consultation from '../views/consultation.vue'
 import staffing from '../views/staffing.vue'
 import homeservice from '../views/homeservice.vue'
+import termsofUse from '../views/TermsofUse.vue'
+import accesibility from '../views/AccesibilityPolicy.vue'
+import privacy from '../views/PrivacyPolicy.vue'
 
 
 Vue.use(VueRouter)
@@ -46,6 +49,21 @@ const routes = [
     path: '/Homeservice',
     name: 'Homeservice',
     component: homeservice,
+  },
+  {
+    path: '/Terms_Of_Use',
+    name: 'TermsofUse',
+    component: termsofUse,
+  },
+  {
+    path: '/Accesibility_Policy',
+    name: 'Accessibility',
+    component: accesibility,
+  },
+  {
+    path: '/Privacy_Policy',
+    name: 'Privacy',
+    component: privacy,
   },
 ]
 

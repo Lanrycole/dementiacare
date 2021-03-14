@@ -30,7 +30,7 @@ export default {
   name: "serviceList",
   props: {
     services_img: {
-      default: require('../assets/Images/slide-3-s.png'),
+
       require: true,
     },
     services_text: {
@@ -75,7 +75,7 @@ export default {
     padding: 40px !important;
     border-radius: 2rem;
     box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-
+    text-align:start !important;
     h2 {
       font-size: 40px;
       border-bottom: 2px solid $secondaryColor;
@@ -210,7 +210,7 @@ export default {
       margin: 12vh auto;
 
       .services_text {
-        padding: 10px !important;
+        padding: 20px !important;
         width: 100%;
         position: unset;
         text-align: center;

@@ -7,9 +7,9 @@
         <img src="../assets/Images/slide-1.jpg" alt="">
       </div>
       <div class="health_text">
-        <a href="https://www.caregiver.org/resource/caregivers-guide-understanding-dementia-behaviors"
-           target="_blank"><h2>Understanding Dementia</h2></a>
-        <p>Read More about Dementia</p>
+        <a href="https://alzheimer.ca/en/help-support#:~:text=Find%20supportWith%20programs%20and,need%20as%20soon%20as%20possible."
+           target="_blank"><h2>Alzheimer Society Canada</h2></a>
+        <p>Find other people with Alzheimer near you</p>
       </div>
     </div>
     <div class="health_info" data-aos="fade-right"
@@ -20,7 +20,7 @@
       </div>
       <div class="health_text">
         <a href="https://www.webmd.com/palliative-care/caring-for-a-person-with-dementia"
-           target="_blank"><h2>Caring for Dementia</h2></a>
+           target="_blank"><h2>Caring for people with Dementia</h2></a>
         <p>Caring for people with Dementia.</p>
 
       </div>

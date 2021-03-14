@@ -31,7 +31,6 @@
       <iframe width="100%" height="300" id="gmap_canvas" title="gmap"
               src="https://maps.google.com/maps?width=595&amp;height=490&amp;hl=en&amp;q=%20London+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
     </div>
-
     <div class="footer">
       <div class="footer_menu">
         <div class="menu_lst">
@@ -39,19 +38,20 @@
           <div class="nav_items">
             <ul>
               <li>
-                <router-link :to="{name: 'Home'}" class="router-link" exact>Terms of Use</router-link>
+                <router-link :to="{name: 'TermsofUse'}" class="router-link" exact>Terms of Use</router-link>
               </li>
               <li>
-                <router-link :to="{name: 'About'}" class="router-link" exact>Policy</router-link>
+                <router-link :to="{name: 'Accessibility'}" class="router-link" exact>Accessibility Statement</router-link>
+
               </li>
               <li>
-                <router-link :to="{name: 'Services'}" class="router-link" exact>Accessibility Statement</router-link>
+                <router-link :to="{name: 'Privacy'}" class="router-link" exact>Privacy Policy</router-link>
+
               </li>
+
               <li>
-                <router-link :to="{name: 'Contact'}" class="router-link" exact>Cookies Policy</router-link>
-              </li>
-              <li>
-                <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact Us </router-link>
+                <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact Us</router-link>
+
               </li>
             </ul>
           </div>
@@ -105,32 +105,49 @@
 
               </li>
               <li class="contact_links">
-                <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/"><img
+                <a href="https://www.facebook.com/Diversified-Dementia-Care-107213841327774/" target="_blank"><img
                     src="https://img.icons8.com/fluent/28/ffffff/facebook-new.png" alt="facebook"/>
                 </a>
               </li>
 
               <li class="contact_links">
-                <a href="https://www.linkedin.com/company/diversified-dementia-care-service/" target="_blank"><img src="https://img.icons8.com/fluent/28/000000/linkedin.png" alt="linkedin"/>
-
+                <a href="https://www.linkedin.com/company/diversified-dementia-care-service/" target="_blank"><img
+                    src="https://img.icons8.com/fluent/28/000000/linkedin.png" alt="linkedin"/>
                 </a>
-
-
               </li>
-
             </ul>
           </div>
         </div>
-
       </div>
-
+      <div class="modal" v-if="showModal">
+        <Modal :modal_title="modal_title" :modal_text="modal_text"/>
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
+import Modal from "@/components/Modal"
+
+
 export default {
-  name: "Footer"
+  name: "Footer",
+  data() {
+    return {
+      showModal: false,
+      modal_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores at corporis dicta, dolor ex explicabo modi nesciunt placeat temporibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores at corporis dicta, dolor ex explicabo modi nesciunt placeat temporibus.",
+      modal_title: "Terms of Use"
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    }
+  },
+  components: {
+    Modal
+  }
 }
 </script>
 
@@ -141,6 +158,8 @@ export default {
 #container {
 
   .footer {
+    position: relative;
+
     .footer_menu {
       background: $headerColor;
       padding: 20px;
@@ -156,8 +175,6 @@ export default {
           color: $textColor;
           font-weight: bolder;
           font-size: 30px;
-          padding: 10px;
-
 
         }
 
@@ -165,13 +182,14 @@ export default {
           ul {
             list-style: none;
             color: $textColor;
-
+            text-align: start;
+            padding:0;
             li {
               list-style: none;
               color: $highlight;
-              padding: 10px;
+              padding: 5px;
               cursor: pointer;
-
+              text-align: start;
               &:hover {
                 color: $secondaryColor;
               }
@@ -179,6 +197,11 @@ export default {
               a {
                 color: $highlight;
                 text-decoration: none;
+              }
+
+              p {
+                padding: 0;
+                margin: 0;
               }
 
               .router-link, a {
@@ -189,7 +212,6 @@ export default {
                 &:hover {
                   color: $secondaryColor;
                 }
-
               }
             }
 
@@ -200,7 +222,6 @@ export default {
           }
         }
       }
-
     }
   }
 
@@ -260,7 +281,6 @@ export default {
 
     .footer {
       .footer_menu {
-
         padding: 10px;
         grid-template-columns: 1fr !important;
         grid-gap: 10px;
@@ -290,6 +310,7 @@ export default {
     }
   }
 }
+
 @media (min-width: 411px) and (max-width: 823px) and(-webkit-min-device-pixel-ratio: 2) {
   #container {
     .hot_link {
@@ -338,7 +359,8 @@ export default {
     }
   }
 }
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)  {
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .hot_link {
       grid-template-columns: 1fr 1fr 1fr;
@@ -386,6 +408,7 @@ export default {
     }
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .footer {

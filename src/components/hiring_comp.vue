@@ -15,7 +15,8 @@
       </p>
       <div class="hiring_btn">
         <Button type="button" class="btn1">
-          <a href="tel:6479092011">Call Us</a>
+          <a href="tel:1(833)564-6332">Call Us (EXT 1)</a>
+
         </Button>
 
         <Button type="button" class="btn2">
@@ -124,7 +125,7 @@ export default {
 
   .hiring_img {
     img {
-      width: 850px;
+     width: 100%;
       height: 100%;
 
     }

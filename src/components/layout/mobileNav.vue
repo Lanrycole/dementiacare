@@ -3,7 +3,7 @@
     <div id="mobile_nav">
       <div class="nav_logo">
         <router-link :to="{name: 'Home'}" class="router-link" exact>
-          <img src="../../assets/Images/logos.svg" alt="logo" width="190px"></router-link>
+          <img src="../../assets/Images/logos.svg" alt="logo" width="100px"></router-link>
       </div>
 
       <div class="menu_icon">
@@ -138,7 +138,7 @@ export default {
       position: fixed;
       width: 100%;
       overflow-x: hidden;
-      top: 72px;
+      top: 55px;
       z-index: 2;
 
       p {

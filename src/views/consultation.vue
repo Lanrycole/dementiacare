@@ -25,9 +25,9 @@ export default {
       service_Img: require('../assets/Images/consultation_mini.png'),
       text_header: "Dementia Consultation",
       text: "Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one, work out what their next steps might be.\n" +
-          "<br><br>The consultation service is a way to find out more about dementia, it’s symptoms and stages. It helps individuals and their family reduce the stress and anxiety " +
+          "<br>The consultation service is a way to find out more about dementia, it’s symptoms and stages. It helps individuals and their family reduce the stress and anxiety " +
           "that is associated with the diagnosis of dementia. It is also a free service, setting up an appointment is as" +
-          " simple as giving us a <strong><em>  <a href='tel:6479092011'> call</a></em></strong> or booking an appointment through our website <br><br>" +
+          " simple as giving us a <strong><em>  <a href='tel:6479092011'> call</a></em></strong> or booking an appointment through our website <br>" +
           "Our professional team will hold your hands throughout your journey, offer support to you and your family and provide you with a personalized care plan that " +
           "reflects your wishes, the things and people that are mostly important to you. " +
           "We will also help by connecting you with many other services that may be suitable for you and your family.\n" +

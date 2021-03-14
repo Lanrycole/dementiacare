@@ -18,6 +18,8 @@
           </h2>
           <p>
             Our philosophy of care embraces a person-centered approach that respects the individuality and the experience of those living with dementia.
+
+          We welcome everyone irrespective of their cultural background, race, sex, religion and identity.
           </p>
           <h2>
             Mission
@@ -131,6 +133,7 @@ export default {
       p {
         opacity: 0.7;
         margin-bottom: 3vh;
+        line-height:35px;
 
         &::selection {
           background: $secondaryColor;
@@ -145,6 +148,7 @@ export default {
         margin: 0;
 
         img {
+          width: 100%;
           max-width: 100%;
           height: 500px;
           background: #dfe4ea;

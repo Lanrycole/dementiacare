@@ -87,10 +87,36 @@
         </VueSlickCarousel>
       </div>
     </div>
+    <div class="cookies" v-if="showCookies">
+      <div class="message">
+        <div class="modal_header">
+          <h3>Cookies Policy</h3>
+          <div class="cookiesButton">
+            <Button id="accept" @click="toggleCookie">Accept</Button>
+            <Button id="reject" @click="toggleCookie">Reject</Button>
+            <Button @click="toggleCookieMsg" id="read">Read</Button>
+          </div>
 
+
+        </div>
+        <div class="cookie_msg" v-if="showCookiesMsg">
+          <p>
+            We may use cookies on the website in order to give you a personalized experience on
+            the website. Cookies are small files sent by your web browser by a website you visit. A
+            cookie file is stored in your web browser and allows the Service to be more useful to
+            you. By using the website you consent to the use of our cookies. Some cookies are not
+            essential. You have the option of accepting or blocking such non-essential cookies
+            however, some cookies are important to give you a better experience on the website.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
     <div class="our_services">
       <Services/>
     </div>
+
     <dropdown :dropdown_header="dropdown_title" :dropdown_text="dropdown_text" :icon="icon"/>
     <div class="welcome_card">
       <welcome-card/>
@@ -145,6 +171,8 @@ export default {
   },
   data() {
     return {
+      showCookies: true,
+      showCookiesMsg: false,
       settings: {
         "infinite": true,
         "autoplay": true,
@@ -166,10 +194,17 @@ export default {
           'During this time of uncertainty, our goal is to continue to support our community. Our services continue to ensure careers have a break and our clients have the opportunity to receive therapy, clinical support and socialization.\n' +
           '<br><br>' +
           'We are here to support you and help you in any way we can. Please contact us on 1(833) 564-6332 if you need any assistance and we will do our best to help you and/or provide you with the right resources.',
-        icon: 'https://img.icons8.com/fluent-systems-regular/30/000000/high-importance.png'
+      icon: 'https://img.icons8.com/fluent-systems-regular/30/000000/high-importance.png'
     }
   },
-
+  methods: {
+    toggleCookieMsg() {
+      this.showCookiesMsg = !this.showCookiesMsg;
+    },
+    toggleCookie() {
+      this.showCookies = !this.showCookies;
+    }
+  }
 }
 </script>
 
@@ -187,6 +222,7 @@ export default {
 
 #home {
   margin-top: 13vh;
+  position: relative;
 
   .welcome {
     position: relative;
@@ -198,13 +234,14 @@ export default {
       .landing_info {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
-        background: black;
+        background: $headerColor;
         outline: none;
 
         .landing_text {
           align-items: center;
           margin: 10px;
           outline: none;
+          padding: 20px;
 
           h1 {
             font-size: 60px;
@@ -245,6 +282,7 @@ export default {
             .btn2 {
               @include homeButton;
               margin: 20px;
+              border: 1px solid $textColor;
 
               a {
                 color: $textColor;
@@ -297,6 +335,73 @@ export default {
     }
   }
 
+  .cookies {
+    display: none;
+    margin: 0 auto;
+    width: 80%;
+    position: sticky;
+    left: 10%;
+    top: 75px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    transition: 0.5s ease-in-out;
+    z-index: 5;
+    padding: 0;
+
+    .message {
+      padding: 5px;
+
+      .modal_header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $secondaryColor;
+        margin: 5px;
+
+        h3 {
+          font-size: 16px;
+        }
+
+        .cookiesButton {
+          text-align: end;
+
+          Button {
+            font-weight: bolder;
+            border-radius: 2rem;
+            background: $textColor;
+            padding: 5px 10px 5px 10px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+          }
+
+          #accept {
+            background: $secondaryColor;
+
+          }
+
+          #reject {
+
+          }
+
+          #read {
+            background: none;
+            border-radius: 0;
+
+          }
+        }
+
+      }
+
+      .cookie_msg {
+        line-height: 35px;
+        padding: 20px;
+        cursor: pointer;
+
+      }
+    }
+  }
 
 }
 
@@ -306,10 +411,10 @@ export default {
 
     .welcome {
       .landing {
-        margin-top: 4vh;
+        margin-top: 3vh;
 
         .landing_info {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
           grid-template-areas:
           "a a a"
           "a a a";
@@ -341,7 +446,7 @@ export default {
 
               .btn2 {
                 @include homeButton;
-
+                border: 1px solid $textColor;
                 width: 100%;
                 margin: 5px auto;
 
@@ -373,7 +478,7 @@ export default {
       }
 
       .staffing_info {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;;
         padding: 10px;
 
       }
@@ -423,6 +528,9 @@ export default {
               margin: 10px auto 0 20px;
 
             }
+            .btn2 {
+              border: 1px solid $textColor;
+            }
           }
         }
       }
@@ -436,10 +544,10 @@ export default {
 
     .welcome {
       .landing {
-        margin-top: 2vh !important;
+        margin-top: 1vh !important;
 
         .landing_info {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
           grid-template-areas:
           "a a a"
           "a a a";
@@ -478,7 +586,7 @@ export default {
                 @include homeButton;
                 width: 100%;
                 margin: 5px auto;
-
+                border: 1px solid $textColor;
                 &:hover {
                   color: $headerColor;
                 }
@@ -500,23 +608,24 @@ export default {
 
   }
 }
-@media  (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
 
     margin-top: 0;
 
     .welcome {
       .landing {
-        margin-top: 10vh !important;
+        margin-top: 4vh !important;
 
         .landing_info {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
           grid-template-areas:
           "a a a"
           "a a a";
 
           .landing_text {
-            width: 90% !important;
+            width: 100% !important;
             margin: 0 auto;
             text-align: center;
 
@@ -534,7 +643,7 @@ export default {
 
               margin: 2vh auto;
               text-align: center !important;
-              width: 100% !important;
+              width: 80% !important;
               justify-content: space-around;
 
               .btn1 {
@@ -549,7 +658,7 @@ export default {
                 @include homeButton;
                 width: 100%;
                 margin: 5px auto;
-
+                border: 1px solid $textColor;
                 &:hover {
                   color: $headerColor;
                 }
@@ -571,6 +680,7 @@ export default {
 
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
     margin-top: 0;
@@ -580,7 +690,7 @@ export default {
         margin-top: 10vh !important;
 
         .landing_info {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
           grid-template-areas:
           "a a a"
           "a a a";
@@ -602,21 +712,19 @@ export default {
             .landing_text_button {
               margin: 2vh auto;
               text-align: center;
-              width: 100% !important;
-              justify-content: space-around;
 
               .btn1 {
                 @include homeButton;
-                margin: 5px auto;
-                width: 40%;
+                margin: 20px ;
+                width: 30%;
                 background: $highlight;
               }
 
               .btn2 {
                 @include homeButton;
-                margin: 5px auto;
-                width: 40%;
-
+                margin: 20px ;
+                width: 30%;
+                border: 1px solid $textColor;
                 &:hover {
                   color: $headerColor;
                 }

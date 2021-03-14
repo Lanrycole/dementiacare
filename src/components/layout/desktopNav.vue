@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <div class="hiring" v-if="scrollPosition<300">
-      <p><img src="https://img.icons8.com/ios/22/ffffff/apple-phone.png" alt="phone"/>1234567890</p>
+      <p><img src="https://img.icons8.com/ios/22/ffffff/apple-phone.png" alt="phone"/> 1(833)564-6332 (EXT 0)</p>
       <p><img src="https://img.icons8.com/windows/22/ffffff/place-marker.png" alt="location"/> London, ON </p>
       <p><img src="https://img.icons8.com/material-sharp/22/ffffff/filled-sent.png" alt="email"/>info@dementiacare.com
       </p>

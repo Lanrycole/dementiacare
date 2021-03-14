@@ -7,15 +7,12 @@
       <div class="mobile_nav">
         <mobileNav/>
       </div>
-
     </div>
     <router-view/>
-<!--Todo: Add SEO-->
-
-
     <div class="footer">
       <Footer/>
     </div>
+
   </div>
 </template>
 
@@ -25,12 +22,14 @@ import desktopNav from "@/components/layout/desktopNav"
 import Footer from "@/components/footer_comp"
 
 
+
 export default {
 
   components: {
     mobileNav,
     desktopNav,
     Footer,
+
 
   },
   metaInfo() {
@@ -57,9 +56,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style  lang="scss">
 @import "./src/assets/Colors/colors";
 @import "./src/assets/Fonts/fonts";
+@import "./src/assets/Buttons/buttons";
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
 
 * {
   padding: 0;

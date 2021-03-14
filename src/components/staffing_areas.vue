@@ -23,7 +23,7 @@
         </div>
         <div class="staffing_details">
           <img src="../assets/Images/home_care.svg" alt="">
-          <p>Home Care Aide</p>
+          <p>Nursing Aide</p>
         </div>
 
       </div>

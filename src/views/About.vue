@@ -5,12 +5,11 @@
       <div class="about_text">
         <h1>Dementia consultation</h1>
         <p>
-          DDC provides a consultation service that includes dementia information, advice and support services to
-          individuals and families of people living with dementia and younger onset dementia to improve their quality of
-          life. DDC also provides consultation and advisory services to service providers and actively contributes to
+          We provide a consultation service that includes dementia information, advice and support services to
+          individuals and families of people living with dementia. We also provides consultation and advisory services to service providers and actively contributes to
           developing a service sector that is responsive to and can meet the needs of people living with dementia and
           younger onset dementia. <br>
-          We provide proactive follow-up after diagnosis with information and support by carrying out needs assessment,
+          Our consultation services provides proactive follow-up after diagnosis with information and support by carrying out needs assessment,
           goal setting and developing a person-centered care plan that focuses on supporting individuals living with
           dementia.
         </p>
@@ -36,18 +35,20 @@
         <div class="team_member_desc">
           <h2>Meet the Team</h2>
           <p>
-            We are a team of dedicated company. We take pride in providing exceptional care.
+            We are a team of dedicated Health care professionals . We take pride in providing exceptional care.
             Our organization team of staff include:
           </p>
 
-          <p><strong>Demetia Care specialist</strong></p>
+          <p><strong>Dementia Care specialist</strong></p>
+          <p><strong>Registered Nurses</strong></p>
+          <p><strong>Registered Practical Nurses</strong></p>
 
           <p><strong>Care Managers</strong></p>
+          <p><strong>Personal Support  Workers</strong></p>
 
-          <p> <strong>HR</strong></p>
+          <p> <strong>Talent Acquisition</strong></p>
 
-          <p> <strong>Employee Management</strong></p>
-          <div class="team_member_desc_btn">
+           <div class="team_member_desc_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
               </router-link>
@@ -64,6 +65,8 @@
       <dropdown :dropdown_header="philosophy_header" :dropdown_text="philosophy_text"/>
       <dropdown :dropdown_header="consultants_header" :dropdown_text="consultants_text"/>
       <dropdown :dropdown_header="staffing_header" :dropdown_text="staffing_text"/>
+      <dropdown :dropdown_header="enabling_header" :dropdown_text="enabling_text"/>
+      <dropdown :dropdown_header="coming_soon_header" :dropdown_text="coming_soon_text"/>
 
     </div>
     <div class="about_us_menu ">
@@ -175,7 +178,7 @@ export default {
     return {
       support_org: 'How do we support organizations?',
       support_org_text: 'The partnership team will work alongside community care partners to assist in the identification of areas to further develop and improve support to individuals  living with dementia.\n' +
-          'Emphasis will be on key areas of client support such as assessment, person-centered approaches, enablement, wellness, dementia enabling environments and career support.' +
+          'Emphasis will be on key areas of client support such as assessment, person-centered approaches, enablement, wellness, dementia enabling environments and career support.\n' +
           '<br>' +
           ' <strong>Activities:</strong> ' +
           '<br>• Coaching and Mentoring' +
@@ -193,23 +196,20 @@ export default {
           '<br>• Overall improvement in an organization’s financial position.\n',
 
       philosophy_header: "Our philosophy",
-      philosophy_text: "Our philosophy of care embraces a person-centered approach that respects the individuality and the experience of those living with dementia." +
+      philosophy_text: "Our philosophy of care embraces a person-centered approach that respects the individuality and the experience of those living with dementia.\n'" +
           "We aim to help you to remain living at home for as long as possible. <br>" +
-          "Our dementia specialist and care managers work with you to understand your needs and help you navigate through the home care package process." +
-          "Should you choose DDC as your home care provider, your care manager will help you through the process of signing your <strong>home care agreement.</strong>" +
-          "Together with DDC, we will help you design a personalized plan that will meet your daily needs and also ensures your " +
-          "utmost wellbeing which includes a start date that is convenient. ",
+          "Our dementia specialist and care managers work with you to understand your needs and help you navigate through the home care package process. \n" +
+          "Should you choose DDC as your home care provider, your care manager will help you through the process of signing your <strong>home care agreement.\n</strong>" +
+          "Together, we will help you design a personalized care plan that will meet your daily needs and also ensures your " +
+          "utmost wellbeing. ",
 
-      enabling_header: "Enabling household",
-      enabling_text: "Based around our Enabling home environments, our dementia specialist team will" +
-          " provide an evidence-based environment that seeks to maximize well being in the persons living with dementia. <br>" +
-          " Providing a wide range of meaningful activities based on the person’s strengths, identity and interests, the " +
-          "teams will provide meaningful engagement, stimulation and friendship in a " +
-          "group setting that is specially designed for dementia enabling environments.",
+      enabling_header: "Enabling Home",
+      enabling_text: "Based around our Enabling home environment program, our dementia care specialist team will" +
+          " provide an evidence-based environment assessment and recommendations  that seeks to maximize the independence of the persons living with dementia at their home. ",
       consultants_header: " Our Consultants",
       consultants_text: "Our consultants apply evidence-based knowledge, objective assessment techniques, " +
           "a collaborative approach and a passion to improve the quality of life of older people and people with dementia. We use proven-in-practice knowledge," +
-          " professional expertise and experience for challenging situations, leading clients to new insights and innovative solutions. <br>" +
+          "professional expertise and experience for challenging situations, leading clients to new insights and innovative solutions.  <br>" +
           "We operate in a diverse range of care contexts including and not limited to:" +
           " <br>• Homes of older people and people living with dementia\n" +
           " <br>• Community and social clubs\n" +
@@ -218,7 +218,18 @@ export default {
           " <br>• Hospitals" +
           "<br>Contact us if you are open to decreasing resident discharge and use of psychotropic medications, while improving staff retention and satisfaction.",
       staffing_header: "Staffing and Recruitments ",
-      staffing_text: "DDC specialize in providing temporary employments or continuous nursing staffing to long term care homes, Home care, Hospitals, Retirements homes and Community and Residential care homes  ",
+      staffing_text: "DDC specialize in providing temporary employments or continuous nursing staffing to long term care homes, Home care, Hospitals, Retirements homes and Community " +
+          "and Residential care homes  ",
+      coming_soon_header: "Coming Soon",
+      coming_soon_text: "Our Dementia Centre, where we will offer a range of consultancy services on many aspects of caring for older people and people living with dementia.\n" +
+          "The service we will be providing at the day program center will include:\n" +
+          "\n" +
+          " <br> Cognitive stimulation therapy,\n" +
+          "<br> Reminiscence Therapy\n" +
+          "<br> Positive Snoezelen rooms, a multi-sensory stimulation therapy \n" +
+          "<br>  Therapeutic activities\n" +
+          "<br>  Sport engagements \n" +
+          "<br> Our daily programs will provide the family a short break while also providing an enriching experience for the person living with dementia.\n",
 
       icon: 'https://img.icons8.com/fluent-systems-regular/30/000000/low-importance.png',
       landingImg: require('../assets/Images/staffing_header.png'),
@@ -231,7 +242,7 @@ export default {
       text_align_partners: 'end',
 
       text_align: 'center',
-      menu_content: '   <h1>Partners</h1> <br> <p style="line-height:32px"> The Dementia Partnership Project aims to enhance the experience of all involved and to also improve the quality of life of people living with dementia in their community when accessing support services.\n' +
+      menu_content: '   <h1 style="margin:0; padding:0;">Partners</h1> <br> <p style="line-height:32px "> The Dementia Care Partnership Program aims to enhance the experience of all involved and to also improve the quality of life of people living with dementia in their community when accessing support services.\n' +
           'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n </p> ',
       partner_text: '   <h1>Partners</h1> <br> <p style="line-height:32px"> The Dementia Partnership Project aims to enhance the experience of all involved and to also improve the quality of life of people living with dementia in their community when accessing support services.\n' +
           'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n',
@@ -306,7 +317,7 @@ export default {
 
       h1 {
         border-bottom: 2px solid $secondaryColor;
-        width: 50%;
+        width: 30%;
         margin: 20px;
       }
     }
@@ -320,7 +331,7 @@ export default {
 
     .team_member_info {
       background: $textColor;
-      width: 70%;
+      width: 80%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -331,7 +342,7 @@ export default {
         margin: 0;
 
         img {
-          width: 600px;
+          width: 100%;
           height: 100%;
 
         }

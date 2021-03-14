@@ -3,6 +3,9 @@
     <div class="hiring">
       <hiring/>
     </div>
+<div class="recruitment_solution">
+  <recruitment :dropdown_header="recruitment_header" :dropdown_text="recruitment_text"/>
+</div>
 <div class="staffing">
   <staffing/>
 </div>
@@ -17,6 +20,7 @@
 <script>
 import hiring from '@/components/hiring_comp'
 import staffing from '@/components/staffing_areas'
+import recruitment from '@/components/dropdown'
 
 
 export default {
@@ -24,11 +28,16 @@ export default {
 
   components: {
     hiring,
-    staffing
+    staffing,
+    recruitment
   },
 
   data() {
+
     return {
+      recruitment_header :"Our Recruitment Solutions",
+      recruitment_text: "We have healthcare professionals who are committed and dedicated to their duties with diverse " +
+          "experience in Mental health, Intensive Care Units, Emergency departments, Pre- and Post-operatives, Long-Term Care Homes, Public health and Community care.",
       title: "Join Us",
       text: "We are partners with industry leading organizations, providing the best home care services for adults",
       boardImg: require('../assets/Images/staffing2_mini.png')
@@ -47,9 +56,11 @@ export default {
 .hiring{
   margin-top: 13vh;
 }
-
+.recruitment_solution{
+  margin-top: 5vh;
+}
 .resume_section {
-  margin: 10vh auto;
+  margin: 5vh auto;
   text-align: center;
   border-radius: 2rem;
   grid-column-start: 2;
@@ -69,123 +80,7 @@ export default {
     opacity: 0.8;
   }
 
-  form {
-    margin: 5vh auto;
 
-    padding: 2px;
-    text-align: center;
-
-    .input_fields {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin: 0 auto;
-      text-align: center !important;
-
-      div {
-        text-align: start !important;
-
-        label {
-          text-align: start;
-          font-weight: bolder;
-          opacity: 0.6;
-        }
-      }
-
-
-      input[type="text"] {
-        //transform: scale(0.8);
-        position: relative;
-        padding: 10px 10px 10px 10px;
-        width: 80%;
-        font-weight: 100;
-        letter-spacing: 2px;
-        transition: width 0.8s ease;
-        outline: none;
-        background: none;
-        //border: 1px solid #586070;
-        border: none;
-        font-size: 18px;
-        display: inline-block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-        &:hover {
-          box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-          border: none;
-        }
-      }
-
-
-      input[type="date"] {
-        position: relative;
-        padding: 10px 10px 10px 10px;
-        width: 80%;
-        font-weight: 100;
-        letter-spacing: 2px;
-        transition: width 0.8s ease;
-        outline: none;
-        background: none;
-        //border: 1px solid #586070;
-        border: none;
-        font-size: 18px;
-        display: inline-block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-        &:hover {
-          box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-          border: none;
-        }
-
-      }
-
-      input[type="file"] {
-        width: 300px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-      }
-
-    }
-
-    .btn1 {
-      text-align: center;
-      @include homeButton;
-      border: 1px solid $textColor;
-      margin: 10px auto;
-      width: 200px;
-      box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-    }
-
-    .message {
-      margin: 0 auto;
-      text-align: start;
-
-      label {
-        text-align: start;
-        font-weight: bolder;
-        opacity: 0.6;
-      }
-
-      textarea {
-        width: 90%;
-        resize: none;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        padding: 10px 10px 10px 10px;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-        &:hover {
-          box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-          border: none;
-        }
-
-      }
-    }
-  }
 }
 
 
@@ -210,35 +105,7 @@ export default {
 
       }
 
-      form {
-        margin: 2vh auto;
-        text-align: center;
-        padding: 10px;
 
-        .input_fields {
-          display: grid;
-          grid-template-columns: 1fr;
-
-          input[type="text"] {
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-          }
-
-          input[type="file"] {
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-          }
-
-          input[type="date"] {
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-          }
-        }
-
-        textarea {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -261,34 +128,7 @@ export default {
 
       }
 
-      form {
-        margin: 2vh auto;
-        text-align: center;
-        padding: 30px;
 
-        .input_fields {
-          display: grid;
-
-          input[type="text"] {
-            padding: 10px 10px 10px 10px;
-            width: 90%;
-          }
-
-          input[type="file"] {
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-          }
-
-          input[type="date"] {
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-          }
-        }
-
-        textarea {
-          width: 100%;
-        }
-      }
     }
   }
 
