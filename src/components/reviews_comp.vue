@@ -24,7 +24,10 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review</Button>
+
+                <Button type="button" class="btn2">
+                  <a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank"> Write Review</a>
+                </Button>
               </div>
 
             </div>
@@ -50,7 +53,9 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review</Button>
+                <Button type="button" class="btn2">
+                  <a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank"> Write Review</a>
+                </Button>
               </div>
             </div>
           </div>
@@ -75,7 +80,8 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review</Button>
+                <Button type="button" class="btn2"><a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank">
+                  Write Review</a></Button>
               </div>
             </div>
           </div>
@@ -100,8 +106,8 @@
                 tempore velit, voluptas voluptate.
               </p>
               <div class="submit_review">
-                <Button type="button" class="btn2">Write Review <img src="https://img.icons8.com/dotty/24/000000/ringing-phone.png" alt="phone"/>
-                </Button>
+                <Button type="button" class="btn2"><a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank">
+                  Write Review</a></Button>
               </div>
             </div>
           </div>
@@ -163,8 +169,8 @@ export default {
 
 
     /* Create the parallax scrolling effect */
-    background: url("../assets/Images/reviews.jpg") no-repeat fixed center;
-    background-size: cover;
+    background: url("../assets/Images/reviews.jpg") fixed center/cover no-repeat;
+    //background-size: cover;
 
     .review_info {
       margin: 0 auto !important;
@@ -216,8 +222,7 @@ export default {
 
             .btn2 {
               @include homeButton;
-              background-color: rgb(0, 0, 0); /* Fallback color */
-              background-color: rgba(0, 0, 0, 0.6);
+
               padding: 8px;
               //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
               transition: 0.5s;
@@ -227,12 +232,11 @@ export default {
               border: 2px solid $textColor;
               width: 200px;
 
-              img {
-                top: 10px;
-                right: 10px;
-                position: absolute;
-                display: none;
+              a {
+                color: $textColor;
+
               }
+
 
               &:hover {
                 background: $highlight;

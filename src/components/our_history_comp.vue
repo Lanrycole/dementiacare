@@ -2,11 +2,12 @@
   <div id="container">
     <div class="welcome_card">
 
-      <div class="cards" data-aos="zoom-in">
+      <div class="cards" data-aos="fade-up"
+           data-aos-duration="2000">
         <div class="card_img">
           <img src="../assets/Images/doctor.svg" alt="">
         </div>
-        <div class="card_text" data-aos="zoom-in">
+        <div class="card_text">
           <h2>
             Our History
           </h2>
@@ -44,11 +45,12 @@
         </div>
       </div>
       <hr>
-      <div class="cards" data-aos="zoom-in">
-        <div class="card_img" data-aos="zoom-in">
+      <div class="cards" data-aos="fade-up"
+           data-aos-duration="2000">
+        <div class="card_img">
           <img src="../assets/Images/suburbs.svg" alt="office">
         </div>
-        <div class="card_text" data-aos="zoom-in">
+        <div class="card_text" >
           <h2>Address</h2>
           <p>
 
@@ -150,13 +152,13 @@ export default {
         img {
           width: 100%;
           max-width: 100%;
-          height: 500px;
+          height: 100%;
           background: #dfe4ea;
         }
       }
 
       .card_text {
-        padding: 20px;
+        padding: 10px;
 
         &::selection {
           background: $secondaryColor;
@@ -165,7 +167,7 @@ export default {
         h2 {
           color: $headerColor;
           font-weight: bolder;
-          font-size: 50px;
+          font-size: 30px;
           opacity: 0.9;
 
           &::selection {
@@ -191,12 +193,7 @@ export default {
               color: $headerColor;
             }
 
-            img {
-              top: 10px;
-              right: 10px;
-              position: absolute;
-              display: none;
-            }
+
 
             &:hover {
               background: $highlight;
@@ -286,7 +283,7 @@ export default {
           padding: 0;
 
           h2 {
-            font-size: 30px;
+            font-size: 20px;
           }
 
           p {

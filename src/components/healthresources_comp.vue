@@ -57,7 +57,6 @@ export default {
 
 .health_resources {
   background: $textColor;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -80,14 +79,19 @@ export default {
 
     .health_text {
       padding: 20px;
+      a {
+        h2 {
+          font-size: 18px;
+        }
 
+      }
       &::selection {
         background: $secondaryColor;
       }
 
       p {
         font-weight: normal;
-        font-size: 16px;
+
         line-height: 32px;
         margin-top: 20px;
 
@@ -125,10 +129,19 @@ export default {
     margin-top: 8vh;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-padding:20px;
+    padding: 20px;
+
     .health_info {
       width: 100%;
 
+      .health_text {
+        a {
+          h2 {
+            font-size: 20px;
+          }
+
+        }
+      }
     }
   }
 }

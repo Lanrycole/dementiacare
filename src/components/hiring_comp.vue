@@ -1,5 +1,6 @@
 <template>
-  <div class="hiring">
+  <div class="hiring" data-aos="fade-up"
+       data-aos-duration="2000">
     <div class="hiring_img">
       <img src="../assets/Images/staffing.jpg" alt="nurse">
     </div>
@@ -53,7 +54,7 @@ export default {
 
     h2 {
       margin: 0 auto;
-      font-size: 50px;
+      font-size: 40px;
       width: 60%;
       opacity: 0.9;
 
@@ -81,11 +82,10 @@ export default {
 
       .btn1 {
         @include homeButton;
-        background: none;
+        background: $secondaryColor;
         color: $headerColor;
         padding: 8px;
-        border: 1px solid $highlight;
-        transition: 0.5s;
+         transition: 0.5s;
         position: relative;
         text-align: center;
         margin: 20px;
@@ -112,13 +112,21 @@ export default {
         background: none;
         color: $headerColor;
         box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-        border: 2px solid $secondaryColor;
+        border: 1px solid $highlight;
         margin: 20px;
 
         a {
           color: $headerColor;
         }
+        &:hover {
+          background: $secondaryColor;
+          color: $headerColor;
 
+        }
+
+        &::before {
+          background: $highlight;
+        }
       }
     }
   }

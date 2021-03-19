@@ -2,7 +2,8 @@
 
   <div id="container">
     <div class="about">
-      <div class="about_text">
+      <div class="about_text" data-aos="fade-up"
+           data-aos-duration="2000">
         <h1>Dementia consultation</h1>
         <p>
           We provide a consultation service that includes dementia information, advice and support services to
@@ -27,7 +28,8 @@
 
       </div>
     </div>
-    <div class="team_member " data-aos="zoom-in">
+    <div class="team_member " data-aos="fade-up"
+         data-aos-duration="2000">
       <div class="team_member_info">
         <div class="team_member_img">
           <img src="../assets/Images/team.jpeg" alt="">
@@ -299,8 +301,8 @@ export default {
 #container {
   .about {
     margin: 10vh auto 5vh;
-    background: url("../assets/Images/theteam.jpeg") no-repeat fixed center;
-    background-size: cover;
+    background: url("../assets/Images/theteam.jpeg")  fixed center/cover no-repeat;
+    //background-size: cover;
     padding: 120px;
 
     .about_text {
@@ -319,9 +321,11 @@ export default {
         border-bottom: 2px solid $secondaryColor;
         width: 30%;
         margin: 20px;
+        font-size: 26px;
       }
     }
   }
+
 
   .team_member {
 
@@ -515,6 +519,7 @@ export default {
   }
 }
 
+
 @media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
   #container {
@@ -666,7 +671,7 @@ export default {
           border-bottom: 2px solid $secondaryColor;
           width: 100%;
           margin: 20px auto;
-          font-size: 30px;
+          font-size: 26px;
         }
       }
     }
@@ -769,12 +774,141 @@ export default {
     }
   }
 }
+@media (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #container {
+    .about {
+      margin: 2vh auto;
+
+      padding: 10px;
+
+      .about_text {
+        margin: 50vh auto;
+        background: $textColor;
+        padding: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          line-height: 35px;
+          margin: 10px;
+        }
+
+        h1 {
+          border-bottom: 2px solid $secondaryColor;
+          width: 100%;
+          margin: 20px auto;
+          font-size: 26px;
+        }
+      }
+    }
+
+    .team_member {
+      margin: 1vh auto 5vh;
+
+      .team_member_info {
+        background: $textColor;
+        width: 90%;
+        grid-template-columns: 1fr;
+
+        .team_member_img {
+          padding: 0;
+          margin: 0;
+
+          img {
+            max-width: 100%;
+
+          }
+        }
+
+        .team_member_desc {
+          h2 {
+            width: 90%;
+
+            font-size: 26px;
+          }
+        }
+      }
+
+    }
+
+    .about_us_menu {
+      padding: 0 !important;
+      margin: 10vh auto !important;
+      width: 100% !important;
+
+      .left_section {
+        width: 40% !important;
+        border-right: 0.5rem solid $highlight !important;
+
+        .left_menu {
+          width: 100% !important;
+
+          ul {
+
+            li {
+
+              padding: 10px;
+              font-size: 14px !important;
+
+              &:hover {
+                background-position: 0 100%;
+
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .right_section {
+        width: 90% !important;
+        margin: 10px;
+      }
+    }
+
+    .more_info {
+      padding: 5px;
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .infos {
+        margin-top: 0.5vh;
+        grid-template-columns: 1fr !important;
+        grid-gap: 10px;
+        padding: 10px !important;
+
+        .info {
+          grid-template-columns: 1fr !important;
+          grid-gap: 5px;
+
+
+          img {
+            width: 100%;
+
+          }
+
+          .info_text {
+            h2 {
+              margin-top: 0 !important;
+              font-size:20px;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .about {
       margin: 10vh auto 5vh;
-      background: url("../assets/Images/theteam.jpeg") no-repeat fixed center;
-      background-size: cover;
+      background: url("../assets/Images/theteam.jpeg")  center/cover no-repeat;
+      //background-size: cover;
       padding: 20px;
 
       .about_text {
@@ -791,8 +925,9 @@ export default {
 
         h1 {
           border-bottom: 2px solid $secondaryColor;
-          width: 60%;
+          width: 90%;
           margin: 20px;
+          font-size: 26px;
         }
       }
     }

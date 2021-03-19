@@ -162,10 +162,10 @@ export default {
 
     .footer_menu {
       background: $headerColor;
-      padding: 20px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 20px;
+      padding: 40px 20px 40px;
 
       .menu_lst {
         margin: 0 auto;

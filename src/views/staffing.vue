@@ -29,7 +29,7 @@ export default {
     return {
       service_Img: require('../assets/Images/consultation2-mini.png'),
       text_header: "Staffing and Recruitment",
-      text: " Are you an organization looking for quality care for your facilities? Or an individual looking for quality care at home? We can provide you with compassionate nursing candidates across Canada, we have a large database of experienced health care professionals and freshers." +
+      text: " Are you an organization looking for quality care for your facilities? Or an individual looking for quality care at home? W provide you with compassionate nursing candidates across Canada, we have a large database of experienced health care professionals and freshers." +
           " <br>We will support your long-term care homes, hospital and residential homes with reliable, punctual, and professional staff that will promote the quality of life of your residents. \n" +
           "All our staff undergo a thorough screening process that includes vulnerable sector checks, and we provide adequate education to our staff to ensure our clients safety as well as protecting the public.\n" +
           "<br><span style='border-bottom: 1px solid red;'><strong>If you are an organization answer these questions:</strong></span><br>" +

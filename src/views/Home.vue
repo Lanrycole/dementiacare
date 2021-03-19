@@ -6,12 +6,11 @@
           <div class="landing_info">
             <div class="landing_text">
               <p class="msg">
-                Lorem Ipsum
+                Providing professional health care services.
               </p>
               <h1>Diversified Dementia Care</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
-              </p>
+                DDC provides a consultation service that includes dementia information, advice and support services               </p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">
                   <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
@@ -33,11 +32,11 @@
           <div class="landing_info">
             <div class="landing_text">
               <p class="msg">
-                Lorem Ipsum
+                Super Home Care
               </p>
               <h1>Home Care Services</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
+                We provide you with professional health care services at the comfort of your home
               </p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">
@@ -60,12 +59,11 @@
           <div class="landing_info">
             <div class="landing_text">
               <p class="msg">
-                Lorem Ipsum
+                Professional Health care workers
               </p>
               <h1>Staffing & Recruitment</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptatum?
-              </p>
+                We hire Compassionate and Professional health care workers across Canada</p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">
                   <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
@@ -221,7 +219,7 @@ export default {
 }
 
 #home {
-  margin-top: 13vh;
+  margin-top: 14vh;
   position: relative;
 
   .welcome {
@@ -528,6 +526,7 @@ export default {
               margin: 10px auto 0 20px;
 
             }
+
             .btn2 {
               border: 1px solid $textColor;
             }
@@ -587,6 +586,7 @@ export default {
                 width: 100%;
                 margin: 5px auto;
                 border: 1px solid $textColor;
+
                 &:hover {
                   color: $headerColor;
                 }
@@ -630,7 +630,7 @@ export default {
             text-align: center;
 
             h1 {
-              font-size: 35px;
+              font-size: 28px;
             }
 
             .msg {
@@ -659,6 +659,7 @@ export default {
                 width: 100%;
                 margin: 5px auto;
                 border: 1px solid $textColor;
+
                 &:hover {
                   color: $headerColor;
                 }
@@ -715,16 +716,17 @@ export default {
 
               .btn1 {
                 @include homeButton;
-                margin: 20px ;
+                margin: 20px;
                 width: 30%;
                 background: $highlight;
               }
 
               .btn2 {
                 @include homeButton;
-                margin: 20px ;
+                margin: 20px;
                 width: 30%;
                 border: 1px solid $textColor;
+
                 &:hover {
                   color: $headerColor;
                 }

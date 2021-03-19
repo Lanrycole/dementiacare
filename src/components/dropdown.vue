@@ -130,10 +130,18 @@ export default {
 }
 @media (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #container{
+
     .dropdown {
       padding: 10px;
       width: 90%;
+      .dropdown_header {
 
+
+        h3 {
+          margin-left: 10px;
+          font-size:16px;
+        }
+      }
     }
   }
 }

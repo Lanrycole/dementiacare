@@ -168,6 +168,44 @@ export default {
 
   }
 }
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
+  #container {
+    .services_sec {
+      width: 95%;
+      height: unset;
+      margin: 9vh auto;
+
+      .services_img {
+        img {
+          display: none;
+        }
+      }
+
+      .services_text {
+        padding: 10px !important;
+        width: 100%;
+        position: unset;
+        text-align: center;
+
+        h2 {
+          font-size: 22px;
+        }
+
+        .services_text_button {
+          text-align: center;
+
+          .btn1, .btn2 {
+            text-align: center;
+            width: 60%;
+            margin: 5px auto;
+          }
+        }
+      }
+    }
+
+
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {

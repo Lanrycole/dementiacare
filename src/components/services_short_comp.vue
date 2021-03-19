@@ -1,6 +1,7 @@
 <template>
   <div id="container">
-    <div class="services" data-aos="zoom-in">
+    <div class="services" data-aos="fade-up"
+         data-aos-duration="2000">
       <div class="services_info">
         <div class="services_img">
           <img src="../assets/Images/consultation.jpeg" alt="consultation">
@@ -232,7 +233,9 @@ export default {
         margin: 20px auto;
 
         .services_text {
-
+h2{
+  font-size:20px;
+}
         }
       }
     }

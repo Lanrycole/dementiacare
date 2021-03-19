@@ -7,7 +7,8 @@
       </div>
 
       <div class="menu_icon">
-        <img :src="menu_icon" @click="toggleMenu" alt="close menu"/>
+<!--        <img :src="menu_icon" @click="toggleMenu" alt="close menu"/>-->
+        <p @click="toggleMenu">Menu</p>
       </div>
     </div>
     <div class="nav_items" :class="{expandMenu : !showMenu}">
@@ -50,9 +51,7 @@
             </ul>
           </div>
         </li>
-        <!--        <li @click="toggleMenu">-->
-        <!--          <router-link :to="{name: 'Clients'}" class="router-link" exact>Clients</router-link>-->
-        <!--        </li>-->
+
         <li @click="toggleMenu">
           <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
         </li>
@@ -125,8 +124,8 @@ export default {
       .menu_icon {
         cursor: pointer;
 
-        img {
-          cursor: pointer;
+        p {
+     font-weight: bolder;
         }
       }
 
@@ -138,7 +137,7 @@ export default {
       position: fixed;
       width: 100%;
       overflow-x: hidden;
-      top: 55px;
+      top: 51px;
       z-index: 2;
 
       p {

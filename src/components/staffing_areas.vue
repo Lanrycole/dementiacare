@@ -51,7 +51,7 @@ export default {
 
     h2 {
       text-align: center;
-      font-size: 50px;
+      font-size: 30px;
       padding: 40px;
       opacity: 0.9;
       color: $headerColor;
