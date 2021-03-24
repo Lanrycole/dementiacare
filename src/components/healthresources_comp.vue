@@ -22,7 +22,6 @@
         <a href="https://www.webmd.com/palliative-care/caring-for-a-person-with-dementia"
            target="_blank"><h2>Caring for people with Dementia</h2></a>
         <p>Caring for people with Dementia.</p>
-
       </div>
     </div>
     <div class="health_info" data-aos="fade-right"
@@ -91,10 +90,7 @@ export default {
 
       p {
         font-weight: normal;
-
         line-height: 32px;
-        margin-top: 20px;
-
         &::selection {
           background: $secondaryColor;
         }
