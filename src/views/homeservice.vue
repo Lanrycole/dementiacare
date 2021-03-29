@@ -3,8 +3,6 @@
     <div class="services">
       <services :services_header="text_header" :services_text="text" :services_img="service_Img"/>
     </div>
-
-
     <div class="health">
       <HealthResources/>
     </div>
@@ -41,6 +39,10 @@ export default {
           "» Companionship <br>" +
           "» Personal care <br>" +
           "» Home support<br>" +
+          "» Meal preparation<br>" +
+          "» Palliative care<br>" +
+          "» House Cleaning and Laundry<br>" +
+          "» Hospital Recovery care<br>" +
           "» Nursing (wound care, medication administration, and all other medical support)<br>" +
           "» Live in caregiver"
 

@@ -13,6 +13,7 @@
         We are constantly recruiting to fill various patient-care assignments all over Canada.
         Get in touch with us at
 
+
       </p>
       <div class="hiring_btn">
         <Button type="button" class="btn1">
@@ -23,6 +24,8 @@
         <Button type="button" class="btn2">
           <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#joinus'">Join Us</router-link>
         </Button>
+        <p style="font-weight:bolder;"> hiring@diversifieddementiacare.com</p>
+
       </div>
     </div>
   </div>

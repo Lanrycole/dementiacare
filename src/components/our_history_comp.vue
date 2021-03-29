@@ -12,7 +12,7 @@
             Our History
           </h2>
           <p>
-            We are growing company dedicated to providing professional health care services through recruitment, consultation and home care services.
+            We are a growing company dedicated to providing professional health care services through recruitment, consultation and home care services.
           </p>
           <h2>
             Philosophy
@@ -58,7 +58,8 @@
           </p>
           <h2>Contact</h2>
           <p>
-            You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:webmaster@example.com'>send an email. </a>.
+            You can <a href='tel:1(833)564-6332' >call (EXT 0) </a>  or send us an <a href='mailto:info@diversifieddementiacare.com
+'>send an email. </a>.
             <br> We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span>
           </p>
           <h2>Where we serve</h2>

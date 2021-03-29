@@ -161,6 +161,7 @@ export default {
 @import "./src/assets/Buttons/buttons";
 
 #container {
+  display:none;
   .reviews {
     margin: 0 auto !important;
     padding: 140px;

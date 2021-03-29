@@ -10,7 +10,9 @@
   <staffing/>
 </div>
     <div class="resume_section" id="joinus">
-      <iframe src="https://www.cognitoforms.com/f/XgneZ0-g00OXljwZXvzjrA?id=2" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="817" width="100%"></iframe>
+      <iframe src="https://www.cognitoforms.com/f/XgneZ0-g00OXljwZXvzjrA?id=2" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="817" width="100%">
+
+      </iframe>
     </div>
 
   </div>

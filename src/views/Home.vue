@@ -32,11 +32,11 @@
           <div class="landing_info">
             <div class="landing_text">
               <p class="msg">
-                Super Home Care
+                Exceptional Home Care
               </p>
               <h1>Home Care Services</h1>
               <p>
-                We provide you with professional health care services at the comfort of your home
+                We provide professional health care services at the comfort of your home
               </p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">

@@ -2,15 +2,22 @@
 
   <div id="container">
     <div class="about">
+      <div class="about_img_mobile">
+        <img src="../assets/Images/theteam.jpeg" alt="team">
+      </div>
       <div class="about_text" data-aos="fade-up"
            data-aos-duration="2000">
         <h1>Dementia consultation</h1>
         <p>
+          We specialize in providing temporary employments or continuous nursing staffing to long term care homes,
+          Home care, Hospitals, Retirements homes and Community and Residential care homes.
           We provide a consultation service that includes dementia information, advice and support services to
-          individuals and families of people living with dementia. We also provides consultation and advisory services to service providers and actively contributes to
+          individuals and families of people living with dementia. We also provides consultation and advisory services
+          to service providers and actively contributes to
           developing a service sector that is responsive to and can meet the needs of people living with dementia and
           younger onset dementia. <br>
-          Our consultation services provides proactive follow-up after diagnosis with information and support by carrying out needs assessment,
+          Our consultation services provides proactive follow-up after diagnosis with information and support by
+          carrying out needs assessment,
           goal setting and developing a person-centered care plan that focuses on supporting individuals living with
           dementia.
         </p>
@@ -29,7 +36,7 @@
       </div>
     </div>
     <div class="team_member " data-aos="fade-up"
-         data-aos-duration="2000">
+         data-aos-duration="1500">
       <div class="team_member_info">
         <div class="team_member_img">
           <img src="../assets/Images/team.jpeg" alt="">
@@ -46,11 +53,11 @@
           <p><strong>Registered Practical Nurses</strong></p>
 
           <p><strong>Care Managers</strong></p>
-          <p><strong>Personal Support  Workers</strong></p>
+          <p><strong>Personal Support Workers</strong></p>
 
-          <p> <strong>Talent Acquisition</strong></p>
+          <p><strong>Talent Acquisition</strong></p>
 
-           <div class="team_member_desc_btn">
+          <div class="team_member_desc_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
               </router-link>
@@ -125,7 +132,7 @@
         <div class="info" data-aos="fade-up"
              data-aos-anchor-placement="top-bottom">
           <div class="info_img">
-            <img src="../assets/Images/nurse3.jpg" alt="">
+            <img src="../assets/Images/nurse3.jpg" alt="nurse">
           </div>
           <div class="info_text">
             <h2>We continue to Improve </h2>
@@ -138,7 +145,7 @@
         <div class="info" data-aos="fade-up"
              data-aos-anchor-placement="top-bottom">
           <div class="info_img">
-            <img src="../assets/Images/training.jpeg" alt="">
+            <img src="../assets/Images/training.jpeg" alt="trainning">
           </div>
           <div class="info_text">
             <h2>Training System</h2>
@@ -250,7 +257,7 @@ export default {
           'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n',
 
       location_text: '    <h1>Location</h1> <br> <p style="line-height:32px">  2230 Blackwater Road London, ON N5X0L1.</p>',
-      contact_text: "   <h1>Contact</h1> <br> <p style='line-height:32px'> You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:webmaster@example.com'>send an email. </a>. We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span></p>",
+      contact_text: "   <h1>Contact</h1> <br> <p style='line-height:32px'> You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:info@diversifieddementiacare.com'>send an email. </a>. We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span></p>",
     }
   },
   methods: {
@@ -301,9 +308,13 @@ export default {
 #container {
   .about {
     margin: 10vh auto 5vh;
-    background: url("../assets/Images/theteam.jpeg")  fixed center/cover no-repeat;
+    background: url("../assets/Images/theteam.jpeg") fixed center/cover no-repeat;
     //background-size: cover;
     padding: 120px;
+
+    .about_img_mobile {
+      display: none;
+    }
 
     .about_text {
       margin: 20vh auto;
@@ -525,7 +536,7 @@ export default {
   #container {
     .about {
       margin: 2vh auto;
-
+      background: url("../assets/Images/theteam.jpeg") center/cover no-repeat;
       padding: 10px;
 
       .about_text {
@@ -648,15 +659,25 @@ export default {
   }
 
 }
+
 @media (min-width: 411px) and (max-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .about {
       margin: 2vh auto;
-
+      background: none;
       padding: 10px;
-
+      .about_img_mobile {
+        display: block;
+        width: 100%;
+margin-top: 2vh;
+        img {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
       .about_text {
-        margin: 50vh auto;
+        margin: 10vh auto;
         background: $textColor;
         padding: 10px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -774,15 +795,27 @@ export default {
     }
   }
 }
+
 @media (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .about {
       margin: 2vh auto;
-
+      background: none;
       padding: 10px;
+width: 100%;
+      .about_img_mobile {
+        display: block;
+        width: 100%;
+        margin-top: 2vh;
+        img {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
 
       .about_text {
-        margin: 50vh auto;
+        margin: 4vh auto;
         background: $textColor;
         padding: 10px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -893,7 +926,7 @@ export default {
           .info_text {
             h2 {
               margin-top: 0 !important;
-              font-size:20px;
+              font-size: 20px;
             }
           }
 
@@ -903,14 +936,22 @@ export default {
     }
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .about {
       margin: 10vh auto 5vh;
-      background: url("../assets/Images/theteam.jpeg")  center/cover no-repeat;
-      //background-size: cover;
       padding: 20px;
-
+      .about_img_mobile {
+        display: block;
+        width: 100%;
+        margin-top: 2vh;
+        img {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
       .about_text {
         margin: 20vh auto;
         background: $textColor;
@@ -931,8 +972,10 @@ export default {
         }
       }
     }
+
     .team_member {
       margin: 15vh auto 5vh;
+
       .team_member_info {
         background: $textColor;
         width: 100%;
@@ -1013,12 +1056,12 @@ export default {
         .info {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           display: grid;
-          grid-template-columns: 1fr ;
+          grid-template-columns: 1fr;
           grid-gap: 5px;
           background: white;
 
           img {
-           width: 100%;
+            width: 100%;
 
           }
 
@@ -1053,6 +1096,7 @@ export default {
     }
   }
 }
+
 @media (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   #container {
     .about {
@@ -1080,8 +1124,10 @@ export default {
         }
       }
     }
+
     .team_member {
       margin: 15vh auto 5vh;
+
       .team_member_info {
         background: $textColor;
         width: 100%;
@@ -1162,12 +1208,12 @@ export default {
         .info {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           display: grid;
-          grid-template-columns: 1fr ;
+          grid-template-columns: 1fr;
           grid-gap: 5px;
           background: white;
 
           img {
-           width: 100%;
+            width: 100%;
 
           }
 

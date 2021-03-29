@@ -10,7 +10,7 @@
           <h2>Dementia Consultation</h2>
           <hr>
           <p>
-            Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one       </p>
+            Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one</p>
           <div class="services_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
@@ -47,8 +47,7 @@
           <h2>Home Care Services</h2>
           <hr>
           <p>
-            Getting help at home does not take away your independence, it promotes your independence and ensures your safety all allows you to continue
-          </p>
+            Getting help at home does not take away your independence, it rather maximize your independence and allows you to continue living at home safely          </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
               <router-link :to="{name: 'Homeservice'}" class="router-link" exact v-scroll-to="'#book'">Read More
