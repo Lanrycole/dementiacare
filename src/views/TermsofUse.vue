@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import policiesCard from '@/components/policiesCard'
+import policiesCard from '@/components/Policies'
 
 
 export default {

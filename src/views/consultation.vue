@@ -11,8 +11,8 @@
 </template>
 
 <script>
- import services from '@/components/services_full'
-import HealthResources from '@/components/healthresources_comp'
+ import services from '@/components/FullServices'
+import HealthResources from '@/components/HealthResources'
 export default {
   name: "Services",
   components: {

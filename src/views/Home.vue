@@ -140,13 +140,13 @@
 </template>
 <script>
 
-import Services from '@/components/services_short_comp'
-import welcomeCard from '@/components/our_history_comp'
-import Hiring from '@/components/hiring_comp'
-import staffing_cat from '@/components/staffing_areas'
-import Review from '@/components/reviews_comp'
-import HealthResources from '@/components/healthresources_comp'
-import dropdown from '@/components/dropdown'
+import Services from '@/components/ShortServices'
+import welcomeCard from '@/components/OurHistory'
+import Hiring from '@/components/Hiring'
+import staffing_cat from '@/components/Staffing'
+import Review from '@/components/Reviews'
+import HealthResources from '@/components/HealthResources'
+import dropdown from '@/components/Dropdown'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
@@ -269,7 +269,7 @@ export default {
 
             .btn1 {
               @include homeButton;
-              margin: 20px;
+
               background: $highlight;
 
               a {

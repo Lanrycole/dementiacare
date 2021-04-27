@@ -19,7 +19,7 @@
 <script>
 import mobileNav from "@/components/layout/mobileNav"
 import desktopNav from "@/components/layout/desktopNav"
-import Footer from "@/components/footer_comp"
+import Footer from "@/components/Footer"
 
 
 

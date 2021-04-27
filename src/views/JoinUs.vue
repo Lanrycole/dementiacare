@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import hiring from '@/components/hiring_comp'
-import staffing from '@/components/staffing_areas'
-import recruitment from '@/components/dropdown'
+import hiring from '@/components/Hiring'
+import staffing from '@/components/Staffing'
+import recruitment from '@/components/Dropdown'
 
 
 export default {

@@ -171,9 +171,9 @@
 </template>
 <script>
 
-import Review from '@/components/reviews_comp'
-import staffing_cat from '@/components/staffing_areas'
-import dropdown from '@/components/dropdown'
+import Review from '@/components/Reviews'
+import staffing_cat from '@/components/Staffing'
+import dropdown from '@/components/Dropdown'
 
 
 export default {
