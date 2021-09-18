@@ -53,7 +53,7 @@ export default {
   background: $textColor;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   .message {
     padding: 40px;
 

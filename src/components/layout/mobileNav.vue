@@ -3,7 +3,7 @@
     <div id="mobile_nav">
       <div class="nav_logo">
         <router-link :to="{name: 'Home'}" class="router-link" exact>
-          <img src="../../assets/Images/logos.svg" alt="logo" width="100px"></router-link>
+          <img src="../../assets/Images/newlogo.svg" alt="logo" width="40px"></router-link>
       </div>
 
       <div class="menu_icon">
@@ -111,8 +111,8 @@ export default {
 
   #mobile_container {
     #mobile_nav {
-      background: $headerColor;
-      color: $textColor;
+      background: $textColor;
+      color: $headerColor;
       width: 100%;
       z-index: 3;
       padding: 10px 10px 10px;

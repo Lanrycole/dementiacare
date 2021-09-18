@@ -3,36 +3,38 @@
     <div class="welcome">
       <div class="landing">
         <VueSlickCarousel :arrows="false" :dots="false" v-bind="settings">
+          <!--          <div class="landing_info">-->
+          <!--            <div class="landing_text">-->
+          <!--              <p class="msg">-->
+          <!--                Providing professional health care services.-->
+          <!--              </p>-->
+          <!--              <h1>Diversified Dementia Care</h1>-->
+          <!--              <p>-->
+          <!--                DDC provides a consultation service that includes dementia information, advice and support services               </p>-->
+          <!--              <div class="landing_text_button">-->
+          <!--                <Button type="button" class="btn1">-->
+          <!--                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact-->
+          <!--                  </router-link>-->
+          <!--                </Button>-->
+          <!--                <Button type="button" class="btn2">-->
+          <!--                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking-->
+
+          <!--                  </router-link>-->
+
+          <!--                </Button>-->
+          <!--              </div>-->
+
+          <!--            </div>-->
+          <!--            <div class="landing_img">-->
+          <!--              <img src="../assets/Images/diversified.jpeg" alt="diversified_images">-->
+          <!--            </div>-->
+          <!--          </div>-->
           <div class="landing_info">
+
             <div class="landing_text">
+              <img src="./../assets/Images/newlogo.svg" alt="logo"  v-if="scrollPosition<300">
               <p class="msg">
-                Providing professional health care services.
-              </p>
-              <h1>Diversified Dementia Care</h1>
-              <p>
-                DDC provides a consultation service that includes dementia information, advice and support services               </p>
-              <div class="landing_text_button">
-                <Button type="button" class="btn1">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
-                  </router-link>
-                </Button>
-                <Button type="button" class="btn2">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
-
-                  </router-link>
-
-                </Button>
-              </div>
-
-            </div>
-            <div class="landing_img">
-              <img src="../assets/Images/diversified.jpeg" alt="diversified_images">
-            </div>
-          </div>
-          <div class="landing_info">
-            <div class="landing_text">
-              <p class="msg">
-                Exceptional Home Care
+                Exceptional
               </p>
               <h1>Home Care Services</h1>
               <p>
@@ -52,12 +54,15 @@
               </div>
 
             </div>
+
+
             <div class="landing_img">
-              <img src="../assets/Images/homeservice.jpg" alt="">
+              <img src="../assets/Images/homeserve.jpeg" alt="homeservices">
             </div>
           </div>
           <div class="landing_info">
             <div class="landing_text">
+              <img src="./../assets/Images/newlogo.svg" alt="logo"  v-if="scrollPosition<300">
               <p class="msg">
                 Professional Health care workers
               </p>
@@ -111,6 +116,9 @@
 
       </div>
     </div>
+    <div class="review">
+      <review/>
+    </div>
     <div class="our_services">
       <Services/>
     </div>
@@ -126,11 +134,8 @@
       <staffing_cat/>
     </div>
 
-    <div class="review">
-      <review/>
-    </div>
     <div class="partners">
-      <img src="../assets/Images/insignaLogo.jpg" alt="">
+      <img src="../assets/Images/insignaLogo.jpg" alt="logo">
 
     </div>
     <div class="health">
@@ -171,6 +176,7 @@ export default {
     return {
       showCookies: true,
       showCookiesMsg: false,
+      scrollPosition: 0,
       settings: {
         "infinite": true,
         "autoplay": true,
@@ -201,7 +207,14 @@ export default {
     },
     toggleCookie() {
       this.showCookies = !this.showCookies;
+    },
+    updateScroll() {
+      this.scrollPosition = window.scrollY
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+
   }
 }
 </script>
@@ -226,13 +239,13 @@ export default {
     position: relative;
 
     .landing {
-      background: black;
+      //background: black;
       outline: none;
 
       .landing_info {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
-        background: $headerColor;
+        //background: $headerColor;
         outline: none;
 
         .landing_text {
@@ -241,15 +254,25 @@ export default {
           outline: none;
           padding: 20px;
 
+          img {
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+            align-items: center;
+            width: 60%;
+
+          }
+
+
           h1 {
             font-size: 60px;
             font-weight: bolder;
-            color: $textColor;
+            color: $headerColor;
 
           }
 
           .msg {
-            margin-top: 20vh;
+            margin-top: 1vh;
             color: $secondaryColor;
             font-weight: bolder;
             font-size: 30px;
@@ -258,7 +281,7 @@ export default {
 
           p {
             opacity: 0.8;
-            color: $textColor;
+            color: $headerColor;
             font-size: 16px;
           }
 
@@ -296,6 +319,7 @@ export default {
         .landing_img {
           img {
             width: 1200px;
+
           }
         }
       }

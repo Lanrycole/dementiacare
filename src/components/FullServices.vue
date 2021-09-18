@@ -60,7 +60,7 @@ export default {
 .services_sec {
   width: 90%;
   background: white;
-  margin: 10vh auto;
+  margin: 14vh auto;
   .services_img {
     img {
       max-width: 100%;

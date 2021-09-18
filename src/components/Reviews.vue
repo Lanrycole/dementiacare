@@ -2,119 +2,41 @@
   <div id="container">
     <div class="reviews">
       <VueSlickCarousel :arrows="false" :dots="true" v-bind="settings">
-        <div class="review_info">
-          <div class="review_img">
-            <span><img src="../assets/Images/male_avatar.svg" alt="male avatar">
-            </span>
-
-          </div>
-          <div class="review_text">
-            <div class="review_stars">
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-            </div>
-            <div class="customer_reviews">
-              <p class="custom_name">Sonia</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem eos illum nesciunt obcaecati
-                placeat, sapiente. Consectetur debitis, dolorem dolores ex exercitationem pariatur, porro qui rerum
-                tempore velit, voluptas voluptate.
-              </p>
-              <div class="submit_review">
-
-                <Button type="button" class="btn2">
-                  <a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank"> Write Review</a>
-                </Button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="review_info">
-          <div class="review_img">
-            <img src="../assets/Images/female_avatar.svg" alt="female avatar">
-          </div>
-          <div class="review_text">
-            <div class="review_stars">
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-            </div>
-            <div class="customer_reviews">
-              <p class="custom_name">Sola</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem eos illum nesciunt obcaecati
-                placeat, sapiente. Consectetur debitis, dolorem dolores ex exercitationem pariatur, porro qui rerum
-                tempore velit, voluptas voluptate.
-              </p>
-              <div class="submit_review">
-                <Button type="button" class="btn2">
-                  <a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank"> Write Review</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="review_info">
-          <div class="review_img">
-            <img src="../assets/Images/female_avatar.svg" alt="female avater">
-          </div>
-          <div class="review_text">
-            <div class="review_stars">
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-            </div>
-            <div class="customer_reviews">
-              <p class="custom_name">Jessica</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem eos illum nesciunt obcaecati
-                placeat, sapiente. Consectetur debitis, dolorem dolores ex exercitationem pariatur, porro qui rerum
-                tempore velit, voluptas voluptate.
-              </p>
-              <div class="submit_review">
-                <Button type="button" class="btn2"><a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank">
-                  Write Review</a></Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="review_info">
-          <div class="review_img">
-            <img src="../assets/Images/male_avatar.svg" alt="male avatar">
-          </div>
-          <div class="review_text">
-            <div class="review_stars">
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-              <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
-            </div>
-            <div class="customer_reviews">
-              <p class="custom_name">Dayo</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolorem eos illum nesciunt obcaecati
-                placeat, sapiente. Consectetur debitis, dolorem dolores ex exercitationem pariatur, porro qui rerum
-                tempore velit, voluptas voluptate.
-              </p>
-              <div class="submit_review">
-                <Button type="button" class="btn2"><a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank">
-                  Write Review</a></Button>
-              </div>
-            </div>
-          </div>
-        </div>
 
 
       </VueSlickCarousel>
+      <div class="review_info">
+        <!--          <div class="review_img">-->
+        <!--            <span><img src="../assets/Images/male_avatar.svg" alt="male avatar">-->
+        <!--            </span>-->
+
+        <!--          </div>-->
+        <div class="review_text">
+          <div class="review_stars">
+            <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
+            <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
+            <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
+            <img src="https://img.icons8.com/fluent/20/000000/star.png" alt="review start"/>
+
+          </div>
+          <div class="customer_reviews">
+            <p class="custom_name">Heather Whitfield</p>
+            <p class="reviewer_details">Executive Director- Seaforth Long Term Care Home</p>
+            <p>
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/quote-left.png" alt="quote"/>  Our Home has found that Diversified Dementia Care Services has been able to meet the staffing - agency needs of our LTC Home.  We have received timely responses and great communication.
+              We thank DDC for their quality service.
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/quote-right.png" alt="quote"/>
+            </p>
+            <div class="submit_review">
+
+              <Button type="button" class="btn2">
+                <a href="https://g.page/r/Cecq-TNdx_jREAg/review" target="_blank"> Write Review</a>
+              </Button>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -161,7 +83,7 @@ export default {
 @import "./src/assets/Buttons/buttons";
 
 #container {
-  display:none;
+  //display:none;
   .reviews {
     margin: 0 auto !important;
     padding: 140px;
@@ -170,7 +92,8 @@ export default {
 
 
     /* Create the parallax scrolling effect */
-    background: url("../assets/Images/reviews.jpg") fixed center/cover no-repeat;
+    //background: url("../assets/Images/reviews.jpg") fixed center/cover no-repeat;
+    //background-size: cover;
     //background-size: cover;
 
     .review_info {
@@ -190,14 +113,18 @@ export default {
       .review_text {
         width: 50%;
         //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        //box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+
         text-align: center;
         margin: 20px;
         padding: 20px;
         line-height: 30px;
-        border-left: 4px solid $highlight;
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.8);
-        color: $textColor;
+        border-radius:2rem;
+        //border: 2px solid $highlight;
+        //background-color: rgb(0, 0, 0); /* Fallback color */
+        //background-color: rgba(0, 0, 0, 0.9);
+
+        color: $headerColor;
 
         .review_stars {
           text-align: center;
@@ -212,9 +139,13 @@ export default {
             font-size: 30px;
             margin: 10px;
             text-align: center;
-            font-weight: bolder;
-            opacity: 0.8;
-            color: $textColor;
+            opacity: 0.9;
+            color: $headerColor;
+
+          }
+          .reviewer_details{
+          padding:4px;
+          font-style:italic;
           }
 
           .submit_review {
@@ -223,36 +154,30 @@ export default {
 
             .btn2 {
               @include homeButton;
-
               padding: 8px;
               //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
               transition: 0.5s;
               position: relative;
               text-align: center;
               color: $textColor;
-              border: 2px solid $textColor;
+              border: 1px solid $highlight;
               width: 200px;
-
+              font-weight: normal;
+              background:none;
               a {
-                color: $textColor;
-
+                color: $headerColor;
+                font-weight: bold;
               }
-
 
               &:hover {
                 background: $highlight;
                 color: $headerColor;
-
                 img {
                   display: block;
-
                 }
-
               }
-
             }
           }
-
         }
       }
     }
@@ -285,7 +210,7 @@ export default {
           margin: 20px auto;
           padding: 10px;
           border-left: none;
-          border-top: 4px solid $highlight;
+          //border-top: 4px solid $highlight;
 
           .customer_reviews {
             .custom_name {
@@ -301,7 +226,7 @@ export default {
                 @include homeButton;
                 background: none;
                 padding: 6px;
-                border: 2px solid $textColor;
+                border: 2px solid $highlight;
                 width: 300px;
 
                 img {
@@ -359,7 +284,7 @@ export default {
           margin: 20px auto;
           padding: 10px;
           border-left: none;
-          border-top: 4px solid $highlight;
+          //border-top: 4px solid $highlight;
 
           .customer_reviews {
             .custom_name {
@@ -375,7 +300,7 @@ export default {
                 @include homeButton;
                 background: none;
                 padding: 6px;
-                border: 2px solid $textColor;
+                border: 2px solid $highlight;
                 width: 300px;
 
                 img {
@@ -434,7 +359,7 @@ export default {
           margin: 20px auto;
 
           border-left: none;
-          border-left: 4px solid $highlight;
+          //border-left: 4px solid $highlight;
 
           .customer_reviews {
             .custom_name {
@@ -450,7 +375,7 @@ export default {
                 @include homeButton;
                 background: none;
                 padding: 6px;
-                border: 2px solid $textColor;
+                border: 2px solid $highlight;
                 width: 300px;
 
                 img {

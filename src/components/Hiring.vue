@@ -136,7 +136,7 @@ export default {
 
   .hiring_img {
     img {
-     width: 100%;
+     width: 1000px;
       height: 100%;
 
     }
