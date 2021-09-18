@@ -4,7 +4,8 @@
          data-aos-offset="100"
          data-aos-easing="ease-in-sine">
       <div class="health_img">
-        <img src="../assets/Images/slide-1.jpg" alt="">
+        <img src="../assets/Images/slide-4.jpg" alt="dementia image">
+
       </div>
       <div class="health_text">
         <a href="https://alzheimer.ca/en/help-support#:~:text=Find%20supportWith%20programs%20and,need%20as%20soon%20as%20possible."
@@ -16,7 +17,8 @@
          data-aos-offset="80"
          data-aos-easing="ease-in-sine">
       <div class="health_img">
-        <img src="../assets/Images/slide-3.jpg" alt="">
+
+        <img src="../assets/Images/slide-1.jpg" alt="Dementia">
       </div>
       <div class="health_text">
         <a href="https://www.webmd.com/palliative-care/caring-for-a-person-with-dementia"
@@ -28,7 +30,7 @@
          data-aos-offset="50"
          data-aos-easing="ease-in-sine">
       <div class="health_img">
-        <img src="../assets/Images/slide-4.jpg" alt="">
+        <img src="../assets/Images/slide-3.jpg" alt="dementia image">
       </div>
       <div class="health_text">
         <a href="https://www.canada.ca/en/public-health/services/diseases/dementia.html"

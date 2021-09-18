@@ -7,7 +7,7 @@
       </div>
       <div class="about_text" data-aos="fade-up"
            data-aos-duration="2000">
-        <h1>Dementia consultation</h1>
+        <h1>About</h1>
         <p>
           We specialize in providing temporary employments or continuous nursing staffing to long term care homes,
           Home care, Hospitals, Retirements homes and Community and Residential care homes.
@@ -307,7 +307,7 @@ export default {
 
 #container {
   .about {
-    margin: 10vh auto 5vh;
+    margin: 14vh auto 5vh;
     background: url("../assets/Images/theteam.jpeg") fixed center/cover no-repeat;
     //background-size: cover;
     padding: 120px;

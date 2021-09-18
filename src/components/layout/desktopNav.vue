@@ -2,7 +2,7 @@
   <div id="container">
     <div class="hiring" v-if="scrollPosition<300">
       <p><img src="https://img.icons8.com/ios/22/ffffff/apple-phone.png" alt="phone"/> 1(833)564-6332 (EXT 0)</p>
-      <p><img src="https://img.icons8.com/windows/22/ffffff/place-marker.png" alt="location"/> London, ON </p>
+      <p><img src="https://img.icons8.com/windows/22/ffffff/place-marker.png" alt="location"/> London, ON | Toronto, ON </p>
       <p><img src="https://img.icons8.com/material-sharp/22/ffffff/filled-sent.png" alt="email"/>hiring@diversifieddementiacare.com
       </p>
       <p id="hire_p">
@@ -16,7 +16,7 @@
 
       <div class="nav_logo">
         <router-link :to="{name: 'Home'}" class="router-link" exact v-scroll-to="'#container'">
-          <img src="../../assets/Images/logos.svg" alt="logo" width="190px"></router-link>
+          <img src="../../assets/Images/newlogo.svg" alt="logo" width="80px" v-if="scrollPosition>300"></router-link>
       </div>
 
       <div class="nav_items">
@@ -110,8 +110,9 @@ export default {
 }
 
 .db {
-  background: $headerColor !important;
+  background: white !important;
   transition: .7s ease-out;
+
 }
 
 #container {
@@ -128,6 +129,7 @@ export default {
     color: $textColor;
     display: flex;
     justify-content: space-around;
+    //border-bottom: 3px solid $highlight;
 
 
     p {
@@ -152,7 +154,7 @@ export default {
     #hire_p {
       text-align: start;
       position: relative;
-      padding: 10px 20px 10px 20px;
+      padding: 5px 20px 5px 20px;
       cursor: pointer;
       border-radius: 6rem;
       background: #57606f;
@@ -169,18 +171,19 @@ export default {
   }
 
   #desktop_nav {
-    //background: $textColor;
+    background: $textColor;
     display: flex;
     width: 100%;
     justify-content: space-between;
     text-align: center;
     padding: 0;
     margin: 0;
-    //border-bottom: 1px solid $secondaryColor;
-    //box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
-    text-transform: uppercase;
-    background: black;
 
+
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    text-transform: uppercase;
+    //background: $headerColor;
+    //background: white;
     .nav_logo {
       width: 30%;
 
@@ -208,8 +211,10 @@ export default {
           margin: 15px;
           padding: 10px;
 
+
           .router-link-exact-active {
             color: $secondaryColor !important;
+
           }
 
           .join_us {
@@ -235,7 +240,7 @@ export default {
             padding: 10px;
             cursor: pointer;
             position: relative;
-            color: $textColor !important;
+            color: $headerColor !important;
 
             img {
               position: absolute;
@@ -261,23 +266,26 @@ export default {
             position: absolute;
             margin: 10px auto;
             text-align: center;
-            background-color: rgb(0, 0, 0); /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: $textColor;
             width: 40%;
+
             display: none !important;
+
 
             ul {
               text-align: start;
 
+
               li {
                 display: block;
+
               }
 
               .router-link {
                 text-align: start;
                 margin: 0 !important;
                 padding: 0 !important;
-
+                color: $headerColor !important;
                 &:hover {
                   color: $secondaryColor !important;
                 }
