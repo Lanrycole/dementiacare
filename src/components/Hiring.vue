@@ -24,7 +24,7 @@
         <Button type="button" class="btn2">
           <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#joinus'">Join Us</router-link>
         </Button>
-        <p style="font-weight:bolder;"> hiring@diversifieddementiacare.com</p>
+        <p style="font-weight:bolder;"> admin@ddchealthservices.com</p>
 
       </div>
     </div>

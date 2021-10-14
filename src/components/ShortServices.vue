@@ -2,23 +2,7 @@
   <div id="container">
     <div class="services" data-aos="fade-up"
          data-aos-duration="2000">
-      <div class="services_info">
-        <div class="services_img">
-          <img src="../assets/Images/consultation.jpeg" alt="consultation">
-        </div>
-        <div class="services_text">
-          <h2>Dementia Consultation</h2>
-          <hr>
-          <p>
-            Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one</p>
-          <div class="services_btn">
-            <Button type="button" class="btn1">
-              <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
-              </router-link>
-            </Button>
-          </div>
-        </div>
-      </div>
+
       <div class="services_info">
         <div class="services_img">
           <img src="../assets/Images/consultation2.jpeg" alt="nurse">
@@ -57,6 +41,41 @@
           </div>
         </div>
       </div>
+      <div class="services_info">
+        <div class="services_img">
+          <img src="../assets/Images/training_short.jpeg" alt="training short">
+        </div>
+        <div class="services_text">
+          <h2>Training</h2>
+          <hr>
+          <p>
+            Getting help at home does not take away your independence, it rather maximize your independence and allows you to continue living at home safely          </p>
+          <div class="services_btn">
+            <Button type="button" class="btn1">
+              <router-link :to="{name: 'Training'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              </router-link>
+
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div class="services_info">
+        <div class="services_img">
+          <img src="../assets/Images/consultation.jpeg" alt="consultation">
+        </div>
+        <div class="services_text">
+          <h2>Dementia Consultation</h2>
+          <hr>
+          <p>
+            Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one</p>
+          <div class="services_btn">
+            <Button type="button" class="btn1">
+              <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              </router-link>
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -78,16 +97,16 @@ export default {
 #container {
   .services {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
     color: $textColor;
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     text-align: center;
 
     .services_info {
       transition: 0.5s;
-      width: 90%;
+      width: 95%;
       margin: 0 auto;
       border-top-left-radius: 75px;
       border-bottom-right-radius: 75px;

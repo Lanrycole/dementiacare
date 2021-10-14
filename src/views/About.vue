@@ -51,11 +51,19 @@
           <p><strong>Dementia Care specialist</strong></p>
           <p><strong>Registered Nurses</strong></p>
           <p><strong>Registered Practical Nurses</strong></p>
-
           <p><strong>Care Managers</strong></p>
           <p><strong>Personal Support Workers</strong></p>
-
           <p><strong>Talent Acquisition</strong></p>
+          <p><strong>Community Service Workers</strong></p>
+          <p><strong>Child and Youth Worker</strong></p>
+          <p><strong>Behavioural Worker</strong></p>
+          <p><strong>Mental Health Worker</strong></p>
+          <p><strong> Psychosocial Rehabilitation Worker</strong></p>
+          <p><strong>  Developmental Support Worker</strong></p>
+          <p><strong> Social Worker</strong></p>
+          <p><strong>Residential Counsellors (Residential Support Workers)</strong></p>
+          <p><strong>Supervisory positions</strong></p>
+          <p><strong> Program Managers</strong></p>
 
           <div class="team_member_desc_btn">
             <Button type="button" class="btn1">
@@ -257,7 +265,7 @@ export default {
           'The project’s primary aim is to build capacity within the community care sector in a variety of ways, with a focus on assisting community care providers and healthcare professionals to further develop their skills when responding to the needs of people living with dementia.\n',
 
       location_text: '    <h1>Location</h1> <br> <p style="line-height:32px">  2230 Blackwater Road London, ON N5X0L1.</p>',
-      contact_text: "   <h1>Contact</h1> <br> <p style='line-height:32px'> You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:info@diversifieddementiacare.com'>send an email. </a>. We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span></p>",
+      contact_text: "   <h1>Contact</h1> <br> <p style='line-height:32px'> You can <a href='tel:6479092011' >call </a>  or send us an <a href='mailto:Info@ddchealthservices.com'>send an email. </a>. We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span></p>",
     }
   },
   methods: {
@@ -348,8 +356,7 @@ export default {
       background: $textColor;
       width: 80%;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+
 
       //box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
       .team_member_img {

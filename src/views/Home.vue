@@ -3,66 +3,9 @@
     <div class="welcome">
       <div class="landing">
         <VueSlickCarousel :arrows="false" :dots="false" v-bind="settings">
-          <!--          <div class="landing_info">-->
-          <!--            <div class="landing_text">-->
-          <!--              <p class="msg">-->
-          <!--                Providing professional health care services.-->
-          <!--              </p>-->
-          <!--              <h1>Diversified Dementia Care</h1>-->
-          <!--              <p>-->
-          <!--                DDC provides a consultation service that includes dementia information, advice and support services               </p>-->
-          <!--              <div class="landing_text_button">-->
-          <!--                <Button type="button" class="btn1">-->
-          <!--                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact-->
-          <!--                  </router-link>-->
-          <!--                </Button>-->
-          <!--                <Button type="button" class="btn2">-->
-          <!--                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking-->
-
-          <!--                  </router-link>-->
-
-          <!--                </Button>-->
-          <!--              </div>-->
-
-          <!--            </div>-->
-          <!--            <div class="landing_img">-->
-          <!--              <img src="../assets/Images/diversified.jpeg" alt="diversified_images">-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <div class="landing_info">
-
-            <div class="landing_text">
-              <img src="./../assets/Images/newlogo.svg" alt="logo"  v-if="scrollPosition<300">
-              <p class="msg">
-                Exceptional
-              </p>
-              <h1>Home Care Services</h1>
-              <p>
-                We provide professional health care services at the comfort of your home
-              </p>
-              <div class="landing_text_button">
-                <Button type="button" class="btn1">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
-                  </router-link>
-                </Button>
-                <Button type="button" class="btn2">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
-
-                  </router-link>
-
-                </Button>
-              </div>
-
-            </div>
-
-
-            <div class="landing_img">
-              <img src="../assets/Images/homeserve.jpeg" alt="homeservices">
-            </div>
-          </div>
           <div class="landing_info">
             <div class="landing_text">
-              <img src="./../assets/Images/newlogo.svg" alt="logo"  v-if="scrollPosition<300">
+              <img src="./../assets/Images/newlogo.png" alt="logo"  v-if="scrollPosition<300">
               <p class="msg">
                 Professional Health care workers
               </p>
@@ -87,35 +30,51 @@
               <img src="../assets/Images/staffing2.jpg" alt="">
             </div>
           </div>
+          <div class="landing_info">
+
+            <div class="landing_text">
+              <img src="./../assets/Images/newlogo.png" alt="logo"  v-if="scrollPosition<300">
+              <p class="msg">
+                Exceptional
+              </p>
+              <h1>Home Care Services</h1>
+              <p>
+                We provide professional health care services at the comfort of your home
+              </p>
+              <div class="landing_text_button">
+                <Button type="button" class="btn1">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  </router-link>
+                </Button>
+                <Button type="button" class="btn2">
+                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+
+                  </router-link>
+
+                </Button>
+              </div>
+
+            </div>
+            <div class="landing_img">
+              <img src="../assets/Images/homeserve.jpeg" alt="homeservices">
+            </div>
+          </div>
+
         </VueSlickCarousel>
       </div>
     </div>
-    <div class="cookies" v-if="showCookies">
-      <div class="message">
-        <div class="modal_header">
-          <h3>Cookies Policy</h3>
-          <div class="cookiesButton">
-            <Button id="accept" @click="toggleCookie">Accept</Button>
-            <Button id="reject" @click="toggleCookie">Reject</Button>
-            <Button @click="toggleCookieMsg" id="read">Read</Button>
+    <div class="intro">
+
+        <div class="intro_title">
+          <h3>DDC Health Services</h3>
           </div>
-
-
-        </div>
-        <div class="cookie_msg" v-if="showCookiesMsg">
-          <p>
-            We may use cookies on the website in order to give you a personalized experience on
-            the website. Cookies are small files sent by your web browser by a website you visit. A
-            cookie file is stored in your web browser and allows the Service to be more useful to
-            you. By using the website you consent to the use of our cookies. Some cookies are not
-            essential. You have the option of accepting or blocking such non-essential cookies
-            however, some cookies are important to give you a better experience on the website.
-          </p>
-
-        </div>
-
+      <div class="intro_text">
+        <p>
+          DDC is a temporary staffing agency specializing in the provision of health care professionals to Long-Term Care homes, in-home, community health care and support services to children, youth with behavioural challenges, seniors, and people with challenging abilities (developmental, mental, physical and dementia). Our services are aimed at providing freedom of choice, respect and promoting social inclusion for people with different abilities.
+        </p>
       </div>
-    </div>
+      </div>
+
     <div class="review">
       <review/>
     </div>
@@ -175,7 +134,7 @@ export default {
   data() {
     return {
       showCookies: true,
-      showCookiesMsg: false,
+      showCookiesMsg: true,
       scrollPosition: 0,
       settings: {
         "infinite": true,
@@ -202,12 +161,7 @@ export default {
     }
   },
   methods: {
-    toggleCookieMsg() {
-      this.showCookiesMsg = !this.showCookiesMsg;
-    },
-    toggleCookie() {
-      this.showCookies = !this.showCookies;
-    },
+
     updateScroll() {
       this.scrollPosition = window.scrollY
     }
@@ -357,72 +311,36 @@ export default {
     }
   }
 
-  .cookies {
-    display: none;
-    margin: 0 auto;
+  .intro {
+     margin: 5vh auto;
     width: 80%;
-    position: sticky;
-    left: 10%;
-    top: 75px;
+
     background: white;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    box-shadow: 0 5px 10px rgba(192, 200, 224, 0.05), 0 15px 40px rgb(255, 255, 255);
     transition: 0.5s ease-in-out;
     z-index: 5;
-    padding: 0;
-
-    .message {
-      padding: 5px;
-
-      .modal_header {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 2px solid $secondaryColor;
-        margin: 5px;
-
-        h3 {
-          font-size: 16px;
-        }
-
-        .cookiesButton {
-          text-align: end;
-
-          Button {
-            font-weight: bolder;
-            border-radius: 2rem;
-            background: $textColor;
-            padding: 5px 10px 5px 10px;
-            outline: none;
-            border: none;
-            cursor: pointer;
-            margin: 5px;
-          }
-
-          #accept {
-            background: $secondaryColor;
-
-          }
-
-          #reject {
-
-          }
-
-          #read {
-            background: none;
-            border-radius: 0;
-
-          }
-        }
-
+    padding: 40px;
+    .intro_title {
+      font-size: 30px;
+      color: $headerColor;
+      border-bottom: 2px solid $secondaryColor;
+      margin: 5px;
+      h3 {
+        font-size: 30px;
       }
 
-      .cookie_msg {
-        line-height: 35px;
-        padding: 20px;
-        cursor: pointer;
-
-      }
     }
+      .intro_text {
+        p{
+          margin-top: 40px;
+          line-height:40px;
+
+        }
+
+
+      }
+
   }
 
 }
@@ -488,6 +406,12 @@ export default {
           }
         }
       }
+      .intro {
+        margin: 5vh auto;
+        width: 100%;
+
+
+      }
     }
 
     .staffing {
@@ -520,7 +444,12 @@ export default {
 @media (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
     margin-top: 0;
+    .intro {
+      margin: 5vh auto;
+      width: 100%;
 
+
+    }
     .welcome {
       .landing {
         .landing_text {
@@ -635,7 +564,12 @@ export default {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
+    .intro {
+      margin: 5vh auto;
+      width: 100%;
 
+
+    }
     margin-top: 0;
 
     .welcome {
@@ -709,7 +643,12 @@ export default {
 @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   #home {
     margin-top: 0;
+    .intro {
+      margin: 5vh auto;
+      width: 100%;
 
+
+    }
     .welcome {
       .landing {
         margin-top: 10vh !important;

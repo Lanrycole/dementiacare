@@ -1,7 +1,7 @@
 <template>
   <div id="container">
-    <div class="message">
-      <div class="modal_header">
+    <div class="intro_header">
+      <div class="intro_title">
         <h3 v-html="modal_title ">{{ modal_title }}</h3>
         <p v-on:click="closeModal">close</p>
       </div>
@@ -54,10 +54,10 @@ export default {
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
   transition: 0.5s ease-in-out;
-  .message {
+  .intro_header {
     padding: 40px;
 
-    .modal_header {
+    .intro_title {
       display: flex;
       justify-content: space-between;
 

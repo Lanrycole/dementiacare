@@ -6,6 +6,7 @@ import Contact from '../views/Contact.vue'
 import Join from '../views/JoinUs.vue'
 import consultation from '../views/consultation.vue'
 import staffing from '../views/staffing.vue'
+import training from '../views/training.vue'
 import homeservice from '../views/homeservice.vue'
 import termsofUse from '../views/TermsofUse.vue'
 import accesibility from '../views/AccesibilityPolicy.vue'
@@ -49,6 +50,11 @@ const routes = [
     path: '/Homeservice',
     name: 'Homeservice',
     component: homeservice,
+  },
+  {
+    path: '/Training',
+    name: 'Training',
+    component: training,
   },
   {
     path: '/Terms_Of_Use',

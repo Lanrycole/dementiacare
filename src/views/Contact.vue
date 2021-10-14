@@ -55,7 +55,7 @@
                   </g>
                 </g>
               </svg>
-              info@diversifieddementiacare.com
+              info@ddchealthservices.com
             </div>
             <br>
             <br>

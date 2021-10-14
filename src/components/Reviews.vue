@@ -1,10 +1,7 @@
 <template>
   <div id="container">
     <div class="reviews">
-      <VueSlickCarousel :arrows="false" :dots="true" v-bind="settings">
 
-
-      </VueSlickCarousel>
       <div class="review_info">
         <!--          <div class="review_img">-->
         <!--            <span><img src="../assets/Images/male_avatar.svg" alt="male avatar">-->
@@ -43,18 +40,11 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-// optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 
 export default {
   name: "Reviews",
   components: {
-    VueSlickCarousel,
 
   },
   data() {
@@ -86,7 +76,7 @@ export default {
   //display:none;
   .reviews {
     margin: 0 auto !important;
-    padding: 140px;
+    padding: 40px;
     outline: none !important;
     /* Set a specific height */
 

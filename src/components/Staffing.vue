@@ -6,24 +6,60 @@
       </p>
       <div class="staffing_info">
         <div class="staffing_details">
-          <img src="../assets/Images/doctors.svg" alt="">
+          <img src="../assets/Images/doctors.svg" alt=" doctors">
           <p>Health Practitioner</p>
         </div>
         <div class="staffing_details">
-          <img src="../assets/Images/nurses.svg" alt="">
+          <img src="../assets/Images/nurses.svg" alt=" nurses">
           <p>Registered Nurse</p>
         </div>
         <div class="staffing_details">
-          <img src="../assets/Images/nurse_prac.svg" alt="">
+          <img src="../assets/Images/nurse_prac.svg" alt=" nurses">
           <p>Registered Practical Nurse</p>
         </div>
         <div class="staffing_details">
-          <img src="../assets/Images/health_worker.svg" alt="">
+          <img src="../assets/Images/health_worker.svg" alt="health worker">
           <p>PSW</p>
         </div>
         <div class="staffing_details">
-          <img src="../assets/Images/home_care.svg" alt="">
+          <img src="../assets/Images/home_care.svg" alt=" home care">
           <p>Nursing Aide</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurse_prac.svg" alt=" nurses">
+          <p>Community Service Workers</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/home_care.svg" alt=" home care">
+          <p>Child and Youth Worker</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurses.svg" alt=" nurses">
+          <p>Behavioural Worker</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/doctors.svg" alt=" doctors">
+          <p>Psychosocial Rehabilitation Worker</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurse_prac.svg" alt=" nurses">
+          <p>Developmental Support Worker</p>
+        </div>
+            <div class="staffing_details">
+          <img src="../assets/Images/home_care.svg" alt="">
+          <p>Support Worker</p>
+        </div>
+            <div class="staffing_details">
+              <img src="../assets/Images/health_worker.svg" alt="healthcare worker">
+          <p>Residential Counsellors (Residential Support Workers)</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/nurse_prac.svg" alt=" nurses">
+          <p>Supervisory positions</p>
+        </div>
+        <div class="staffing_details">
+          <img src="../assets/Images/home_care.svg" alt=" home care">
+          <p>Program Managers</p>
         </div>
 
       </div>

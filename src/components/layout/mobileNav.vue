@@ -3,7 +3,7 @@
     <div id="mobile_nav">
       <div class="nav_logo">
         <router-link :to="{name: 'Home'}" class="router-link" exact>
-          <img src="../../assets/Images/newlogo.svg" alt="logo" width="40px"></router-link>
+          <img src="../../assets/Images/newlogo.png" alt="logo" width="40px"></router-link>
       </div>
 
       <div class="menu_icon">
@@ -37,6 +37,13 @@
                   data-aos-offset="200"
                   data-aos-duration="200" @click="toggleMenu">
                 <router-link :to="{name: 'Staffing'}" class="router-link dropdown" exact >Staffing
+                </router-link>
+              </li>
+              <li data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="200"
+                  data-aos-duration="200" @click="toggleMenu">
+                <router-link :to="{name: 'Training'}" class="router-link dropdown" exact >Training
                 </router-link>
               </li>
               <li data-aos="fade-left"
@@ -219,9 +226,7 @@ export default {
           }
 
           &:hover {
-            //#dropdown {
-            //  display: block;
-            //}
+
           }
 
         }

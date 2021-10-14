@@ -58,7 +58,7 @@
           </p>
           <h2>Contact</h2>
           <p>
-            You can <a href='tel:1(833)564-6332' >call (EXT 0) </a>  or send us an <a href='mailto:info@diversifieddementiacare.com
+            You can <a href='tel:1(833)564-6332' >call (EXT 0) </a>  or send us an <a href='mailto:info@ddchealthservices.com
 '>send an email. </a>.
             <br> We are also available on our various social media platforms  <span style='border-bottom: 2px solid #F39E1C'>@diversifieddementiacare</span>
           </p>
