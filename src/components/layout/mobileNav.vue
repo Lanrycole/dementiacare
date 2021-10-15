@@ -2,7 +2,7 @@
   <div id="mobile_container">
     <div id="mobile_nav">
       <div class="nav_logo">
-        <router-link :to="{name: 'Home'}" class="router-link" exact>
+        <router-link :to="{name: 'home'}" class="router-link" exact>
           <img src="../../assets/Images/newlogo.png" alt="logo" width="40px"></router-link>
       </div>
 
@@ -14,10 +14,10 @@
     <div class="nav_items" :class="{expandMenu : !showMenu}">
       <ul>
         <li @click="toggleMenu">
-          <router-link :to="{name: 'Home'}" class="router-link" exact>Home</router-link>
+          <router-link :to="{name: 'home'}" class="router-link" exact>Home</router-link>
         </li>
         <li @click="toggleMenu">
-          <router-link :to="{name: 'About'}" class="router-link" exact>About</router-link>
+          <router-link :to="{name: 'about'}" class="router-link" exact>About</router-link>
         </li>
         <li id="ser" @click="showDropDown">
            <a id="service">Services <img src="https://img.icons8.com/pastel-glyph/24/0F0F34/expand-arrow.png"
@@ -28,7 +28,7 @@
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="100"
                   data-aos-duration="100" @click="toggleMenu">
-                <router-link :to="{name: 'Consultation'}" class="router-link dropdown" exact>
+                <router-link :to="{name: 'consultation'}" class="router-link dropdown" exact>
                  Consultation
                 </router-link>
               </li>
@@ -36,21 +36,21 @@
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="200"
                   data-aos-duration="200" @click="toggleMenu">
-                <router-link :to="{name: 'Staffing'}" class="router-link dropdown" exact >Staffing
+                <router-link :to="{name: 'staffing'}" class="router-link dropdown" exact >Staffing
                 </router-link>
               </li>
               <li data-aos="fade-left"
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="200"
                   data-aos-duration="200" @click="toggleMenu">
-                <router-link :to="{name: 'Training'}" class="router-link dropdown" exact >Training
+                <router-link :to="{name: 'training'}" class="router-link dropdown" exact >Training
                 </router-link>
               </li>
               <li data-aos="fade-left"
                   data-aos-anchor="#example-anchor"
                   data-aos-offset="300"
                   data-aos-duration="300" @click="toggleMenu">
-                <router-link :to="{name: 'Homeservice'}" class="router-link dropdown" exact >Home
+                <router-link :to="{name: 'homeservice'}" class="router-link dropdown" exact >Home
                   Services
                 </router-link>
 
@@ -60,10 +60,10 @@
         </li>
 
         <li @click="toggleMenu">
-          <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
+          <router-link :to="{name: 'contact'}" class="router-link" exact>Contact</router-link>
         </li>
         <li @click="toggleMenu">
-          <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>
+          <router-link :to="{name: 'joinus'}" class="join_us" exact>Join Us</router-link>
         </li>
       </ul>
     </div>

@@ -19,7 +19,7 @@ import HealthResources from '@/components/HealthResources'
 
 
 export default {
-  name: "Services",
+  name: "Staffing",
   components: {
 
      services,

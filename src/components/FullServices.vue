@@ -12,10 +12,10 @@
           </p>
           <div class="services_text_button">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
+              <router-link :to="{name: 'contact'}" class="router-link" exact>Contact</router-link>
             </Button>
             <Button type="button" class="btn2">
-              <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>
+              <router-link :to="{name: 'joinus'}" class="join_us" exact>Join Us</router-link>
             </Button>
 
           </div>

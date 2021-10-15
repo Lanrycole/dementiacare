@@ -122,7 +122,7 @@
 
     <div class="hiring">
       <p>
-        <router-link :to="{name: 'Joinus'}" class="join_us" exact>We are hiring</router-link>
+        <router-link :to="{name: 'joinus'}" class="join_us" exact>We are hiring</router-link>
       </p>
     </div>
 

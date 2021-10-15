@@ -15,7 +15,7 @@
           </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Staffing'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'staffing'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
 
             </Button>
@@ -34,7 +34,7 @@
             Getting help at home does not take away your independence, it rather maximize your independence and allows you to continue living at home safely          </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Homeservice'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'homeservice'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
 
             </Button>
@@ -52,7 +52,7 @@
             Getting help at home does not take away your independence, it rather maximize your independence and allows you to continue living at home safely          </p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Training'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'training'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
 
             </Button>
@@ -70,7 +70,7 @@
             Our Dementia consultation service is one of the ways we can help a person with a diagnosis of dementia, their career or loved one</p>
           <div class="services_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
+              <router-link :to="{name: 'consultation'}" class="router-link" exact v-scroll-to="'#book'">Read More
               </router-link>
             </Button>
           </div>

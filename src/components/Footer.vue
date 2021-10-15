@@ -14,14 +14,14 @@
       <div class="book_us">
         <img src="../assets/Images/book.svg" alt="calendar">
         <p>
-          <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book An Appointment
+          <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Book An Appointment
           </router-link>
         </p>
       </div>
       <div class="join_uS">
         <img src="../assets/Images/resume.svg" alt="">
         <p>
-          <router-link :to="{name: 'Joinus'}" class="router-link" exact v-scroll-to="'#book'">Join Us</router-link>
+          <router-link :to="{name: 'joinus'}" class="router-link" exact v-scroll-to="'#book'">Join Us</router-link>
 
         </p>
 
@@ -38,19 +38,19 @@
           <div class="nav_items">
             <ul>
               <li>
-                <router-link :to="{name: 'TermsofUse'}" class="router-link" exact>Terms of Use</router-link>
+                <router-link :to="{name: 'termsofUse'}" class="router-link" exact>Terms of Use</router-link>
               </li>
               <li>
-                <router-link :to="{name: 'Accessibility'}" class="router-link" exact>Accessibility Statement</router-link>
+                <router-link :to="{name: 'accessibility'}" class="router-link" exact>Accessibility Statement</router-link>
 
               </li>
               <li>
-                <router-link :to="{name: 'Privacy'}" class="router-link" exact>Privacy Policy</router-link>
+                <router-link :to="{name: 'privacy'}" class="router-link" exact>Privacy Policy</router-link>
 
               </li>
 
               <li>
-                <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact Us</router-link>
+                <router-link :to="{name: 'contact'}" class="router-link" exact>Contact Us</router-link>
 
               </li>
             </ul>
@@ -84,11 +84,11 @@
           <div class="nav_items">
             <ul>
               <li>
-                <router-link :to="{name: 'Joinus'}" class="join_us" exact>Apply for a job</router-link>
+                <router-link :to="{name: 'joinus'}" class="join_us" exact>Apply for a job</router-link>
 
               </li>
               <li>
-                <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Check status of
+                <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Check status of
                   Application
                 </router-link>
               </li>

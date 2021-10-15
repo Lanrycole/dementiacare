@@ -31,13 +31,13 @@
 
           <div class="card_btn">
             <Button type="button" class="btn2">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Contact
+              <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Contact
               </router-link>
 
             </Button>
 
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
+              <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
               </router-link>
 
             </Button>
@@ -70,13 +70,13 @@
 
           <div class="card_btn">
             <Button type="button" class="btn2">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Contact
+              <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Contact
               </router-link>
 
             </Button>
 
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
+              <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Book Us
               </router-link>
 
             </Button>
@@ -94,7 +94,7 @@
 
 
 export default {
-  name: "welcomeCard",
+  name: "History",
   components: {},
 
 }

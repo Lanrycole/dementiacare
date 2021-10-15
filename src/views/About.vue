@@ -67,7 +67,7 @@
 
           <div class="team_member_desc_btn">
             <Button type="button" class="btn1">
-              <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+              <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
               </router-link>
             </Button>
 

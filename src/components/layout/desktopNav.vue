@@ -6,7 +6,7 @@
       <p><img src="https://img.icons8.com/material-sharp/22/ffffff/filled-sent.png" alt="email"/>admin@ddchealthservices.com
       </p>
       <p id="hire_p">
-        <router-link :to="{name: 'Joinus'}" class="join_us" exact v-scroll-to="'#book'"> We are Hiring</router-link>
+        <router-link :to="{name: 'joinus'}" class="join_us" exact v-scroll-to="'#book'"> We are Hiring</router-link>
 
       </p>
 
@@ -15,17 +15,17 @@
     <div id="desktop_nav" :class="{db: scrollPosition>250}">
 
       <div class="nav_logo">
-        <router-link :to="{name: 'Home'}" class="router-link" exact v-scroll-to="'#container'">
+        <router-link :to="{name: 'home'}" class="router-link" exact v-scroll-to="'#container'">
           <img src="../../assets/Images/newlogo.png" alt="logo" width="80px" v-if="scrollPosition>300"></router-link>
       </div>
 
       <div class="nav_items">
         <ul>
           <li>
-            <router-link :to="{name: 'Home'}" class="router-link" exact>Home</router-link>
+            <router-link :to="{name: 'home'}" class="router-link" exact>Home</router-link>
           </li>
           <li>
-            <router-link :to="{name: 'About'}" class="router-link" exact>About</router-link>
+            <router-link :to="{name: 'about'}" class="router-link" exact>About</router-link>
           </li>
           <li id="ser">
             <a id="service">
@@ -36,26 +36,26 @@
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="100"
                     data-aos-duration="100">
-                  <router-link :to="{name: 'Consultation'}" class="router-link dropdown">Dementia Consultation</router-link></li>
+                  <router-link :to="{name: 'consultation'}" class="router-link dropdown">Dementia Consultation</router-link></li>
                 <li data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="200"
                     data-aos-duration="200">
-                  <router-link :to="{name: 'Staffing'}" class="router-link dropdown" exact>Staffing
+                  <router-link :to="{name: 'staffing'}" class="router-link dropdown" exact>Staffing
                   </router-link>
                 </li>
                 <li data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="300"
                     data-aos-duration="300">
-                  <router-link :to="{name: 'Training'}" class="router-link dropdown" exact>Training
+                  <router-link :to="{name: 'training'}" class="router-link dropdown" exact>Training
                   </router-link>
                 </li>
                 <li data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="300"
                     data-aos-duration="300">
-                  <router-link :to="{name: 'Homeservice'}" class="router-link dropdown" exact>Home Care
+                  <router-link :to="{name: 'homeservice'}" class="router-link dropdown" exact>Home Care
                     Services
                   </router-link>
                 </li>
@@ -64,11 +64,11 @@
           </li>
 
           <li>
-            <router-link :to="{name: 'Contact'}" class="router-link" exact>Contact</router-link>
+            <router-link :to="{name: 'contact'}" class="router-link" exact>Contact</router-link>
 
           </li>
           <li>
-            <router-link :to="{name: 'Joinus'}" class="join_us" exact>Join Us</router-link>
+            <router-link :to="{name: 'joinus'}" class="join_us" exact>Join Us</router-link>
           </li>
         </ul>
       </div>

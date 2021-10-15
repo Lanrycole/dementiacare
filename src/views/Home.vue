@@ -14,11 +14,11 @@
                 We hire Compassionate and Professional health care workers across Canada</p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
                   </router-link>
                 </Button>
                 <Button type="button" class="btn2">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+                  <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
 
                   </router-link>
 
@@ -43,11 +43,11 @@
               </p>
               <div class="landing_text_button">
                 <Button type="button" class="btn1">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
+                  <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#contact'">Contact
                   </router-link>
                 </Button>
                 <Button type="button" class="btn2">
-                  <router-link :to="{name: 'Contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
+                  <router-link :to="{name: 'contact'}" class="router-link" exact v-scroll-to="'#book'">Booking
 
                   </router-link>
 
@@ -140,8 +140,6 @@ export default {
         "infinite": true,
         "autoplay": true,
         "autoplaySpeed": 2000,
-        "dots": true,
-        "dotsClass": "slick-dots custom-dot-class",
         "edgeFriction": 0.35,
         "speed": 500,
         "slidesToShow": 1,
@@ -166,10 +164,7 @@ export default {
       this.scrollPosition = window.scrollY
     }
   },
-  mounted() {
-    window.addEventListener('scroll', this.updateScroll);
 
-  }
 }
 </script>
 

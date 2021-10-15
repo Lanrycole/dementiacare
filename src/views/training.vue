@@ -53,15 +53,12 @@
 
 import HealthResources from '@/components/HealthResources'
 
-
 export default {
-  name: "Services",
+  name: "Training",
   components: {
     HealthResources
   },
-  data() {
 
-  }
 }
 </script>
 

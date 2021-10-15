@@ -18,57 +18,57 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
-    path: '/About',
-    name: 'About',
+    path: '/about',
+    name: 'about',
     component: About
   },
   {
-    path: '/Contact',
-    name: 'Contact',
+    path: '/contact',
+    name: 'contact',
     component: Contact
   },
   {
-    path: '/Joinus',
-    name: 'Joinus',
+    path: '/joinus',
+    name: 'joinus',
     component: Join
   },
   {
-    path: '/Consultation',
-    name: 'Consultation',
+    path: '/consultation',
+    name: 'consultation',
     component: consultation,
   },
   {
-    path: '/Staffing',
-    name: 'Staffing',
+    path: '/staffing',
+    name: 'staffing',
     component: staffing,
   },
   {
-    path: '/Homeservice',
-    name: 'Homeservice',
+    path: '/homeservice',
+    name: 'homeservice',
     component: homeservice,
   },
   {
-    path: '/Training',
-    name: 'Training',
+    path: '/training',
+    name: 'training',
     component: training,
   },
   {
-    path: '/Terms_Of_Use',
-    name: 'TermsofUse',
+    path: '/terms_Of_Use',
+    name: 'termsofUse',
     component: termsofUse,
   },
   {
-    path: '/Accesibility_Policy',
-    name: 'Accessibility',
+    path: '/accesibility_Policy',
+    name: 'accessibility',
     component: accesibility,
   },
   {
-    path: '/Privacy_Policy',
-    name: 'Privacy',
+    path: '/privacy_Policy',
+    name: 'privacy',
     component: privacy,
   },
 ]
